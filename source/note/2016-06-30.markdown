@@ -1,0 +1,42 @@
+---
+layout: page
+title: "2016-06-30"
+date: 2016-06-28 10:37
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+[Drip Into a River 水滴汇集下载效果 - Part I](https://desgard.com/2016/06/28/DGDownloaderButton/)
+
+[Javascript 原型中的哲学思想](http://huang-jerryc.com/2016/06/28/JavaScript%E5%8E%9F%E5%9E%8B%E4%B8%AD%E7%9A%84%E5%93%B2%E5%AD%A6%E6%80%9D%E6%83%B3/)
+
+[Introduction to Service Worker](http://www.w3ctech.com/topic/866)
+
+http://www.html5rocks.com/en/tutorials/service-worker/introduction/
+
+
+[Service Worker初体验](http://www.alloyteam.com/2016/01/9274/)
+
+## 聚沙
+
+### 获取当前文档 dom 节点数
+
+
+```js
+$('*').length
+
+document.getElementsByTagName('*').length
+```
+
+
+### LaTeX
+
+LATEX[1] 是一种排版系统，它非常适用于生成高印刷质量的科技和数学类文档。这个系统同样适用于生成从简单的信件到完整书籍的所有其他种类的文档。LATEX 使用 TEX[2] 作为它的格式化引擎。
+
+http://liam0205.me/2014/09/08/latex-introduction/
+
+
+[MORE](http://blog.mirreal.net/note/2016-06-30.html)

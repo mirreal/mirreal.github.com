@@ -1,0 +1,51 @@
+---
+layout: page
+title: "2016-04-30"
+date: 2016-04-26 11:10
+comments: true
+sharing: true
+footer: true
+---
+
+## issues
+
+### 用 IE8 的都是神经病
+
+在兼容性测试过程中，对下面的代码（babel 自动生成的）：
+
+
+```js
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+```
+
+或者这种：
+
+```js
+module.exports = _main2.default;
+```
+
+出现“缺少标识符、字符串或数字”的错
+
+得在对象的属性上加“”才可以。
+
+```js
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { ‘default’: obj };
+}
+
+module.exports = _main2['default'];
+```
+
+但问题其实并没有结束，问题的根源不完全是这里，因为这样是没问题的
+
+```js
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { name: obj };
+}
+```
+
+其实是 `default` 的问题，作为一个关键字
+
+总之，避免使用关键字，或者保留字作为对象的属性值，尤其是在习惯不加引号的情况下

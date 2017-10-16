@@ -1,0 +1,23 @@
+---
+layout: page
+title: "2016-03-26"
+date: 2016-03-26 13:23
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+关于贪食蛇这游戏很多人在学习编程时都自己去写过，并不复杂，同时可以让初学者更加巩固对语言的理解。故事的起源是一张在网上广泛流传的关于贪食蛇的图片，当然不仅仅是游戏，问题的关键在于，图片中的贪吃蛇真的很贪吃，它把矩形中出现的食物吃了个遍， 然后华丽丽地把整个矩形填满，真心是看得赏心悦目。那应该如何写程序去实现，该用到什么算法。
+
+[如何用Python写一个贪吃蛇AI](http://www.hawstein.com/posts/snake-ai.html) http://www.hawstein.com/posts/snake-ai.html
+
+柯里化是这样的一个转换过程，把接受多个参数的函数变换成接受一个单一参数的函数，如果其他的参数是必要的，返回接受余下的参数且返回结果的新函数。函数柯里化允许和鼓励分隔复杂功能变成更小更容易分析的部分，这些小的逻辑单元显然是更容易理解和测试的，然后应用就会变成干净而整洁的组合，由一些小单元组成的组合。
+
+[函数式JavaScript：函数柯里化](http://blog.jobbole.com/77956/) http://blog.jobbole.com/77956/
+
+
+React Native 的出现，让前端工程师拥有了使用 JavaScript 编写原生 APP 的能力。相比之前的 Web app 来说，对于性能和用户体验提升了非常多。但是 React Native 的代码只兼容两个平台（iOS 和 Android），并没有兼容 Web 端访问。这里介绍了一种方法，通过 React Web 将项目直接运行在 web 浏览器。
+
+[三步将 React Native 项目运行在 Web 浏览器上面](http://taobaofed.org/blog/2016/03/11/react-web-intro/) http://taobaofed.org/blog/2016/03/11/react-web-intro/

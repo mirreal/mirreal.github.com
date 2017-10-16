@@ -1,0 +1,54 @@
+---
+layout: page
+title: "2016-03-03"
+date: 2016-03-03 21:35
+comments: true
+sharing: true
+footer: true
+---
+
+
+## 阅读
+
+红包照片客户端开发那些事
+
+https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ%3D%3D&mid=401327503&idx=1&sn=1d9fac7b648c3494d312da962f53bfbd
+
+Principles of good RESTful API Design
+http://www.cnblogs.com/moonz-wu/p/4211626.html
+
+极客眺望墙外风景的正确姿势
+http://www.codingpy.com/article/climb-the-gfw-the-geek-way/
+
+## 在线图书
+
+Clojure Flavored JavaScript
+https://oyanglul.us/clojure-flavored-javascript/zh/
+
+## 站点
+
+刘家财 http://liujiacai.net/
+
+## 其他
+
+科学上网之ShadowSocks https://shadowsocks.com/
+
+一个2016应届生妹子 http://www.apollozz.com/
+
+## 词典
+
+HSTS
+
+HTTP Strict Transport Security HTTP 严格传输安全
+
+## 聚沙
+
+sublime text 安装 package control
+
+https://packagecontrol.io/installation
+
+在 ctrl+` 控制台输入：
+
+```
+import urllib2,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')
+```

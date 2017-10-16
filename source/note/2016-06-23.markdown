@@ -1,0 +1,96 @@
+---
+layout: page
+title: "2016-06-23"
+date: 2016-06-23 10:03
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[自文档化的JavaScript代码的开发方法](http://jixianqianduan.com/article-translation/2016/06/22/ways-to-write-self-documenting-js.html)
+
+## 聚沙
+
+### 数据导出 mongoexport
+
+
+#### 普通导出
+
+```sh
+mongoexport -d <db_name> -c <collection_name> -o <export_name>
+```
+
+```text
+参数说明:
+ -d 指明使用的库, 本例中为” my_mongodb”
+ -c 指明要导出的表, 本例中为”user”
+ -o 指明要导出的文件名, 本例中为”user.dat”
+```
+
+导出的方式使用的是JSON 的样式
+
+example
+
+```sh
+mongoexport -d hunter -c members -o members.dat
+```
+
+#### CSV 格式导出
+
+```sh
+mongoexport -d hunter -c members --csv -f userId,nick -o user_csv.dat
+```
+
+### 数据导入 mongoimport
+
+#### 导入JSON 数据
+
+我们先将表user 删除掉
+
+```js
+db.user.drop();
+```
+
+```sh
+show collections;
+```
+
+然后导入数据
+
+```sh
+mongoimport -d hunter -c members members.dat
+```
+
+### 数据备份 mongodump
+
+可以用 mongodump 来做 MongoDB 的库或表级别的备份
+
+备份my_mongodb 数据库
+
+```sh
+mongodump -d <db_name>
+```
+
+此时会在当前目录下创建一个dump 目录，用于存放备份出来的文件
+
+
+### 数据恢复 mongorestore
+
+由于刚刚已经做了备份，先将库my_mongodb 删除掉
+
+```text
+> use my_mongodb
+switched to db my_mongodb
+> db.dropDatabase()
+{ "dropped" : "my_mongodb", "ok" : 1 }
+```
+
+接下来我们进行数据库恢复
+
+```sh
+mongorestore -d my_mongodb my_mongodb_dump/*
+```
+
+[MORE](http://blog.mirreal.net/note/2016-06-23.html)

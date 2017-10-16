@@ -1,0 +1,28 @@
+---
+layout: page
+title: "2016-07-01"
+date: 2016-07-01 11:30
+comments: true
+sharing: true
+footer: true
+---
+
+
+## 阅读
+
+[程序员，你会从 Bug 中学习么](http://blog.jobbole.com/103025/)
+
+[解构（Destructuring） -- Exploring ES6](http://www.zcfy.cc/article/498)
+
+[Node.js 中的队列](http://www.zcfy.cc/article/662)
+
+[30 分钟 git 命令入门到放弃](http://blog.jobbole.com/102957/)
+
+## 站点
+
+正则可视化
+
+http://www.regexr.com/
+
+
+[MORE](http://blog.mirreal.net/note/2016-07-01.html)

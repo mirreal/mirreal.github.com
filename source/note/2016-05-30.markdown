@@ -1,0 +1,83 @@
+---
+layout: page
+title: "2016-05-30"
+date: 2016-05-30 09:18
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### 浅复制和深复制
+
+关于 Date 对象
+
+```js
+// What works
+var original = new Date();
+var copy = new Date(original);
+
+// What doesn't work
+copy = original; // It should work, but it passes by reference so changes to copy also affect original
+copy = jQuery.extend(true, {}, original); // Passes a useless object
+```
+
+```js
+Date.prototype.clone = function () {
+  return new Date(this.getTime());
+}
+```
+
+简单的深复制实现：
+
+```js
+function clone(obj) {
+    var copy;
+
+    // Handle the 3 simple types, and null or undefined
+    if (null == obj || "object" != typeof obj) return obj;
+
+    // Handle Date
+    if (obj instanceof Date) {
+        copy = new Date();
+        copy.setTime(obj.getTime());
+        return copy;
+    }
+
+    // Handle Array
+    if (obj instanceof Array) {
+        copy = [];
+        for (var i = 0, len = obj.length; i < len; i++) {
+            copy[i] = clone(obj[i]);
+        }
+        return copy;
+    }
+
+    // Handle Object
+    if (obj instanceof Object) {
+        copy = {};
+        for (var attr in obj) {
+            if (obj.hasOwnProperty(attr)) copy[attr] = clone(obj[attr]);
+        }
+        return copy;
+    }
+
+    throw new Error("Unable to copy obj! Its type isn't supported.");
+}
+```
+
+https://gist.github.com/RobFreiburger/2166022
+
+http://stackoverflow.com/questions/1090815/how-to-clone-a-date-object-in-javascript
+
+http://stackoverflow.com/questions/728360/most-elegant-way-to-clone-a-javascript-object
+
+http://www.cnblogs.com/rubylouvre/archive/2010/03/26/1696600.html
+
+http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/
+
+https://www.zhihu.com/question/23031215
+
+
+[MORE](http://blog.mirreal.net/note/2016-05-30.html)

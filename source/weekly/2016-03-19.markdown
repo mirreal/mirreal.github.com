@@ -1,0 +1,22 @@
+---
+layout: page
+title: "2016-03-19"
+date: 2016-03-19 13:29
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+在前端开发中，性能一直都是被大家所重视的一点，然而判断一个网站的性能最直观的就是看网页打开的速度。其中提高网页反应速度的一个方式就是使用缓存，一个优秀的缓存策略可以缩短网页请求资源的距离，减少延迟，并且由于缓存文件可以重复利用，还可以减少带宽，降低网络负荷。
+
+[浅谈web缓存](http://www.alloyteam.com/2016/03/discussion-on-web-caching/) http://www.alloyteam.com/2016/03/discussion-on-web-caching/
+
+这是一篇整理程序员碰到的BUG的文章，有的听起来就像是个笑话，大部分都是人祸。但是有没有至今还找不到原因，无法理解，完全超出认知。
+
+[程序员在开发时遇到的灵异现象](http://blog.jobbole.com/98482/) http://blog.jobbole.com/98482/
+
+Unix 的哲学与 C 息息相关，C 语言只提供内存管理机制，不提供策略，也正因为如此才招致了那些贪心的人的鄙薄。但是，你可以利用 C 语言提供的这种简单至极的机制去实现你想要的内存管理策略，好的设计品味，自然就是内存友好的。
+
+[C 指针有害健康](https://segmentfault.com/a/1190000004210701) https://segmentfault.com/a/1190000004210701

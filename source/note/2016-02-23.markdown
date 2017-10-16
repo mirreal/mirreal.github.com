@@ -1,0 +1,48 @@
+---
+layout: page
+title: "2016-02-23"
+date: 2016-02-23 14:04
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+选择输入法的哲学：兼论双拼的优缺点
+http://sspai.com/33019
+
+JavaScript定时器的工作原理
+http://www.phpweblog.net/rainman/archive/2009/01/05/6267.html
+
+## 工具
+
+配色
+http://colourco.de/
+
+
+## 集合
+
+简书 http://www.jianshu.com/
+
+segmentFault https://segmentfault.com/
+
+伯乐在线 http://www.jobbole.com/
+
+## 站点
+
+少数派 http://sspai.com/
+
+## 两个RSS工具
+
+一览 http://www.yilan.io/
+
+inoreader http://www.inoreader.com/
+
+## 英语
+
+see through 看透，看穿，识破
+
+## 锻炼
+
+Plank

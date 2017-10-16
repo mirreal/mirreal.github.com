@@ -1,0 +1,84 @@
+---
+layout: page
+title: "2016-07-05"
+date: 2016-07-05 19:12
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[神奇的Shadow DOM](https://aotu.io/notes/2016/06/24/Shadow-DOM/)
+
+[零Bug的代码是怎么炼成的](http://mp.weixin.qq.com/s?__biz=MzAxOTc0NzExNg%3D%3D&mid=2665513189&idx=1&sn=8b705dac2e27ecf002e6308d10b7f272)
+
+
+[一个靠谱的前端开源项目需要什么](https://segmentfault.com/a/1190000005859766)
+
+
+## 聚沙
+
+### timer
+
+校准因为耗时任务造成的 `setInterval` 延时
+
+尽量使用 `setTimeout` 来替代 `setInterval`
+
+```js
+function timer(fn, delay){
+     var s = setTimeout(function(){
+          fn();
+          timer(fn, delay);
+    }, delay)
+}
+```
+
+暴力校准
+
+```js
+var count = 0;
+var t1 = (new date()).getTime();
+var delay = 1000;
+function timer(fn, delay) {
+  var s = setTimeout(function () {
+    count++;
+    fn();
+    var t2 = (new date()).getTime();
+    var newdelay = delayer - (t2 - t1 - count * delay);
+    timer(fn, newdelay);
+  })
+}
+timer(function () {
+  console.log(111);
+}, delay);
+```
+
+
+### css chrome logo
+
+```css
+div.chrome {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px #999, 0 0 2px #ddd inset;
+  background: radial-gradient(circle, #4FACF5 0, #2196F3 28%, transparent 28%),
+  radial-gradient(circle, #fff 33%, transparent 33%),
+  linear-gradient(-50deg, #FFEB3B 34%, transparent 34%),
+  linear-gradient(60deg, #4CAF50 33%, transparent 33%),
+  linear-gradient(180deg, #FF756B 0, #F44336 30%, transparent 30%),
+  linear-gradient(-120deg, #FFEB3B 40%, transparent 40%),
+  linear-gradient(-60deg, #FFEB3B 30%, transparent 30%),
+  linear-gradient(0deg, #4CAF50 45%, transparent 45%),
+  linear-gradient(60deg, #4CAF50 30%, transparent 30%),
+  linear-gradient(120deg, #F44336 50%, transparent 50%),
+  linear-gradient(180deg, #F44336 30%, transparent 30%);
+}
+```
+
+http://www.cnblogs.com/jarson-7426/p/5640386.html
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-07-05.html)

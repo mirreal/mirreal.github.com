@@ -1,0 +1,55 @@
+---
+layout: page
+title: "2016-06-15"
+date: 2016-06-15 09:53
+comments: true
+sharing: true
+footer: true
+---
+
+
+## 阅读
+
+[重提敏捷已死](http://www.infoq.com/cn/news/2016/06/agile-dead-again)
+
+[如何养成好的阅读习惯](http://blog.jobbole.com/101517/)
+
+不读书，等于不学无术，这种状态有时候比死更难受
+
+[为什么代码缩进时用 Tab 超级棒](http://blog.jobbole.com/101839/)
+
+现在多数人更喜欢使用空格而非 tab 缩进，使用混合的直接被打死了
+
+[假如程序员生活在童话里…](http://www.codeceo.com/article/if-programmer-in-fairy-tale.html)
+
+## 聚沙
+
+### scope.$digest()
+
+ng 的使用最忌讳的一点就是修改 DOM 结构——你应该使用 ng 的模板机制进行数据绑定，以此来控制 DOM 结构，而不是直接操作。
+
+然后使用 $scope.$digest() 来通知 ng 一下即可
+
+### 颜色混合函数 less
+
+这些操作和图片编辑器（例如 Photoshop、Fireworks 或 GIMP）中的混合模式很类似（虽然不是完全一致），因此，你可以通过这些函数让 CSS 中的颜色与图片中的颜色相匹配。
+
+#### multiply
+
+分别将两种颜色的红绿蓝 (RGB) 三种值做乘法运算，然后再除以 255，输出结果是更深的颜色。（译注：对应Photoshop中的“变暗/正片叠底”。）
+
+#### screen
+
+与 multiply 函数效果相反，输出结果是更亮的颜色。（译注：对应Photoshop中的“变亮/滤色”。）
+
+#### overlay
+
+结合 multiply 与 screen 两个函数的效果，令浅的颜色变得更浅，深的颜色变得更深。（译注：对应 Photoshop 中的“叠加”。）注意：输出结果由第一个颜色参数决定。
+
+
+## 乱弹
+
+* 挖掘你的工程师属性（Engineering You)
+
+
+[MORE](http://blog.mirreal.net/note/2016-06-15.html)

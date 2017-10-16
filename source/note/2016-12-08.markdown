@@ -1,0 +1,14 @@
+---
+layout: page
+title: "2016-12-08"
+date: 2016-12-08 18:40
+comments: true
+sharing: true
+footer: true
+---
+
+组件间通信
+
+长轮训
+
+ES6-promise

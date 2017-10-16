@@ -1,0 +1,71 @@
+---
+layout: page
+title: "2016-04-26"
+date: 2016-04-26 09:27
+comments: true
+sharing: true
+footer: true
+---
+
+## 想法
+
+太沉浸在自己的世界，忽略了外边的美好
+
+
+## 聚沙
+
+
+```sh
+npm install <package-name> -g
+```
+
+```
+/usr/local/lib/node_modules/
+```
+
+
+### 兼容【续】
+
+http://www.cnblogs.com/snandy/archive/2011/04/01/2001727.html
+
+https://github.com/airbnb/javascript/issues/61
+
+https://www.zhihu.com/question/37939963
+
+http://stackoverflow.com/questions/33512715/babel-6-0-20-modules-feature-not-work-in-ie8
+
+https://phabricator.babeljs.io/T2817
+
+http://www.zplan.net/news.php?id=232
+
+两个插件：
+
+http://babeljs.io/docs/plugins/transform-es3-member-expression-literals/
+
+http://babeljs.io/docs/plugins/transform-es3-property-literals/
+
+
+#### Object.defineProperty
+
+使用 es5-shim 提示 ”对象不支持此操作“
+
+其实 es5-shim 明确说明，这个方法的 polyfill 在 IE8 会失败，因为 ie8 已经有个同名的方法，但只是用于 DOM 对象
+
+As currently implemented, the Object.defineProperty shim will not install on IE8 because IE8 already has such a method. However, the built-in IE8 method only works when applied to DOM objects.
+
+https://github.com/es-shims/es5-shim/issues/5
+
+
+
+https://blogs.msdn.microsoft.com/ie/2010/09/07/transitioning-existing-code-to-the-es5-gettersetter-apis/
+
+http://benohead.com/javascript-workaround-for-object-defineproperty-in-ie8/
+
+#### Object.create
+
+上述问题可以引入 es5-sham 解决
+
+
+#### addEventListener
+
+这个更容易了，我们已经把 jQuery 换成 1.x，所以只需把代码中 addEventListener 换成 jQuery 的写法就 Okay 了

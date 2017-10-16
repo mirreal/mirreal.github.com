@@ -1,0 +1,161 @@
+---
+layout: page
+title: "2016-03-07"
+date: 2016-03-07 13:52
+comments: true
+sharing: true
+footer: true
+---
+
+## Homebrew & ZSH for MAC
+
+> OS X 包管理器，类似于centos的 `yum` ,unbuntu 的 `apt-get`
+
+### 安装 brew
+
+```sh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+### 用法
+
+#### 安装 wget
+
+```sh
+brew install wget
+```
+
+#### 卸载 wget
+
+```sh
+brew unstall wget
+```
+
+#### 查询(后面可以是一个正则表达式）
+
+```
+brew search /wget*/
+```
+
+#### 查看包是否需要更新
+
+```
+brew outdated
+```
+
+#### 更新安装包
+
+```
+brew upgrade <package_name>
+```
+
+#### 清理旧版本的包
+
+```
+brew cleanup
+```
+
+#### 查看已安装的包(包括版本号)
+
+```
+brew list --versions
+```
+
+其他常见用法，可直接输入 `brew` 查看。
+
+
+
+### Homebrew Cask
+
+> 安装和管理 OS X 图形界面程序
+
+
+#### 安装 cask
+
+```
+brew install brew-cask
+```
+
+#### 安装软件
+
+```
+brew cask install google-chrome
+```
+
+#### Shell 快捷键
+
+* `ctrl+a`: 移到行首（a是首字母）
+* `ctrl+e`: 移到行尾（end）
+* `ctrl+w`: 删除当前光标到临近左边单词结束(word)
+* `ctrl+u`: 删除光标左边所有
+* `ctrl+k`: 删除光标右边所有
+
+
+### ZSH
+
+#### 安装 oh my zsh
+
+自动安装
+
+```sh
+ wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+```
+
+手动安装
+
+```sh
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+```
+
+配置都在 `.zshrc` 里
+
+#### 主题
+
+```sh
+ZSH_THEME="dst"
+```
+
+[ZSH 主题大全](http://zshthem.es/all/)
+
+#### 插件
+
+```sh
+plugins=(git textmate ruby autojump osx mvn gradle)
+```
+
+
+## 文档
+
+HTTP2 FAQ https://http2.github.io/faq/
+
+## 阅读
+
+经过无数经验教训后我给独立程序员的建议
+http://www.jianshu.com/p/152e84a045a9
+
+How to Level up as a Developer
+https://medium.freecodecamp.com/how-to-level-up-as-a-developer-87344584777c#.2rvt7h740
+
+http://36kr.com/p/5044048.html
+
+解密微博红包：架构、防刷、监控和资源调度
+http://www.infoq.com/cn/articles/2016-hongbao-weibo
+
+Introducing the WebVR 1.0 API Proposal
+https://hacks.mozilla.org/2016/03/introducing-the-webvr-1-0-api-proposal/
+
+用 JavaScript 对抗 DDOS 攻击 (下)
+http://www.cnblogs.com/index-html/p/js-network-firewall-2.html
+
+记录一个threejs项目
+http://www.cnblogs.com/pursues/archive/2016/02/29/5226807.html
+
+## 站点
+
+关于数学计算 http://www.euclideanspace.com/maths/index.htm
+http://www.natural-science.or.jp/article/laboratory/cat467/
+
+一份three文档 http://learningthreejs.com/
+
+一个源码注释 https://github.com/omni360/three.js.sourcecode

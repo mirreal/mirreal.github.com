@@ -1,0 +1,22 @@
+---
+layout: page
+title: "2017-04-28"
+date: 2017-04-24 09:15
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+#### [我的职业是前端工程师](http://ued.party/)
+
+一本前端小书，作者自称，内容主要集中于前端应用通用知识，并以个人视角来看前端领域的各种技术。
+
+#### [Leaf——美团点评分布式ID生成系统](http://tech.meituan.com/MT_Leaf.html)
+
+#### [维护一个大型开源项目(Visual Studio Code)是怎样的体验](https://www.zhihu.com/question/36292298/answer/160028010)
+
+#### [我为什么不在乎人工智能](http://www.yinwang.org/blog-cn/2017/04/23/ai)
+
+#### [[译] 我经常听到的 GraphQL 到底是什么](https://juejin.im/post/58fd6d121b69e600589ec740)

@@ -1,0 +1,78 @@
+---
+layout: page
+title: "2016-06-03"
+date: 2016-06-03 09:49
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[Async and Await](https://zeit.co/blog/async-and-await)
+
+[Front-end Hyperpolylglot](http://jeffcarp.github.io/frontend-hyperpolyglot/)
+
+
+http://hyperpolyglot.org/
+
+
+http://googlecreativelab.github.io/anypixel/
+
+
+https://asvd.github.io/microlight/
+
+http://www.daqianduan.com/4721.html
+
+
+## 聚沙
+
+### .travis.yml
+
+https://docs.travis-ci.com/user/customizing-the-build/
+
+### SVG Triangle
+
+
+```css
+.container {
+    position: relative;
+    margin: 20px auto;
+    width: 120px;
+}
+.container .triangle {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 12px;
+}
+.container .triangle polygon {
+    fill: #282828;
+}
+.container .info {
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 14px;
+    color: #fefefe;
+    background-color: #282828;
+    border-radius: 4px;
+}
+```
+
+```html
+<div class="container">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="triangle">
+        <polygon points="0,12 20,12 10,0"/>
+    </svg>
+    <div class="info">New project</div>
+</div>
+```
+
+polygon 元素定义了一个由一组首尾相连的直线线段构成的闭合多边形形状。最后一点连接到第一点。
+
+
+[MORE](http://blog.mirreal.net/note/2016-06-03.html)

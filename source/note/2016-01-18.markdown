@@ -1,0 +1,22 @@
+---
+layout: page
+title: "2016-01-18"
+date: 2016-01-18 23:35
+comments: true
+sharing: true
+footer: true
+---
+
+## 删除 tag
+
+删除本地 tag:
+
+```
+git tag -d v0.1
+```
+
+只删除本地的没有用，下次 fetch 的时候还会拉下来，再删除远程仓库中的 tag ，跟删除远程分支的语法类似
+
+```
+git push origin :refs/tags/v0.1
+```

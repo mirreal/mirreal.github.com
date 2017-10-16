@@ -1,0 +1,18 @@
+---
+layout: page
+title: "2016-05-22"
+date: 2016-05-22 14:23
+comments: true
+sharing: true
+footer: true
+---
+
+## 字符画
+
+字符画大全 http://www.zoneky.com/ascii/
+
+ASCII Generator http://www.network-science.de/ascii/
+
+http://www.html-js.com/article/JavaScript-using-the-technique-of-canvas-JavaScript-API-image-into-character-painting
+
+http://www.cnblogs.com/laosan/p/create-magic-ascii-picture-by-javascript.html

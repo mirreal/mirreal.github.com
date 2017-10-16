@@ -1,0 +1,25 @@
+---
+layout: page
+title: "2016-04-30"
+date: 2016-04-30 00:42
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### webstorm es6
+
+es6 语法支持设置
+
+```
+Preferences > Languages & Frameworks > JavaScript
+```
+
+配置 ECMAScript 版本即可
+
+
+### vue
+
+http://jiongks.name/blog/just-vue/

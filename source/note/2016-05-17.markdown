@@ -1,0 +1,94 @@
+---
+layout: page
+title: "2016-05-17"
+date: 2016-05-17 09:32
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[Email 诞生记](http://blog.jobbole.com/101055/)
+
+本文主要介绍 Email 的原理和协议
+
+[setTimeout 的黑魔法](http://www.cnblogs.com/fly-snow/archive/2016/04/24/5427865.html)
+
+[未来计划](http://www.yinwang.org/blog-cn/2016/05/14/future)
+
+
+## 聚沙
+
+### typewriter
+
+```js
+var typewriter = function(element) {
+    var $this = element;
+    var html = $this.innerHTML;
+    var progress = 0;
+
+    $this.innerHTML = '';
+
+    var loop = setInterval(function() {
+        var current = html.substr(progress, 1);
+
+        if (current == '<') {
+            progress = html.indexOf('>', progress) + 1;
+        } else {
+            progress += 1;
+        }
+
+        $this.innerHTML = html.substring(0, progress) + (progress & 1 ? '_' : '');
+        if (progress >= html.length) {
+            clearInterval(loop);
+        }
+    }, 80);
+};
+
+var element = document.querySelector('.code');
+typewriter(element);
+```
+
+### 点击穿透
+
+#### 产生的原因
+
+浮层下面有一些跳转的列表，这些采用的是 a 标签进行跳转，而 a 标签的点击事件默认的是 click 事件。
+
+click 事件在移动端不会立即执行，会有 300 毫秒的延时，用来检测用户单击还是双击（最初源于iOS 自带的 Safari 浏览器）。
+
+而罪魁祸首就是这 300 毫秒的延时，由于浮层上一般借助的 zepto 库绑定的 tap 事件，zepto 库的 tap 事件主要是利用的 touch 来模拟的，而 touch 没有 300 毫米的延时。
+
+这样就造成，当点击浮层，复层消失立即消失，从点击到浮层消失的时间间隔小于 300 毫秒，就再次出发浮层下面的 click 事件，导致上面的“点击穿透现象”。
+
+#### 解决方案
+
+* 用 click 代替 tap 事件，这种方案的优点就是简单，基本没有什么改动。缺点就是体验不佳，明显感觉反应慢半拍。当然可以通过交互设计弱化这种感觉，通过浮层逐渐消失（fadeOut）抵消300ms 的延时
+
+* 动态地在触摸位置生成一个透明的元素，在一定的 timeout 后再将生成的透明元素移除。这个方案的优点就是感受不到延时，缺点是需要额外的添加元素及 js 代码，并且当浮层消失后，下面的点击会处于暂时失效状态。类似的做法还有利用 pointer-events。
+
+* 既然问题源于 click 事件延时，那么检测到 touchend 事件的时候就拦截系统的 click 事件，通过 DOM 自定义事件立即触发一个模拟 click 事件。这个方案的代表就是FastClick.
+
+#### pointer-events
+
+CSS属性pointer-events允许作者控制特定的图形元素在何时成为属性事件的target。
+
+除了指定元素不成为鼠标事件的目标，none值还指示鼠标事件穿过该元素，并指向位于元素下面的元素。
+
+none
+
+元素永远不会成为鼠标事件的target。但是，当其后代元素的pointer-events属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶触发父元素的事件侦听器。
+
+### 异步和线程
+
+* 浏览器的内核是多线程的，它们在内核制控下相互配合以保持同步，一个浏览器至少实现三个常驻线程：javascript引擎线程，GUI渲染线程，浏览器事件触发线程。
+* javascript引擎是基于事件驱动单线程执行的.JS引擎一直等待着任务队列中任务的到来，然后加以处理，浏览器无论什么时候都只有一个JS线程在运行JS程序。
+
+
+## 乱弹
+
+*  决定伟大水平和一般水平的关键因素，既不是天赋，也不是经验，而是[刻意练习]的程度
+
+
+http://hackerzhou.me/ex_love/

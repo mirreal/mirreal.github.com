@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Css | Mirreal Note]]></title>
+  <link href="http://blog.mirreal.net/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://blog.mirreal.net/"/>
+  <updated>2016-03-13T14:53:42+08:00</updated>
+  <id>http://blog.mirreal.net/</id>
+  <author>
+    <name><![CDATA[Mirreal Ellison]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[实现不定尺寸图片居中的几种方式]]></title>
+    <link href="http://blog.mirreal.net/blog/2015/01/23/image-atuo-middle/"/>
+    <updated>2015-01-23T21:26:48+08:00</updated>
+    <id>http://blog.mirreal.net/blog/2015/01/23/image-atuo-middle</id>
+    <content type="html"><![CDATA[<p>这是在实习工作中遇到的一个需求，实现未知尺寸的图片在一固定宽高的容器中水平和垂直居中。</p>
+
+<p>比如是在一个200px的正方形容器，图片的宽高可能大于200px，也可能小于200px。对于小图片，就是简单的水平和垂直居中，而大图片则要求按比例缩放，并实现居中。</p>
+
+<p>这个问题主要有两个方面的点：</p>
+
+<ul>
+<li>未知尺寸元素的垂直居中</li>
+<li>大图片的宽高适配</li>
+</ul>
+
+
+<p>因为图片大小尺寸未知，且可能超出容器，很多垂直居中的方法不能用。</p>
+
+<h3>最终的解决方法如下：</h3>
+
+<!-- more -->
+
+
+<p>HTML大概是这样的：</p>
+
+<pre><code>&lt;div class="box"&gt;
+  &lt;img src="img/0.jpg" alt="earth shadow" title="It's me"&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>CSS：</p>
+
+<pre><code>.box {
+  width: 200px;
+  height: 200px;
+position: relative;
+  text-align: center;
+}
+
+.box img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+</code></pre>
+
+<p>将容器的位置设为<code>relative</code>，图片的位置设为<code>absolute</code>，然后将其<code>top</code>，<code>right</code>，<code>bottom</code>，<code>left</code>都设置成0，虽然图片尺寸未知，但是对于一张具体的图片而言是有固定宽高的，所以并不能使它四个方位间距都为0，因此<code>margin: auto;</code>会让它居中。如果仅对于宽高都小于200px的图片，这样就足够了，但是对于大图片就不适用，所以再加上<code>max-width: 200px;max-height: 200px;</code>，这样图片就可以自适应缩放。</p>
+
+<p>查看演示：<a href="http://blog.mirreal.net/demo/image-center/1.html">demo1</a></p>
+
+<h3>方式二：使用表格布局</h3>
+
+<p>还是这段HTML：</p>
+
+<pre><code>&lt;div class="box1"&gt;
+  &lt;img src="img/0.jpg"  alt="earth shadow" title="It's me"&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>CSS这样写：</p>
+
+<pre><code>.box1 {
+  width:200px;
+  height:200px;
+  display: table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
+.box1 img {
+  max-width:200px;
+  max-height:200px;
+  vertical-align:middle;
+}
+</code></pre>
+
+<h3>方式三：使用背景图片</h3>
+
+<p>HTML就直接写了：</p>
+
+<pre><code>&lt;div class="box2"&gt;&lt;/div&gt;
+</code></pre>
+
+<p>CSS：</p>
+
+<pre><code>.box2 {
+  width: 200px;
+  height: 200px;
+  background: url(img/0.jpg) no-repeat;
+  background-position: center;
+}
+</code></pre>
+
+<p>直接使用<code>background-position: center;</code>实现居中，如图片尺寸小于200px就OK了。但是对于大图片，会被截掉，所以还需加上<code>background-size: contain;</code>，可是对于小图片又有问题，因为加上这个属性会对图片缩放，小图也不例外。而在我们的需求里，对小图要求按照其原有大小显示。</p>
+
+<p>貌似这种方式使用纯CSS行不通。</p>
+
+<p>&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

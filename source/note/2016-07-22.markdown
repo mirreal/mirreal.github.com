@@ -1,0 +1,18 @@
+---
+layout: page
+title: "2016-07-22"
+date: 2016-07-22 12:31
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[Linus Torvalds 是一个糟糕的老板吗](https://linux.cn/article-7588-1.html)
+
+[计算机科学家 Samuel Arbesman：我们进入了新的不可知时代](http://www.ifanr.com/689074)
+
+[逐渐去掌握 React（作为一名 Angular 开发者）](https://segmentfault.com/a/1190000006032997)
+
+https://daveceddia.com/to-react-from-angular/

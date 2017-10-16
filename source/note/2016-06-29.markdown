@@ -1,0 +1,35 @@
+---
+layout: page
+title: "2016-06-29"
+date: 2016-06-28 10:36
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[Google和微软牵手的产物：我为什么选择Angular 2？](https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2650993121&idx=1&sn=d7ac7e04e28e697f91c714401676de58)
+
+
+## 聚沙
+
+### 如何在 mongodb 中在原有键值上修改
+
+比如乘以 10
+
+```js
+db.scores.find().forEach(function(doc) {
+  db.scores.update({
+    _id: doc._id
+  },
+  {
+    $set: {
+      "score": doc.score * 10
+    }
+  })
+})
+```
+
+
+[MORE](http://blog.mirreal.net/note/2016-06-29.html)

@@ -1,0 +1,12 @@
+---
+layout: page
+title: "2016-07-18"
+date: 2016-07-18 21:06
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[走进 Redux 之基础篇](https://www.kisnows.com/2016/05/03/step-to-redux-2/)

@@ -1,0 +1,25 @@
+---
+layout: page
+title: "2015-12-09"
+date: 2015-12-09 00:17
+comments: true
+sharing: true
+footer: true
+---
+
+## 文件上传过程中的问题
+
+Method：POST
+
+file
+
+OPTIONS
+
+KEYWORDS
+
+- Blob
+- File
+- FormData
+- FileReader
+
+## The opposite of beautiful is not ugly, but wrong.

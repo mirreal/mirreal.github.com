@@ -1,0 +1,44 @@
+---
+layout: page
+title: "2016-04-17"
+date: 2016-04-17 20:36
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### postMessage
+
+#### 发送消息
+
+语法
+
+```js
+otherWindow.postMessage(message, targetOrigin);
+```
+
+example
+
+```js
+window.postMessage({
+  'color': 'blue',
+  'size': 19
+}, '*');
+```
+
+#### 接收消息
+
+```js
+window.addEventListener('message', function(event) {
+  if (event.origin !== 'http://yuan.m.taobao.com:8080') return;
+
+  console.log(event);
+
+}, false);
+```
+
+## 阅读
+
+[既然昆虫有趋光性，为什么昆虫不齐刷刷地奔向太阳？](https://www.zhihu.com/question/21260723/answer/29561931)

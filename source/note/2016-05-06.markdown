@@ -1,0 +1,78 @@
+---
+layout: page
+title: "2016-05-06"
+date: 2016-05-06 11:02
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+
+[Promise 反模式](http://taobaofed.org/blog/2016/05/03/promise-anti-patterns/)
+
+
+[当我们说软件工程师的时候我们在说什么](https://zhuanlan.zhihu.com/p/20824976)
+
+
+## 聚沙
+
+### 分号
+
+不插入的案例
+
+```js
+s = function(x) {
+  return x*x
+}
+
+(1 + 2).toString(8)
+```
+
+### 定义文档兼容性
+
+> 与任何早期浏览器版本相比，Internet Explorer 8 对行业标准提供了更加紧密的支持。 因此，针对旧版本的浏览器设计的站点可能不会按预期显示。 为了帮助减轻任何问题，Internet Explorer 8 引入了文档兼容性的概念，从而允许您指定站点所支持的 Internet Explorer 版本。 文档兼容性在 Internet Explorer 8 中添加了新的模式；这些模式将告诉浏览器如何解释和呈现网站。 如果您的站点在 Internet Explorer 8 中无法正确显示，则可以更新该站点以支持最新的 Web 标准（首选方式），也可以强制 Internet Explorer 8 按照在旧版本的浏览器中查看站点的方式来显示内容。 通过使用 meta 元素将 X-UA-Compatible 标头添加到网页中，可以实现这一点。
+这将允许您选择何时更新站点以支持由 Internet Explorer 8 支持的新功能。
+
+
+好官方的语调，简单来说，就是：
+
+`X-UA-Compatible` 当初是针对 IE8 新加的一个配置
+
+用于为 IE8 指定不同的页面渲染模式，比如使用 IE7 兼容模式，或者是采用最新的引擎。
+
+现在基本也不需要前者的降级模式，更多的是写入 `IE=edge` 支持最新特性
+
+而 `chrome=1` 则会激活 Google Chrome Frame，前提是你的 IE 安装过这个插件
+
+
+#### 为什么要用X-UA-Compatible？
+
+在 IE8 刚推出的时候，很多网页由于重构的问题，无法适应较高级的浏览器，所以使用 `X-UA-Compatible` 强制 IE8 采用低版本方式渲染。
+
+使用下面这段代码后，开发者无需考虑网页是否兼容 IE8 浏览器，只要确保网页在 IE6、IE7 下的表现就可以了。
+
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+```
+
+而下面这段代码：
+
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+```
+
+`IE=edge` 告诉 IE 使用最新的引擎渲染网页，`chrome=1` 则可以激活 Chrome Frame[1]。
+
+https://msdn.microsoft.com/zh-cn/library/cc288325(v=vs.85).aspx
+
+http://lightcss.com/add-x-ua-compatible-meta-to-your-website/
+
+
+### mark
+
+http://www.amp-what.com/
+
+
+[MORE](http://blog.mirreal.net/note/2016-05-06.html)

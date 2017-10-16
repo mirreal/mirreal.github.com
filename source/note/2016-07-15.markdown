@@ -1,0 +1,12 @@
+---
+layout: page
+title: "2016-07-15"
+date: 2016-07-15 10:02
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[敏捷之殇](http://my.oschina.net/xuemingdeng/blog/700003)

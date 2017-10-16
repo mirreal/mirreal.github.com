@@ -1,0 +1,81 @@
+---
+layout: page
+title: "2016-06-17"
+date: 2016-06-17 09:39
+comments: true
+sharing: true
+footer: true
+---
+
+
+## 阅读
+
+[保持简单：Uber流处理架构演进的四字箴言](https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2650992977&idx=1&sn=24e81c309fca42124fa3f15232464fd5)
+
+[像素化你的代码](https://imququ.com/post/code2png-encoder.html)
+
+## 聚沙
+
+### ng-class
+
+在 angular 中为我们提供了3种方案处理 class：
+
+1. scope变量绑定，如上例。
+2. 字符串数组形式。
+3. 对象key/value处理。
+
+将 class 放入 controller scope 之上
+
+```js
+function ctr($scope){
+   $scope.test = “classname”;
+}
+```
+
+template
+
+```html
+<div class=”{{test}}”></div>
+```
+
+字符串数组形式是针对 class 简单变化，具有排斥性的变化，true 是什么 class，false 是什么 class，其形如:
+
+```js
+function Ctr($scope) {
+    $scope.isActive = true;
+}
+```
+
+template
+
+```html
+<div ng-class="{true: 'active', false: 'inactive'}[isActive]">
+</div>
+```
+
+对象 key/value 处理主要针对复杂的 class 混合，其形如：
+
+```js
+function Ctr($scope) {
+  $scope.isSelected = true;
+  $scope.isCar = true;
+}
+```
+
+template
+
+```html
+<div ng-class="{'selected': isSelected, 'car': isCar}">
+</div>
+```
+
+当 `isSelected = true`，则增加 selected class，
+
+当 `isCar = true`，则增加 car class，
+
+所以结果可能是4种组合。
+
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-06-17.html)

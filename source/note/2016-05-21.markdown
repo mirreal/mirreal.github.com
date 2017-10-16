@@ -1,0 +1,18 @@
+---
+layout: page
+title: "2016-05-21"
+date: 2016-05-21 21:48
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### SSH
+
+基本用法：
+
+```sh
+ssh user@host
+```

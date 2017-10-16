@@ -1,0 +1,8 @@
+---
+layout: page
+title: "2016-12-12"
+date: 2016-12-12 18:55
+comments: true
+sharing: true
+footer: true
+---

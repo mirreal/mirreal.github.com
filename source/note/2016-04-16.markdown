@@ -1,0 +1,25 @@
+---
+layout: page
+title: "2016-04-16"
+date: 2016-04-16 19:50
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### decodeuricomponent uri malformed
+
+```js
+var string = '%CE%D2%CA%C7%CC%D4%B1%A6%BB%E1%D4%B1';
+```
+
+原因：中文编码出错，成乱码，无法解析
+
+解决：从上游解决
+
+
+### 关于 delete 可以删除什么，不能删除什么
+
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/delete

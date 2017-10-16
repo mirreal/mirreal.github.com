@@ -1,0 +1,62 @@
+---
+layout: page
+title: "2017-04-07"
+date: 2017-04-07 16:58
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### 一种取消 promise 的方式
+
+```js
+function makeCancelable(promise) {
+    let hasCanceled_ = false;
+
+    const wrappedPromise = new Promise((resolve, reject) => {
+        promise.then(val =>
+            hasCanceled_ ? reject({ isCanceled: true }) : resolve(val)
+        );
+        promise.catch(error =>
+            hasCanceled_ ? reject({ isCanceled: true }) : reject(error)
+        );
+    });
+
+    return {
+        promise: wrappedPromise,
+        cancel() {
+            hasCanceled_ = true;
+        }
+    };
+}
+```
+
+### import & export
+
+```js
+import _ from 'lodash';
+```
+
+是下列写法的简写形式：
+
+```js
+import { default as _ } from 'lodash';
+```
+
+### debounce onChange
+
+[Take care of React's event pooling](https://facebook.github.io/react/docs/events.html#event-pooling)
+
+换种思路，也可以 `debounce` ` onChange` 事件里面的 `fetch` 方法
+
+毕竟我们的本质其实是想减少请求
+
+### 使用 new RegExp 需谨慎
+
+这次是我自己把浏览器搞坏了，没有处理字符串的特殊字符，比如 `\` 和 `|`
+
+```js
+const reg = new RegExp(key, 'gi');
+```

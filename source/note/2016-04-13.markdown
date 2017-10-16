@@ -1,0 +1,15 @@
+---
+layout: page
+title: "2016-04-13"
+date: 2016-04-13 09:45
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[说说Float那个被埋没的志向](http://www.html-js.com/article/3525)
+
+
+[我是一个Java class](https://mp.weixin.qq.com/s?__biz=MzAxOTc0NzExNg%3D%3D&mid=416976590&idx=1&sn=22823ada76d8cfd26a43e8d3a7b7a60e)

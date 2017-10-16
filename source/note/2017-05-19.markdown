@@ -1,0 +1,28 @@
+---
+layout: page
+title: "2017-05-19"
+date: 2017-05-15 00:03
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+## 阅读
+
+#### [[译] 为何 TypeScript 愈发流行了](https://juejin.im/post/59152911a22b9d0058fd5fe8)
+
+这篇文章试图探讨驱使TypeScript 愈来愈流行的因素，除了 Angular2，以及微软在企业级应用的影响等，其真实原因可能是现如今 JavaScript 开发越来越高的复杂性以及越来越强大的能力。
+
+#### [美团点评酒旅前端的技术体系](http://tech.meituan.com/hotel-fe-tech-system.html)
+
+对于边界越来越模糊的前端开发，一个完备的技术体系应当包括流程规范，技术工具栈，构建工具栈，自动化测试，部署流程和部署平台，监控体系，文章分享了团队技术体系的细节以及对当前真个架构的思考。
+
+#### [A11y.css](http://ffoodd.github.io/a11y.css/)
+
+A11y.css 旨在向开发人员警告 HTML 代码中存在的潜在风险和错误， 可以通过简单地将其作为外部样式表来粗略地评估站点的质量。
+
+#### [WebAssembly 简明漫画介绍](https://www.smashingmagazine.com/2017/05/abridged-cartoon-introduction-webassembly/)
+
+文章采用漫画的形式生动地介绍 WebAssembly 到底是什么，以及为什么它可以那么快。

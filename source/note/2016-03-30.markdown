@@ -1,0 +1,18 @@
+---
+layout: page
+title: "2016-03-30"
+date: 2016-03-30 09:28
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+
+## 阅读
+
+[Clickjacking简单介绍](http://drops.wooyun.org/papers/104)
+
+[20年过去了，重新审视设计模式](http://www.jianshu.com/p/f1261a51e8cf)
+[Reclaiming Design Patterns (20 Years Later)](http://blogs.tedneward.com/post/reclaiming-design-patterns/)

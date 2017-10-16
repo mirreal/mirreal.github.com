@@ -1,0 +1,12 @@
+---
+layout: page
+title: "2015-11-21"
+date: 2015-11-21 12:59
+comments: true
+sharing: true
+footer: true
+---
+
+小心无意引入的隐藏字符
+
+[“短”化你的代码](http://ucren.com/blog/archives/549)

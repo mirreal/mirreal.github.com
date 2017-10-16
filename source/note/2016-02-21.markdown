@@ -1,0 +1,49 @@
+---
+layout: page
+title: "2016-02-21"
+date: 2016-02-21 14:09
+comments: true
+sharing: true
+footer: true
+---
+
+## 移动开发调试笔记
+
+### 1.Chrome
+
+1. 打开测试机上面“开发者选项”中的 “USB 调试”功能。
+2. 在桌面版 Chrome 中输入 `chrome://inspect` 即可查找你的设备，在移动设备中的 Chrome 浏览器中打开要测试的网页
+
+### 2.WebView
+
+
+
+##### 工具：Weinre
+
+
+
+### 代理工具
+
+
+
+#### Charels
+
+
+
+https相关设置
+
+
+
+在`SSL proxy settings`中选中`Enable SSL Proxying`,同时需要在下面的location列表添加需要代理的域名和端口443(SSL默认端口号)
+
+
+
+同时需要在手机安装证书，http://www.charlesproxy.com/documentation/additional/legacy-ssl-proxying/
+
+
+
+Chrome下的Charles代理
+
+
+
+map local

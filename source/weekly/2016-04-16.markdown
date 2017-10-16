@@ -1,0 +1,94 @@
+---
+layout: page
+title: "2016-04-16"
+date: 2016-04-16 00:49
+comments: true
+sharing: true
+footer: true
+---
+
+## 业界动态
+
+#### [Facebook 的野心：这个由 App 引领的时代该结束了](http://www.geekpark.net/topics/215169)
+Facebook 近日召开了他们开年以来最重要的一场大会——F8 开发者大会。大会上最亮眼、所占比重最大的即时通讯应用 Messenger 可能会让你觉得似曾相识。
+
+#### [10 Lessons from 10 Years of Amazon Web Services](http://www.allthingsdistributed.com/2016/03/10-lessons-from-10-years-of-aws.html)
+亚马逊 AWS 服务上线整整 10 年了。打造和运行一个安全、可靠、可伸缩、性能可预测的服务，并且成本尽可能低，AWS 团队经历了无数的教训，亚马逊 Werner Vogels 挑选了10个与大家分享。[译文点击这里](http://blog.jobbole.com/99540/)。
+
+#### [美洽：SaaS 服务如何做出中国特色？](http://cn.technode.com/post/2016-04-08/saas-4/)
+在美国，以 Salesforce、Workday、Zendesk 为代表的 SaaS 服务商都已成为数十亿甚至上百亿市值的企业时，SaaS 服务才开始被中国的资本与互联网公司接受。美洽是一个为企业提供整合多渠道信息并进行实时在线客服服务的平台，其创始人为我们分享了他在做 SaaS 服务上的心得。
+
+#### [Android Studio 2.0新特性：即时运行和云测试实验室](http://www.infoq.com/cn/news/2016/04/android-studio-2)
+[Android Studio 2.0](http://developer.android.com/sdk/index.html) 带来了多项新特性和改进，包括即时运行、集成一个测试真实设备的谷歌服务、更快的模拟器、更快的构建速度、GPU优化器和调试器、支持深度链接等。
+
+
+#### [NPM蠕虫漏洞披露](http://www.infoq.com/cn/news/2016/04/npm-infection?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global)
+NPM 项目已正式承认其存在一个长期的安全漏洞，该漏洞可能导致恶意的代码包可以在开发者系统上随意的运行任意代码，导致了第一个 NPM 创建的蠕虫。
+
+#### [我是一个 Java class](https://mp.weixin.qq.com/s?__biz=MzAxOTc0NzExNg%3D%3D&mid=416976590&idx=1&sn=22823ada76d8cfd26a43e8d3a7b7a60e)
+
+本文用一个拟人化的故事讲述 Java 虚拟机，介绍 JAVA 虚拟机最有趣的方法。@路晟 推荐
+
+#### [Windows 环境下的 Bash 试玩体验](https://www.webreflection.co.uk/blog/2016/04/13/bash-on-ubuntu-on-windows)
+
+微软在前两周的 Build 开发者大会上发布了其与 Ubuntu 合作推出的 Bash 二进制包，本文是来自在 Twitter 、Facebook 和诺基亚都工作过的一位开发者对此的抢先试玩报告。总结来说，Windows 下的 Bash 能够满足 Unix 开发环境的大部分需求，比如开箱即用的 curl、cat、sed 甚至 vi；不过还是存在一些欠缺以及丑陋的地方，比如默认拥有 root 权限但大部分网络相关的操作却会失败，再比如不支持全局的 ctrl+c / ctrl+v 操作等等。
+
+## 前端技术
+
+#### [ES6 module loading: More complicated than you think](https://www.nczonline.net/blog/2016/04/es6-module-loading-more-complicated-than-you-think/)
+
+ES6 的一个重要特性之一就是在语言层面上对于模块有了正式的定义。但很多人可能还存在一些困惑，比如为什么在解析之前我需要明确指定某个文件中包含模块？为什么不能通过检查是否有 import 和 export 来判断？模块是如何被加载的？等等。如果你也存在这些困惑，不妨看看这篇文章。
+
+#### [JavaScript 的 4 种内存泄漏及解决方法](https://auth0.com/blog/2016/01/26/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/)
+
+虽然更加现代的 JS 引擎的垃圾回收机制都已经足够强大，但是如果不小心的话，还是很容易掉进内存泄漏的坑里。本文对最常见的 4 种内存泄漏的产生原因以及解决方式都做了详细的总结，非常全面。
+
+####  [一张图告诉你为何 JavaScript 开发起来如此让人疯狂](http://www.planningforaliens.com/blog/2016/04/11/why-js-development-is-crazy/)
+
+这张图是一张钟形曲线图，x轴表示代码行数/复杂度，y轴表示 JavaScript 应用的数量。而你写的应用，最有可能出现在钟形曲线的中间，当你处于中间的时候，你就不自觉地「过度工程化」你的应用了，比如当你选择 React 技术栈的时候。所以一切都不可避免地走向疯狂： **大多数你用来解决问题的工具，都是在解决根本不存在的问题或者将来也不会出现的问题** 。
+
+#### [浏览器同源政策及其规避方法](http://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
+
+"同源政策"是浏览器安全的基石，很多人都知道这一点，但了解得不全面。本文较为详细地介绍了"同源政策"的各个方面，以及如何规避它。
+
+#### [跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
+
+CORS 大家可能都比较了解了，但本文详细介绍了 CORS 的内部机制，值得一看。
+
+#### [EQCSS - A CSS Extension for Element Queries & More](http://elementqueries.com/?utm_campaign=Front%2BEnd%2BDev%2BWeekly&utm_medium=web&utm_source=Front_End_Dev_Weekly_93)
+
+Element Queries 是一种新的响应式网站设计的方式，它针对元素来设置响应条件，比 CSS 媒体查询的条件更丰富和灵活。
+
+#### [WordPress CSS Coding Standards：WordPress 的 CSS 代码标准](http://hao.jobbole.com/wordpress-css-coding-standards/?utm_source=blog.jobbole.com&utm_medium=sidebar-resources)
+
+像其他代码标准一样，从核心代码到主题再到插件，WordPress 的 CSS 代码标准是为了提供给Wordpress开源社区和项目建立基准，让他们更好地进行合作和评估。其中的代码和文件，就像某一个团队出品的一样。还有一个重要的点，WordPress 的 CSS代码应该是可读、有意义、一致以及别致的。
+
+#### [Using Map and Reduce in Functional JavaScript](http://www.sitepoint.com/map-reduce-functional-javascript/)
+
+所有人都在谈论 ECMAScript6，甚至是 ECMAScript7 里出现的令人吃惊的新特性，因此我们很容易忘掉 ECMAScript5 带给我们一些很棒的方法来支持在 JavaScript 里进行函数编程。本文并没有讲解什么新特性，只是带领我们复习了一遍“古老”的 map 和 reduce。
+
+#### [图解 Flux](https://www.sdk.cn/news/2950)
+
+在如今的 Web 开发领域，Flux 是最流行也是最容易被大家所误解的技术之一。本教程打算以一种大家都能理解方式图解 Flux。
+
+#### [A-Frame入门 —— Web也能做虚拟现实了](http://aerotiger.info/archives/a-frame-the-easiest-way-to-bring-vr-to-the-web-today.html)
+
+如今 VR 可谓是是风生水起，下一个引爆世界的技术，本文介绍的 [A-Frame](https://aframe.io/) 是一个在 Web 世界中创造 VR 体验的框架。依赖 [Three.js](http://threejs.org/) 和 [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) 来创建VR场景，而且能让开发者可以构建丰富的 API 来创建一个可扩展的 VR Web。
+
+## 程序人生
+
+#### [Classic Programmer Paintings](http://classicprogrammerpaintings.tumblr.com/)
+
+从某种角度来看，编程确实可以看作是一种艺术创作活动。那么我们其实可以认为，要创作出更好的软件和程序，程序员就需要尽可能地培养艺术家的特质。方法之一就是欣赏名画，那么在程序员的眼中，古典名画究竟表达了些什么？
+
+#### [怎样使用 GitHub](https://www.zhihu.com/question/20070065/answer/79557687)
+
+一个文科妹子写的 Github 入门教程，很是生动有趣。
+
+#### [给年轻程序员们的10点启示](http://www.jianshu.com/p/19783ae9bcad)
+
+作者语：成为一名 IT 管理者后，从更多的程序员的身上看到他们身上的一些特质对其职业生涯所产生的影响，希望从一些不同的角度给予年轻程序员朋友们一些启发。
+
+------
+
+- 本期编辑：@沐莘 @天默 @在原

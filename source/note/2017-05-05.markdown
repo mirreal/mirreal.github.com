@@ -1,0 +1,40 @@
+---
+layout: page
+title: "2017-05-05"
+date: 2017-04-27 23:41
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### require timeout error
+
+> The paths config was used to set two module IDs to the same file, and that file only has one anonymous module in it. If module IDs "something" and "lib/something" are both configured to point to the same "scripts/libs/something.js" file, and something.js only has one anonymous module in it, this kind of timeout error can occur. The fix is to make sure all module ID references use the same ID (either choose "something" or "lib/something" for all references), or use map config.
+
+http://requirejs.org/docs/errors.html#timeout
+
+简而言之，出现这种错误可能是对同一模块配置两个相同的 ID
+
+而我遇到的是，自然是 header，和 index 分别以不同名字引用相同的 航班搜索组件
+
+## 阅读
+
+How to build a math expression tokenizer using JavaScript (or any other language) https://medium.freecodecamp.com/how-to-build-a-math-expression-tokenizer-using-javascript-3638d4e5fbe9
+
+MobX 中文文档 http://cn.mobx.js.org/
+
+#### [Android 开发最佳实践](https://github.com/futurice/android-best-practices/blob/master/translations/Chinese/README.cn.md)
+
+#### [xxx](https://juejin.im/post/590702d98d6d810058dd0537)
+
+#### [代码中添加注释之好坏丑](https://juejin.im/post/5902126aa0bb9f0065e80ea9)
+
+#### [Safely Accessing Deeply Nested Values In JavaScript](https://medium.com/javascript-inside/safely-accessing-deeply-nested-values-in-javascript-99bf72a0855a)
+
+这是一篇简短的文章，主要介绍如何优雅安全地在 JavaScript 中访问深层嵌套数据结构的几种不同方法。可以使用几行 JS 代码实现，也可以借助一些类库，方法会有差异但都能很好地解决这个问题。
+
+https://blog.chromium.org/2017/05/chrome-59-beta-headless-chromium-native.html
+
+https://developers.google.com/web/updates/2017/04/headless-chrome

@@ -1,0 +1,50 @@
+---
+layout: page
+title: "2016-04-19"
+date: 2016-04-19 17:30
+comments: true
+sharing: true
+footer: true
+---
+
+
+## 聚沙
+
+### 一段代码
+
+多年前看过，没怎么看懂，现在已经好很多了
+
+```js
+[].forEach.call($$('*'),function(a){
+  a.style.outline='1px solid #'+(~~(Math.random()*(1<<24))).toString(16)
+})
+
+
+var wrong = [];
+for (var i = 0; i < 100; i++ ) {
+  var hex = (~~(Math.random()*(1<<24))).toString(16);
+
+  if (hex.length < 6 ) {
+    wrong.push(hex);
+  }
+}
+console.log(wrong)
+
+[].forEach.call($$('*'),function(a) {
+  var random = Math.random();
+
+  if (random < (1 / (1 << 4)) ) {
+    // random += 0.7;
+    console.log(random)
+  }
+  var color = (~~(random * (1<<24))).toString(16);
+
+  if (color.length < 6) {
+    a.style.outline = '10px solid #' + color + 'a';
+    console.log(color, a)
+  } else {
+    a.style.outline = '1px solid #' + color;
+  }
+
+})
+```

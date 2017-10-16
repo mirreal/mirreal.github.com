@@ -1,0 +1,57 @@
+---
+layout: page
+title: "2016-05-28"
+date: 2016-05-28 10:59
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### EditorConfig
+
+一个用于设置 Python 和 JavaScript 行尾和缩进风格的配置文件。来自 http://editorconfig.org/
+
+```sh
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Matches multiple files with brace expansion notation
+# Set default charset
+[*.{js,py}]
+charset = utf-8
+
+# 4 space indentation
+[*.py]
+indent_style = space
+indent_size = 4
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab
+
+# Indentation override for all JS under lib directory
+[lib/**.js]
+indent_style = space
+indent_size = 2
+
+# Matches the exact files either package.json or .travis.yml
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2
+```
+
+http://editorconfig.org/
+
+## 乱弹
+
+* [Untangling Spaghetti Code: How to Write Maintainable JavaScript](https://www.sitepoint.com/write-maintainable-javascript/) 这片文章之前猿小报推荐过，目前在网上还看到两个译本，一个是 [解开面条代码: 怎样书写可维护JavaScript](http://jixianqianduan.com/article-translation/2016/05/20/how-to-write-maintainable-js.html)，一个是月影翻译的 [寻找头绪：编写可维护的 JavaScript](https://www.h5jun.com/post/untangling-spaghetti-code-writing-maintainable-javascript.html)，人们对于这一块看来是有一致的认同
+* 没有第二条

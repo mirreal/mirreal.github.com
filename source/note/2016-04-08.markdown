@@ -1,0 +1,20 @@
+---
+layout: page
+title: "2016-04-08"
+date: 2016-04-08 13:40
+comments: true
+sharing: true
+footer: true
+---
+
+
+## TODO READING
+
+http://www.html-js.com/article/JavaScript-tips-on-how-to-implement-a-ECMAScript-6-promise-patch
+如何实现一个ECMAScript 6 的promise功能
+
+http://bg.biedalian.com/2014/03/01/I-promise-I-resolve-v2.html
+
+http://www.html-js.com/article/1752
+
+http://mao.li/javascript/javascript-callback-function/

@@ -1,0 +1,69 @@
+---
+layout: page
+title: "2016-05-27"
+date: 2016-05-27 12:53
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[别人家的面试题：一个整数是否是“4”的N次幂](https://www.h5jun.com/post/power-of-four.html)
+
+[互联网公司员工睡觉那些事](https://mp.weixin.qq.com/s?__biz=MzA3NDk4ODUxMg==&mid=2651958292&idx=1&sn=8d98af9a6c633a2838ac3d015afbc2e8)
+
+[JavaScript函数式编程探索与思考](https://wenjs.me/p/javascript-functional-programming)
+
+[顶尖程序员不同于常人的5个区别](http://www.jianshu.com/p/05de8f667eea)
+
+[Material Design技术分享](https://mp.weixin.qq.com/s?__biz=MzI1NjEwMTM4OA%3D%3D&mid=2651231829&idx=1&sn=2418c741e7f0e41f6ac4fff4dc2de6f0)
+
+[前端测试工具集锦](http://qaseven.github.io/2016/05/24/front-end-tools/)
+
+[怎样书写可维护JavaScript](http://jixianqianduan.com/article-translation/2016/05/20/how-to-write-maintainable-js.html)
+
+https://www.sitepoint.com/write-maintainable-javascript/
+
+## 聚沙
+
+### 二进制 1 的个数
+
+```js
+var countBit = function(num) {
+  var count = 0;
+
+  while (num > 0) {
+
+    if (num & 1 !== 0) {
+      count += 1;
+    }
+    // 可以是这样
+    // count += num & 1;
+
+    num >>= 1;
+  }
+
+  return count;
+};
+```
+
+更好的做法：
+
+```js
+function countBit(n){
+    var ret = 0;
+    while(n > 0){
+        ret++;
+        n &= n - 1;
+    }
+    return ret;
+}
+```
+
+## 乱弹
+
+* 在大学里很多事情都荒废了，这种算法本来就是小儿科，如今我却要 javascript 来写，位运算在 c 这类语言代表效率，在 js 中却未必
+
+
+[MORE](http://blog.mirreal.net/note/2016-05-27.html)

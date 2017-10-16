@@ -1,0 +1,45 @@
+---
+layout: page
+title: "2016-03-12"
+date: 2016-03-12 13:29
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+成为高效开发者这件事你可以通过经验、书本、或者试验和错误来学习。但成为高效开发者的最有效方式之一是直接向高效开发者学习。作者访谈了 Facebook 的几位最高产的工程师，发现这些开发者最高生产力的基础结构，总结了他们的共同经验以及晋级之路，供参考。
+
+[How to Level up as a Developer](https://medium.freecodecamp.com/how-to-level-up-as-a-developer-87344584777c) https://medium.freecodecamp.com/how-to-level-up-as-a-developer-87344584777c
+
+
+用一个实际的例子普及了 WebGL 和一些计算机图形学的概念，随着 VR 的持续升温以及 Web VR API 的跟进，未来 web 上视觉系大有可为，在 web 建立各种美妙的应用。
+
+[记录一个three.js项目](http://www.cnblogs.com/pursues/archive/2016/02/29/5226807.html) http://www.cnblogs.com/pursues/archive/2016/02/29/5226807.html
+
+有一些人总是追赶着技术，有什么新技术不管三七二十一立马就用，结果被各种坑。又有一些人，总是担心新技术带来的技术风险，不愿意学习。而我想说，我们需要保持的是一个拥抱变化的心，以及理性分析的态度。在新技术的面前，不盲从，也不守旧，一切的决策都应该建立在认真分析的基础上，这样才能应对技术的变化。
+
+[被误解的MVC和被神化的MVVM](http://www.infoq.com/cn/articles/rethinking-mvc-mvvm) http://www.infoq.com/cn/articles/rethinking-mvc-mvvm
+
+## issues
+
+一个 box-shadow 效果图 [http://elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html](http://elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
+
+#### 关于AlphaGo
+
+[AlphaGo的分析](http://zhuanlan.zhihu.com/yuandong/20607684)
+
+[蒙特卡罗树搜索](http://www.codingpy.com/article/monte-carlo-tree-search-and-alphago/)
+
+#### 每天发现一个好链接
+
+[http://admire.so/](http://admire.so/)
+
+---
+
+#### WebVR
+
+[Introducing the WebVR 1.0 API Proposal](https://hacks.mozilla.org/2016/03/introducing-the-webvr-1-0-api-proposal/)
+
+[Build the Virtual Reality Web with A-Frame](https://hacks.mozilla.org/2016/03/build-the-virtual-reality-web-with-a-frame/)

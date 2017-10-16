@@ -1,0 +1,33 @@
+---
+layout: page
+title: "2015-12-10"
+date: 2015-12-10 00:14
+comments: true
+sharing: true
+footer: true
+---
+
+## Flexbox 的一些兼容方案
+
+还在使用着 `display: box`，其实已经过时了
+
+```css
+{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  flex-direction: row;  
+}
+```
+
+子元素这样写：
+
+```css
+{
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+```

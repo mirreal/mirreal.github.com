@@ -1,0 +1,48 @@
+---
+layout: page
+title: "2016-06-28"
+date: 2016-06-28 08:07
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[如何给变量取个简短且无歧义的名字](http://yemengying.com/2016/06/25/cleanCode4naming/)
+
+[ES6才是彻底改变了JS代码的编写方式](https://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&mid=2247483872&idx=1&sn=32d50c1c6320a5f07dbf52ab3144bc13)
+
+
+## 聚沙
+
+### Chrome devTools Time/Latency
+
+> Time is total duration, from the start of the request to the receipt of the final byte in the response. Latency is the time to load the first byte in the response.
+
+Time 是从请求开始到接收到最后一个字节的总时长，Latency 是从请求开始到接收到第一个字节的时间；
+
+
+### /etc/passwd和/etc/shadow
+
+Linux系统中，所有用户（包括系统管理员）的账号和密码都可以在/etc/passwd和/etc/shadow这两个文件中找到
+
+`/etc/passwd` 只有系统管理员才可以修改的，其他用户可以查看，`/etc/shadow` 超级管理员
+
+
+```sh
+plutil -p mirreal.plist
+{
+  "smb_sid" => [
+    0 => "XXXX-XXXX"
+  ]
+  "uid" => [
+    0 => "0"
+  ]
+  "passwd" => [
+    0 => "XXYYXX"
+  ]
+}
+```
+
+[MORE](http://blog.mirreal.net/note/2016-06-28.html)

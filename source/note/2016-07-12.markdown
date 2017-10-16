@@ -1,0 +1,74 @@
+---
+layout: page
+title: "2016-07-12"
+date: 2016-07-12 16:51
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[用 JavaScript 编写λ演算解释器](https://github.com/xitu/gold-miner/blob/master/TODO/writing-a-lambda-calculus-interpreter-in-javascrip.md)
+
+[WebVR如此近 - three.js的WebVR示例程序解析](https://zhuanlan.zhihu.com/p/21556998)
+
+
+
+## 聚沙
+
+### HSTS
+
+HSTS是HTTP Strict Transport Security的缩写，即：“HTTP严格传输安全”。
+
+
+HTTPS最典型的用户访问过程：通常我们访问一个网站时，只在浏览器中输入网站地址，而不输入协议名。HTTPS网站的做法是对用户的HTTP访问做302跳转到HTTPS，并重新建连。
+
+
+但是这个过程明显存在两个不足之处：
+
+* 整个通信过程中的前两个RT是没有意义的；
+* 使用了不安全的HTTP通信，万一你是在提交敏感数据呢。
+
+
+HSTS的具体工作机制可描述如下：服务器端配置支持HSTS后，会在给浏览器返回的HTTP首部中携带HSTS字段。浏览器获取到该信息后，会将所有HTTP访问请求在内部做307跳转到HTTPS。而无需任何网络过程。
+
+
+但是HSTS是有缺陷的，第一次访问网站的客户端，HSTS并不工作。 要解决这个问题，就要了解我们下面要讲解的HSTS preload list。
+
+HSTS preload list是Chrome浏览器中的HSTS预载入列表，在该列表中的网站，使用Chrome浏览器访问时，会自动转换成HTTPS。Firefox、Safari、Edge浏览器也在采用这个列表。
+
+### rgbColor
+
+```js
+let rgbColor = {
+    r: 234,
+    g: 36,
+    b: 122
+};
+let hexColor = rgbColor2HEX(rgbColor.r, rgbColor.g, rgbColor.b);
+console.log(hexColor); // #ea247a
+
+function rgbColor2HEX(r, g, b) {
+  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).substr(1);
+}
+```
+
+### 蛇精病的做法
+
+```js
+let a = 3;
+let b = 6;
+
+function swop(a, b) {
+  a ^= b;
+  b ^= a;
+  a ^= b;
+}
+swop(a, b);
+console.log(a, b); // 6, 3
+```
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-07-12.html)

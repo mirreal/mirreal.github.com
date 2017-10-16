@@ -1,0 +1,58 @@
+---
+layout: page
+title: "2016-03-04"
+date: 2016-03-04 21:31
+comments: true
+sharing: true
+footer: true
+---
+
+## 站点
+
+【DeveloperWorks 中国站网站投稿指南】
+https://www.ibm.com/developerworks/cn/author/
+
+## 聚沙
+
+### 操纵历史记录
+
+Hisory API
+
+location
+
+### 刷新页面
+
+```js
+location.reload()
+history.go(0)
+
+location.replace(location)
+location = location
+
+location.assign(url) // 打开一个新的 URL
+```
+
+### 名词
+
+href 到底是什么 hypertext reference
+
+浏览器推送
+
+## 题目
+
+获取search的几种方式
+
+科学上网
+
+前端测试工具
+
+## 阅读
+
+被误解的MVC和被神化的MVVM
+http://www.infoq.com/cn/articles/rethinking-mvc-mvvm
+
+## 止步
+
+关注太多
+
+不专注

@@ -1,0 +1,89 @@
+---
+layout: page
+title: "2016-05-05"
+date: 2016-05-05 09:46
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[语句在JavaScript中的值](http://blog.csdn.net/aimingoo/article/details/51136511)
+
+[10个“Chrome开发者工具”使用技巧](https://blog.wilddog.com/?p=680)
+
+[dev tips](https://umaar.com/dev-tips/)
+
+[一键收藏至Github](https://segmentfault.com/a/1190000005052495)
+
+[免费翻墙镜像和工具](http://w3cboy.com/post/2014/08/free-over-the-wall-tools-and-mirrors/)
+
+[函数式编程离我们有多远](https://www.h5jun.com/post/functional-how-far.html)
+
+[贴吧 React 最佳实践](https://github.com/fex-team/fit/issues/1)
+
+[震惊小伙伴的单行代码●Scala篇](http://www.vaikan.com/10-scala-one-liners-to-impress-your-friends)
+
+
+
+## 轨迹
+
+### 红绿灯大战
+
+http://www.w3ctech.com/topic/951
+
+http://blog.csdn.net/aimingoo/article/details/45014325
+
+## 聚沙
+
+### IE8 IE9 的控制台
+
+遇到一个奇怪的问题（其实搞清楚原因，好像也很正常了），小蜜在 IE8 IE9 无法加载，提示 `script error`
+
+第一反应就是又是哪个函数不支持，准备打开控制台看看，结果又什么事都没有了，NIMA，怎么调试
+
+什么东西会因为控制台就好了，到底会是什么呢。。。其实就是控制台本身
+
+> console.log is there in IE8, but the console object isn't created until you open DevTools. Therefore, a call to console.log may result in an error, for example if it occurs on page load before you have a chance to open the dev tools.
+
+
+IE8/IE9 要开启 IE Dev Tools 才能使用 console
+
+切忌把 IE8/9 想成 Chrome/Firefox，以为永远有 window.console 可用
+
+PS: 终于，IE10 改邪归正向 Chrome/Firefox 看齐，console 不再像段誉的六脉神剑时有时无。
+
+但只要 IE8/9 还在一天，console 检查还是不能少
+
+事实上，IE8/9 从未死去，所以
+
+就像这样：
+
+```js
+
+if (window.console) {
+  console.log('log here');
+}
+```
+
+要是有一堆 `console.log`, `console.count`, `console.error`, `console.time`, `console.profile`，... 这样去写，那还不把人恶心死
+
+写个 console polyfill 吧
+
+当然其实也不会有那么多些奇奇怪怪的 console
+
+参考：
+
+http://stackoverflow.com/questions/690251/what-happened-to-console-log-in-ie8
+
+https://msdn.microsoft.com/library/gg589530(v=vs.85).aspx
+
+
+另外一篇兼容 IE8 的文章：
+
+http://www.zplan.net/news.php?id=232
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-05-05.html)

@@ -1,0 +1,102 @@
+---
+layout: page
+title: "2016-06-14"
+date: 2016-06-14 09:39
+comments: true
+sharing: true
+footer: true
+---
+
+是否在纠结是不是要加逗号
+
+[最后一个参数后面也允许加逗号了](http://www.cnblogs.com/ziyunfei/p/5543304.html)
+
+应该不用写成这样了
+
+```js
+var   fs   = require('fs')
+    , mkdirp = require('mkdirp')
+    , path = require('path')
+    , uglify = require('gulp-uglify')
+    ;
+```
+
+
+## 聚沙
+
+### KOA
+
+http://book.apebook.org/minghe/koa-action/index.html
+
+http://javascript.ruanyifeng.com/nodejs/koa.html
+
+http://koajs.com/
+
+Koa 应用是一个包含中间件 generator 方法数组的对象。当请求到来时, 这些方法会以 stack-like 的顺序执行, 从这个角度来看，Koa 和其他中间件系统（比如 Ruby Rack 或者 Connect/Express ）非常相似.
+
+比如内容协商（content-negotation）、缓存控制（cache freshness）、反向代理（proxy support）重定向等常见功能都由中间件来实现. 将类似常见任务分离给中间件实现, Koa 实现了异常精简的代码.
+
+#### Hello world
+
+```js
+var koa = require('koa');
+var app = koa();
+
+app.use(function *(){
+  this.body = 'Hello World';
+});
+
+app.listen(3000);
+```
+
+app.use 方法用于向 middleware 数组添加 Generator 函数。Generator 函数的参数 `next`，表示下一个中间件。
+
+Generator 函数内部使用 `yield` 命令，将程序的执行权转交给下一个中间件，即 `yield next`，要等到下一个中间件返回结果，才会继续往下执行。
+
+意味着：只要有一个中间件缺少 `yield next` 语句，后面的中间件都不会执行
+
+#### 传参
+
+由于 Koa 要求中间件唯一的参数就是 next，导致如果要传入其他参数，必须另外写一个返回 Generator 函数的函数。
+
+```js
+function logger(format) {
+  return function *(next){
+    var str = format
+      .replace(':method', this.method)
+      .replace(':url', this.url);
+
+    yield next;
+  }
+}
+
+app.use(logger(':method :url'));
+```
+
+#### context
+
+中间件当中的 `this` 表示上下文对象 context，代表一次 HTTP 请求和回应，即一次访问/回应的所有信息，都可以从上下文对象获得。
+
+context 对象封装了 request 和 response 对象，并且提供了一些辅助方法。每次 HTTP 请求，就会创建一个新的 context 对象。
+
+
+
+### 克隆指定分支
+
+```sh
+git clone -b <branch> <remote_repo>
+```
+
+example
+
+```sh
+git clone -b demo git@gitlab.alibaba-inc.com:crm/xiaomi.git
+```
+
+## 乱弹
+
+* 万般皆可套路
+* 只会抱怨的人也只剩下抱怨了
+
+
+[MORE](http://blog.mirreal.net/note/2016-06-14.html)

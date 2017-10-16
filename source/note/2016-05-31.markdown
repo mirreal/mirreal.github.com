@@ -1,0 +1,66 @@
+---
+layout: page
+title: "2016-05-31"
+date: 2016-05-31 09:54
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[基于JavaScript的一些函数式编程概念讲解](https://segmentfault.com/a/1190000005595107)
+
+[H5 Crash 研究](http://www.barretlee.com/blog/2016/05/30/h5-crash-research/)
+
+## 聚沙
+
+### npm scripts
+
+### 管道式命令
+
+如果希望同时执行多个任务，可以借用 Linux 系统的 管道命令，将两个操作连在一起。
+
+在 package.json 文件的 scripts 字段内的一个任务可以由多个子任务组成。
+
+|：连接两个任务
+
+```js
+"build-js": "browserify browser/main.js | uglifyjs -mc > static/bundle.js"
+```
+
+&&：任务内部引用其他任务，子任务 先后 执行
+
+```js
+"build": "npm run build-js && npm run build-css"
+```
+
+&：任务内部引用其他任务，子任务 平行 执行
+
+```js
+"commit": "npm run test & npm run commit"
+```
+
+流操作示例：
+
+```js
+"scripts": {
+  "build-css": "autoprefixer -b 'last 2 versions' < assets/styles/main.css | cssmin > dist/main.css"
+}
+```
+
+上面我们在 package.json 中定义了一个叫做 build-css 的任务，他又两个任务组成；当我们使用 npm run build-css 时会执行两个子任务（前提是这两个子任务的模块在本地或全局已安装，不报错）。
+
+https://www.zybuluo.com/yangfch3/note/249328
+
+## 乱弹
+
+* 最初学习的时候，看着课本上的经典算法，想着如果用可视化的方式来呈现这一过程一定很好 [AlgorithmVisualizer](http://jasonpark.me/AlgorithmVisualizer/#path=graph_search/dfs/tree)
+* 数据好不好看，关键在于模型，在于计算公式，你其他什么也不需要做，换换公式，突然就一片大好。总之，即使数据是死的，但计算方法掌握在人的手里。更让人震惊的是，大家对此心知肚明，这样一想，好像也没有值得惊讶的了，看来我还是图样图森破。
+* 三思而后行。
+* 每一个看似不合理的动作，其实都有它的原因，和平常事物的区别在于，你是否发现其原因。而在这时候，总会出现一个愚昧的人，作出自己认为聪明的作法。
+
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-05-31.html)

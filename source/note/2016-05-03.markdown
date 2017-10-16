@@ -1,0 +1,102 @@
+---
+layout: page
+title: "2016-05-03"
+date: 2016-05-03 00:43
+comments: true
+sharing: true
+footer: true
+---
+
+
+## 阅读
+
+[隐写术总结](http://appleu0.sinaapp.com/?p=501)
+
+
+## 聚沙
+
+### webpack --config -p
+
+压缩？
+
+### Chrome devTools size or content
+
+"Size" is the number of bytes on the wire, and "content" is the actual size of the resource. A number of things can make them different, including:
+
+* Being served from cache (small or 0 "size")
+* Response headers, including cookies (larger "size" than "content")
+* Redirects or authentication requests
+* gzip compression (smaller "size" than "content", usually)
+
+相关：http://stackoverflow.com/questions/8072921/chrome-dev-tools-size-vs-content
+
+
+### IE8 postMessage
+
+虽然 postMessage 是 HTML5 的特性，但 IE8 和 Firefox3 就实现了这个 API，当然，跟后来的标准并不一致。
+
+这其实也不能怪 IE8。
+
+
+
+It's in the HTML 5 spec. It's implemented in Internet Explorer 8 and Firefox 3, but the implementation in IE8 deviates from the spec.
+
+In your iframe page, you have a code similar to this:
+
+```js
+parent.postMessage({success: 'ok', name: "mirreal"}, "*");
+```
+
+so in order to get it to work on IE 8/9, you need to convert it to the following:
+
+```js
+parent.postMessage(JSON.stringify({success: 'ok', name: "mirreal"}), "*");
+```
+
+
+
+Note: The postMessage method is supported in Internet Explorer from version 8, Firefox from version 3 and Opera from version 9.5.
+
+Note: The postMessage method is synchronous in Internet Explorer and asynchronous in other browsers.
+
+window.postMessage is syncronouse in IE 8
+
+```js
+var syncronouse = true;
+window.onmessage = function () {
+  console.log(syncronouse);// true
+};
+window.postMessage('test', '*');
+syncronouse = false;
+```
+
+http://stevesouders.com/misc/test-postmessage.php
+
+http://www.violato.net/blog/javascript/141-workaround-for-postmessage-json-issue-on-ie-89
+
+http://help.dottoro.com/ljgheukc.php
+
+
+### IE10 【续】
+
+无法获取未定义或 null 引用的属性
+
+### setTImeout
+
+```js
+(function(f) {
+   window.setTimeout = f(window.setTimeout);
+   window.setInterval = f(window.setInterval);
+})(function(f) {
+  return function(c, t) {
+    var a = [].slice.call(arguments, 2);
+    return f(function() {
+      c.apply(this, a)
+    }, t);
+  }
+});
+```
+
+https://developer.mozilla.org/zh-CN/docs/Web/API/Window/setTimeout
+
+[more](http://blog.mirreal.net/note/2016-05-03.html)

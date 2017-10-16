@@ -1,0 +1,29 @@
+---
+layout: page
+title: "2016-04-20"
+date: 2016-04-20 19:48
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[如何把 Callback 接口包装成 Promise 接口](http://www.welefen.com/post/how-to-convert-callback-to-promise.html)
+
+[作为20年开源老兵，我看开源这些年](http://36kr.com/p/5046173.html)
+
+[意识到了自己没有办法成为 top 1% 的程序员，还应该选择程序员的道路么](https://www.zhihu.com/question/41996685/answer/94768921)
+
+## 聚沙
+
+### Web Speech Api
+
+语音识别
+
+语音合成
+
+```js
+var words = new SpeechSynthesisUtterance('Uncharted 4: A Thief\'s End');  
+window.speechSynthesis.speak(words);  
+```

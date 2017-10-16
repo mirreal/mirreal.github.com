@@ -1,0 +1,118 @@
+---
+layout: page
+title: "2015-01-06"
+date: 2015-01-06 14:59
+comments: true
+sharing: true
+footer: true
+---
+
+
+### grunt
+
+```
+npm install grunt --save-dev
+```
+
+-save-dev 添加依赖到package.json
+
+### AMD
+
+#### 格式：
+
+```js
+define(id?, dependencies?, factory);
+```
+
+#### 一个简单的例子
+
+canvas.js
+
+```js
+define('canvas', [], function() {
+  function Canvas() {
+    this.canvas = document.getElementById('canvas');
+    this.context = canvas.getContext('2d');
+  }
+
+  Canvas.prototype.drawStone = function(stone) {
+    var ctx = this.context;
+
+    var x = 20 * stone.x + 10;
+    var y = 20 * stone.y + 10;
+
+    ctx.fillStyle = 'orange';
+    ctx.beginPath();
+    ctx.arc(x, y, 9, 0, Math.PI*2, false);
+    ctx.closePath();
+    ctx.fill();
+  };
+
+  return Canvas;
+});
+```
+
+game.js
+
+```js
+define('game', ['canvas'], function(Canvas) {
+  function Game() {
+    this.stones = [];
+    this.canvas = new Canvas();
+
+    this.init();
+  }
+
+  Game.prototype.init = function() {
+    var self = this;
+
+    this.createRandomStones();
+    this.draw();
+
+    this.getAroundStones();
+
+    this.eventHandler();
+
+    this.loop = setInterval(function() {
+      self.update();
+      self.draw();
+    }, 120);
+  };
+
+...
+
+  return Game;
+})
+```
+
+life.js
+
+```js
+require.config({
+  baseUrl: 'src'
+});
+
+require(['game'], function(Game) {
+  new Game();
+});
+```
+
+life.html
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Game of Life</title>
+        <link rel="icon" href="favicon.ico" />
+        <link rel="stylesheet" href="src/life.css">
+    </head>
+    <body>
+      <canvas id="canvas" width="640" height="640">Your browser does not support Canvas.</canvas>
+      <img id='snapshotImageElement'>
+      <a href="#" id="snapshotButton" class="button">Snapshot</a>
+      <script data-main="src/life" src="require.js"></script>
+    </body>
+</html>
+```

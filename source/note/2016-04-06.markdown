@@ -1,0 +1,34 @@
+---
+layout: page
+title: "2016-04-06"
+date: 2016-04-06 09:54
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[清晰、高效、一致、美观——关于设计原则的优先级排序](http://beforweb.com/node/824)
+
+[淘宝首页性能优化实践](http://www.barretlee.com/blog/2016/04/01/optimization-in-taobao-homepage/)
+
+[App架构经验总结](http://keeganlee.me/post/architecture/20160303)
+
+[王垠，请别再欺负我们读书少](http://zhuanlan.zhihu.com/p/20699215)
+
+[JavaScript中的后续传递风格](http://article.yeeyan.org/view/213582/179432)
+[By example: Continuation-passing style in JavaScript](http://matt.might.net/articles/by-example-continuation-passing-style/)
+
+[Node.js软肋之回调大坑](http://www.infoq.com/cn/articles/nodejs-callback-hell)
+
+
+## 随谈
+
+看了几篇王垠的文章，确实夹杂着很多好玩有趣的东西。
+
+有时候，觉得其实这样才是真的理解这个世界。
+
+有时候自己写了一些代码，看起来仅仅是代码而已。
+
+自己从未去追溯过深层次的原因，真正理解什么是程序。

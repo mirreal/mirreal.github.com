@@ -1,0 +1,14 @@
+---
+layout: page
+title: "2017-09-19"
+date: 2017-09-19 20:00
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+#### [基于开源项目搭建属于自己的技术栈](http://www.jianshu.com/p/42d45998117f)
+
+开源库这么多，为什么选择 A 而不选择 B，清楚各个库的优缺点，方能做出更好的判断。

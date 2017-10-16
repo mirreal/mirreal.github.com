@@ -1,0 +1,78 @@
+---
+layout: page
+title: "2017-09-16"
+date: 2017-09-17 17:23
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### 模块循环引用
+
+【A 组件】引用 【enhance 函数（C 模块）】，【enhance（C 模块）】 引入了 【alertEnhance（D 模块）】 ，其中 【alert（D 模块）】 引入【组件 B】，
+
+而 【B 组件】也引用 【enhance 函数（C 模块）】，结果找不到值
+
+### 计算 x == y 规则
+
+#### x，y 类型不同
+
+* 如果x，y其中一个是布尔值，那么对这个布尔值进行toNumber操作
+* x，y 为数字和字符串，将字符串的一方进行toNumber()操作
+* x，y一方为对象，将对象进行ToPrimitive()操作
+
+对象的隐式转换
+
+```js
+[] == ![] // true
+[] === ![] // false
+
+x.valueOf().toString()
+```
+
+### 重写 commit
+
+```bash
+git filter-branch --commit-filter '
+  if [ "$GIT_AUTHOR_EMAIL" = "yran@xxxxx.com" ];
+  then
+          GIT_AUTHOR_NAME="mirreal";
+          GIT_AUTHOR_EMAIL="zgkm181142521@gmail.com";
+          git commit-tree "$@";
+  else
+          git commit-tree "$@";
+  fi' HEAD
+```
+
+### git push
+
+```bash
+push --all --progress  "common"
+```
+
+### babel-plugin-react-css-modules
+
+记得加后缀名
+
+```js
+import './style.scss';
+```
+
+### MAC 快捷键
+
+```
+Command 鍵 ⌘
+Shift 鍵 ⇧
+Option 鍵 ⌥
+Control 鍵 ⌃
+Caps Lock 鍵 ⇪
+Fn 鍵
+```
+
+## 资源
+
+### 下拉刷新
+
+ttps://minirefresh.github.io

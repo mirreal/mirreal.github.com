@@ -1,0 +1,12 @@
+---
+layout: page
+title: "2015-12-12"
+date: 2015-12-12 12:54
+comments: true
+sharing: true
+footer: true
+---
+
+[Demo：position 和 z-index](http://www.neoease.com/tutorials/z-index/)
+
+URL 的长度限制，确实有这样一个值，只是不同浏览器会存在差异。所以使用 GET 方式传递大量数据时，一不小心就遇到限制，尤其是 JSONP 只能 GET ，但是 JSONP 本来就不是用来提交大量数据的。

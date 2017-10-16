@@ -1,0 +1,73 @@
+---
+layout: page
+title: "2016-04-10"
+date: 2016-04-10 15:03
+comments: true
+sharing: true
+footer: true
+---
+
+## 站点
+
+http://www.udpwork.com/
+
+
+## 聚沙
+
+### 文件上传
+
+```js
+var formData = new FormData();
+formData.append('file', $('#file')[0].files[0]);
+$.ajax({
+    url: '/upload',
+    type: 'POST',
+    cache: false,
+    data: formData,
+    processData: false,
+    contentType: false
+}).done(function(res) {
+}).fail(function(res) {});
+```
+
+2
+
+```js
+var fd = new FormData(document.getElementById("fileinfo"));
+fd.append("CustomField", "This is some extra data");
+$.ajax({
+  url: "stash.php",
+  type: "POST",
+  data: fd,
+  processData: false,  // 告诉jQuery不要去处理发送的数据
+  contentType: false   // 告诉jQuery不要去设置Content-Type请求头
+});
+```
+
+```js
+首先，创建一个 XMLHttpRequest2 的实例：
+
+var xhr = new XMLHttpRequest();
+添加 file 控件，这里我们使用 multiple 属性来支持多文件的选择。
+
+<input id="filename" type="file" multiple="multiple" />
+获取并保存选择的多个文件。
+
+var files = document.getElementById('filename').files;
+接下来，要介绍的是另一个 html5 推出的新对象：FormData。
+
+FormData 对象是用户的表单数据的集合， 它以键值对的形式存储了表单数据，其值能够包括数字、字符串以及文件。
+我们通过这个对象，来向服务器提交我们的文件数据。
+
+var formData = new FormData();
+formData.append('filename', files[index]); // index 为第 n 个文件的索引
+xhr.open('post', url); // url 为提交的后台地址
+xhr.send(formData);
+这样就完成了一次文件的上传，多个文件我们遍历多个文件重复这个步骤即可。
+```
+
+#### CORS
+
+利用 CORS，http://www.test2.com 只需添加一个标头，就可以允许来自 http://www.test1.com 的请求，下图是我在PHP中的 hander() 设置，“*”号表示允许任何域向我们的服务端提交请求：
+
+　　也可以设置指定的域名，如域名 http://www.test2.com ，那么就允许来自这个域名的请求：

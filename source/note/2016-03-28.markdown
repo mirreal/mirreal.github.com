@@ -1,0 +1,31 @@
+---
+layout: page
+title: "2016-03-28"
+date: 2016-03-28 10:34
+comments: true
+sharing: true
+footer: true
+---
+
+
+## 聚沙
+
+### -webkit-font-smoothing
+
+字体平滑
+
+### $.siblings()
+
+寻找当前节点的同胞
+
+## 阅读
+
+[常见的Loading进度条动效形式](http://www.jianshu.com/p/aa301c739e1f)
+
+[前端文本截断](http://efe.baidu.com/blog/text-truncating/)
+
+[ClickJacking漏洞的原理](https://www.zhuyingda.com/blog/b6.html?origin=75)
+
+[GET来的漏洞](http://drops.wooyun.org/web/7112)
+
+[我的通行你的证](http://drops.wooyun.org/web/12695)

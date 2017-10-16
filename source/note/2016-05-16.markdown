@@ -1,0 +1,121 @@
+---
+layout: page
+title: "2016-05-16"
+date: 2016-05-16 09:46
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[TCP/IP 之 大明王朝邮差](http://blog.jobbole.com/100779/)
+
+故事只要写的不是太烂，更利于传播，另一方面，科普也并非某些人摒弃的毫无意义
+
+[几款主流 NoSql 数据库的对比](http://www.cnblogs.com/vajoy/p/5471308.html)
+
+供选择数据库的时候做一个参考
+
+[代码重构的实战经验和那些坑](http://www.iteye.com/news/31551)
+
+
+## 聚沙
+
+### End-to-End Test
+
+> End-to-end testing is a methodology used to test whether the flow of an application is performing as designed from start to finish. The purpose of carrying out end-to-end tests is to identify system dependencies and to ensure that the right information is passed between various system components and systems.
+
+
+https://www.techopedia.com/definition/7035/end-to-end-test
+
+### document.execCommand
+
+操作剪切板
+
+```js
+/*
+	Copy text from any appropriate field to the clipboard
+  By Craig Buckler, @craigbuckler
+  use it, abuse it, do whatever you like with it!
+*/
+(function() {
+
+	'use strict';
+
+  // click events
+  document.body.addEventListener('click', copy, true);
+
+	// event handler
+	function copy(e) {
+
+    // find target element
+    var
+      t = e.target,
+      c = t.dataset.copytarget,
+      inp = (c ? document.querySelector(c) : null);
+
+    // is element selectable?
+    if (inp && inp.select) {
+
+      // select text
+      inp.select();
+
+      try {
+        // copy text
+        document.execCommand('copy');
+        inp.blur();
+      }
+      catch (err) {
+        alert('please press Ctrl/Cmd+C to copy');
+      }
+
+    }
+
+	}
+
+})();
+```
+
+document.execCommand https://developer.mozilla.org/zh-CN/docs/Web/API/Document/execCommand
+
+### this 指向
+
+```js
+var foo = {  
+  bar: function() { return this.baz; },  
+  baz: 1
+};
+
+// this 指向 arguments
+(function() {  
+  return typeof arguments[0]();
+})(foo.bar);
+
+// this 指向 global
+typeof (f = foo.bar)();
+```
+
+### new 运算符
+
+```js
+function f(){ return f; }
+new f() instanceof f; // false
+```
+
+关于 new 运算符
+
+1. 创建空对象。
+2. 将类的prototype中的属性和方法复制到实例中。
+3. 将第一步创建的空对象做为类的参数调用类的构造函数
+
+默认如果没有覆盖这个空对象的话,返回this
+
+## 乱弹
+
+* 有些题目 http://www.cnblogs.com/aaronjs/p/3172112.html
+* 骗赞？ https://www.zhihu.com/question/30002951
+* Robust 鲁棒性（健壮性）指系统在扰动或不确定的情况下仍能保持它们的特征行为
+
+
+[MORE](http://blog.mirreal.net/note/2016-05-16.html)

@@ -1,0 +1,39 @@
+---
+layout: page
+title: "2016-05-26"
+date: 2016-05-26 08:23
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[RPC 的概念模型与实现解析](http://mp.weixin.qq.com/s?__biz=MzAxMTEyOTQ5OQ%3D%3D&mid=2650610547&idx=1&sn=2cae08dbf62d9a6c2f964ffd440c0077)
+
+[理解JavaScript中的作用域和上下文](http://wwsun.github.io/posts/scope-and-context-in-javascript.html)
+
+## 聚沙
+
+### Babel 6: loose 模式
+
+1. 两种模式
+
+许多Babel的插件有两种模式：
+
+• 尽可能符合ECMAScript6语义的normal模式。
+
+• 提供更简单ES5代码的loose模式。
+
+通常，推荐不使用loose模式，使用这种模式的优点和缺点是：
+
+• 优点：生成的代码可能更快，对老的引擎有更好的兼容性，代码通常更简洁，更加的“ES5化”。
+
+• 缺点：你是在冒险——随后从转译的ES6到原生的ES6时你会遇到问题。这个险是很不值得冒的。
+
+http://www.2ality.com/2015/12/babel6-loose-mode.html
+
+https://github.com/lcxfs1991/blog/issues/9
+
+
+[MORE](http://blog.mirreal.net/note/2016-05-26.html)

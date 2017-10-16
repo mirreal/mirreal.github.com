@@ -1,0 +1,268 @@
+---
+layout: page
+title: "2016-05-09"
+date: 2016-05-09 13:45
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[常见的隐写工具介绍](http://bobao.360.cn/learning/detail/441.html)
+
+[Promise 与定时器](https://www.h5jun.com/post/wait-promise.html)
+
+[使用CSS技术实现Netflix Logo动画效果](https://zhuanlan.zhihu.com/p/20858727)
+
+[深入理解JavaScript类数组](http://www.lxxyx.win/2016/05/07/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JavaScript%E7%B1%BB%E6%95%B0%E7%BB%84/)
+
+## 聚沙
+
+### code style basee on JSCS
+
+只是代码风格
+
+#### Automatically create your configuration file
+
+```sh
+jscs --auto-configure src
+```
+
+#### Automatically fix your errors
+
+```sh
+jscs src --fix
+```
+
+https://github.com/jscs-dev/node-jscs/tree/master/presets
+
+### jshint
+
+关注“代码质量”的格式检查工具
+
+
+```json
+{
+
+      "predef": ["$", "jQuery", "angular", "define", "require", "echarts", "console", "chrome", "JSTracker", "JSTracker2", "TOP", "QN"]
+    , "curly": true
+    , "eqeqeq": true
+    , "freeze": true
+    , "funcscope": false
+    , "futurehostile": true
+    , "latedef": "nofunc"
+    , "maxerr": 99999
+    , "nocomma": true
+    , "nonbsp": true
+    , "nonew": true
+    , "notypeof": false
+    , "undef": true
+
+    , "asi": true
+    , "expr": true
+    , "debug": false
+    , "lastsemic": true
+    , "loopfunc": false
+    , "proto": false
+    , "validthis": true
+    , "withstmt": false
+
+    , "browser": true
+    , "jquery": true
+
+}
+```
+
+
+## 配置项解释
+
+
+```
+{
+      "predef": ["$", "jQuery", "angular", "define", "require", "echarts", "console", "chrome"]
+
+    预定义的全局量.
+
+
+    , "curly": true
+
+    必须加大括号, 即使在 if 后只有一条语句.
+
+
+    , "eqeqeq": true
+
+    禁止使用 == / != , 只能用 === / !== .
+
+
+    , "freeze": true
+
+    禁止动原生对象的原型. 比如给 Array 加一个 count 方法, Array.prototype.count = function(){}
+
+
+    , "funcscope": false
+
+    你不能在一个控制结构中声明一个变量, 但是却在控制结构之外使用它. 比如:
+
+    function test() {
+        if (true) {
+            var x = 0;
+        }
+
+        x += 1; // Default: 'x' used out of scope.
+                // No warning when funcscope:true
+    }
+
+
+    , "futurehostile": true
+
+    不能使用在后续 js 版本中出现的关键词.
+
+
+    , "latedef": "nofunc"
+
+    从顺序结构上来看, 不允许使用未声明的变量. function abc(){} 这种函数声明例外, 函数声明允许后置.
+
+
+    , "maxerr": 50
+
+    jshint 工作时的最大"错误"数量, 超过这个量会中止检查.
+
+
+    , "nocomma": true
+
+    禁止使用"逗号"表达式.
+
+
+    , "nonbsp": true
+
+    禁止 "non-breaking whitespace" 字符(不知道是什么就不用管它).
+
+
+    , "nonew": true
+
+    new 必须出现在赋值语句中. 空的 new Abc() 不被允许.
+
+
+    , "notypeof": false
+
+
+    检查对 typeof 结果的比较操作, 比如 typeof a == "fuction" 就无法通过检查, 因为 fuction 不是一个"合理结果集"中的成员.
+
+
+    , "undef": true
+
+    禁止使用未声明的变量.
+
+
+    , "asi": true
+
+    末尾的分号不强制.
+
+
+    , "expr": true
+
+    允许使用行内表达式, 比如 callback && callback()
+
+
+    , "debug": false
+
+    代码中不能有遗留的 debugger
+
+
+    , "loopfunc": false
+
+    不允许在循环结构中定义函数.
+
+
+    , "proto": false
+
+    不允许有涉及 __proto__ 属性的行为.
+
+
+    , "validthis": true
+
+    在非构造函数中使用 this 是被允许的.
+
+
+    , "withstmt": false
+
+    不允许使用 with .
+
+
+    , "browser": true
+
+    jslint 环境, 配置成浏览器它会自动处理 document 这种全局量.
+
+
+    , "jquery": true
+
+    jslint 环境, 配置 jquery 它会自动处理相关全局量.
+}
+```
+
+.jshintignore 忽略检查
+
+```
+node_modules/
+build/
+src/**/tpl.js
+```
+
+http://www.sitepoint.com/comparison-javascript-linting-tools/
+
+http://www.swifthumb.com/thread-8829-1-1.html
+
+http://efe.baidu.com/blog/js-lints/
+
+
+### 数组元素的洗牌
+
+```js
+var list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+list.sort( () => {
+  return Math.random() - 0.5
+});
+```
+
+### 合并数组
+
+如果你要合并两个数组，一般情况之下你都会使用 `Array.concat()` 函数：
+
+```js
+var array1 = [1, 2, 3];
+var array2 = [4, 5, 6];
+array1.concat(array2);
+```
+
+然后这个函数并不适合用来合并两个大型的数组，因为其将消耗大量的内存来存储新创建的数组。
+
+```js
+var array1 = [1,2,3];
+var array2 = [4,5,6];
+array1.push.apply(array1, array2)
+```
+
+这种方法不是用来创建一个新的数组，其只是将第一个第二个数组合并在一起，同时减少内存的使用
+
+### 翻转数组指定部分
+
+```js
+var a = [2, 5, 3, 4, 7, 6, 9]
+
+function reverse(array, begin, end) {
+  for (var i = 0, len = end-begin; i < parseInt(len/2); i++) {
+    var t = array[begin+i];
+    array[begin+i] = array[begin+len-1-i];
+    array[begin+len-1-i] = t;
+  }
+
+  return array;
+}
+
+console.log(reverse(a, 2, 4));
+```
+
+## demo
+
+空间悖论 Penrose http://codepen.io/pixelass/full/PNXaMG/

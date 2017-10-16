@@ -1,0 +1,65 @@
+---
+layout: page
+title: "2016-05-19"
+date: 2016-05-18 23:26
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[不要相信程序员在加班时间写的代码](http://www.jianshu.com/p/d531ddbbd7f3)
+
+软件工程的学说表明，连正常时间好好写的代码，也不要太相信。
+
+[成长路上，刀剑如梦](http://mp.weixin.qq.com/s?__biz=MzAxMTEyOTQ5OQ==&mid=402242397&idx=1&sn=f54f05006c381cad8422aa313f6192bf#rd)
+
+[通过「刻意练习」，你才能成为顶尖的程序员](https://ruby-china.org/topics/28553)
+
+[VR、AR、MR：看完这篇文章，我再也不混乱了](http://mp.weixin.qq.com/s?__biz=MzA4MjA0MTc4NQ==&mid=504089725&idx=3&sn=90647f314cd4aef7353e555842d13ce7#rd)
+
+[Google I/O 最全记录，睡意全无](http://www.ifanr.com/658538)
+
+人工智能是今年的 Google I/O 的一大主题。发布会上首个亮相的产品--Google Assistant ，不仅能回答你的问题，它还能完整地理解上下文语境，围绕一个话题陪你一直聊下去...一夕千念，睡意全无。
+
+## 聚沙
+
+### 获取特定月份的天数
+
+```js
+function getDaysInMonth(year, month) {
+  return new Date(year, month, 0).getDate();
+}
+```
+
+### DOM 不生效
+
+使用 $ 将一段 html 包裹起来的对象，并不指向 DOM 元素
+
+所以任何改动只在当前对象，原 DOM 不会变化
+
+### 简单高亮
+
+```js
+function highlight(text, words, tag) {
+
+  tag = tag || 'span';
+
+  var i, len = words.length, re;
+  for (i = 0; i < len; i++) {
+    re = new RegExp(words[i], 'g');
+    if (re.test(text)) {
+      text = text.replace(re, '<'+ tag +' class="highlight">$&</'+ tag +'>');
+    }
+  }
+
+  return text;
+}
+```
+
+## 弹丸论破
+
+http://www.jianshu.com/p/3ef822ec5a63
+
+[MORE](http://blog.mirreal.net/note/2016-05-19.html)

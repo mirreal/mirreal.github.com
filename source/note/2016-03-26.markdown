@@ -1,0 +1,38 @@
+---
+layout: page
+title: "2016-03-26"
+date: 2016-03-26 00:59
+comments: true
+sharing: true
+footer: true
+---
+
+## 传说中 left-pad
+
+```js
+function leftpad (str, len, ch) {
+  str = String(str);
+
+  var i = -1;
+
+  if (!ch && ch !== 0) ch = ' ';
+
+  len = len - str.length;
+
+  while (++i < len) {
+    str = ch + str;
+  }
+
+  return str;
+}
+```
+
+NPM 存在大量这样的包。一个函数的包。
+
+这种东西，在我们的算法课上可以找到一大堆。
+
+而很多人，就这样去依赖一个函数。
+
+层层依赖，无限嵌套，甚至没人管最底下的都是些什么。
+
+让人开始怀疑 NPM 的这种包机制是否真的合适。

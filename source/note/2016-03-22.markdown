@@ -1,0 +1,232 @@
+---
+layout: page
+title: "2016-03-22"
+date: 2016-03-22 09:42
+comments: true
+sharing: true
+footer: true
+---
+
+## 【聚沙】
+
+### 对象字面量
+
+问题：
+
+```js
+{ a: 9 }.a // Uncaught SyntaxError: Unexpected token .
+```
+解决：
+
+```js
+( { a: 1 }.a ) // 方式1
+( { a: 1 } ).a // 方式2
+```
+
+
+原因：[MDN 对象字面值(Object literals)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#对象字面值(Object_literals))
+
+> 对象字面值是封闭在花括号对({})中的一个对象的零个或多个"属性名-值"对的（元素）列表。你不能在一条语句的开头就使用对象字面值，这将导致错误或非你所预想的行为，因为此时左花括号（{）会被认为是一个语句块的起始符号。
+
+### 位运算
+
+位运算会自动将数字转换成整数
+
+实现一个类似 `parseInt()` 的函数：
+
+```js
+function convertInt(num) {
+  // return num >> 0;
+  // return num << 0;
+  // return num | 0;
+  // return num ^ 0;
+  return ~~ num;
+}
+```
+
+### Prefix Increment Operator(++)的问题
+
+关于前自增运算符的一个有意思的问题：
+
+```js
+++'52'.split('')[0] // 返回的是？
+```
+
+这道题来自 Another JavaScript quiz 第8题，主要是优先级问题，应该返回6，看完答案应该没什么难理解的。但是，题目的某个注意点:
+
+```js
+++'5'
+// Uncaught ReferenceError: Invalid left-hand side expression in prefix operation
+```
+
+却非常有意思。所以问题是为什么 `++'5'` 报错而 `++'52'.split('')[0]` 可以正确执行
+
+阅读 [http://es5.github.io/#x11.4.4](http://es5.github.io/#x11.4.4)，可以看到 Prefix Increment Operator 操作的第5步 `PutValue(expr, newValue)` 要求 `expr` 是引用。
+
+而在这里，
+
+* `'5'`是值，不是引用，所以报错。
+* `'52'.split('')[0]` 返回的是 `['5','2'][0]`，对象的属性访问返回的是引用，所以可以正确执行。
+
+正确方式：
+
+```js
+var x = '5';
+++x  // 6
+
+++'5'[0] // 6
+```
+
+### 数组展平
+
+```js
+function flatten(arr) {
+  if ( !isArray(arr) ) {
+    return arr;
+  }
+
+  return [].concat.apply([], arr.map(function(item) {
+    return flatten(item);
+  }));
+
+
+}
+
+function isArray(arr) {
+  return toString.call(arr).slice(8, -1) === 'Array';
+}
+```
+
+调用方式：
+
+```js
+flatten( [3, 4, [9, 5], [2, 1, 7], 4, 8] )
+
+// [3, 4, 9, 5, 2, 1, 7, 4, 8]
+```
+
+### 获取闭包对象
+
+[一道题](https://segmentfault.com/q/1010000002916478)
+
+```js
+var obj = (function() {
+  var person = {
+    name: 'vincent',
+    age: 24
+  };
+
+  return {
+    run: function(key) {
+      return person[key];
+    }
+  };
+
+})();
+
+
+Object.defineProperty(Object.prototype, 'get', {
+  get: function() {
+    return this;
+  }
+});
+
+console.log( obj.run('age') )
+console.log( obj.run('get') )
+```
+
+### 为什么不要使用 eval
+
+eval 函数会在当前作用域中执行一段 JavaScript 代码字符串。
+
+```js
+var foo = 1;
+function test() {
+    var foo = 2;
+    eval('foo = 3');
+    return foo;
+}
+test(); // 3
+foo; // 1
+```
+
+但是 eval 只在被直接调用并且调用函数就是 eval 本身时，才在当前作用域中执行。
+
+```js
+var foo = 1;
+function test() {
+    var foo = 2;
+    var bar = eval;
+    bar('foo = 3');
+    return foo;
+}
+test(); // 2
+foo; // 3
+```
+
+译者注：上面的代码等价于在全局作用域中调用 eval，和下面两种写法效果一样：
+
+```js
+// 写法一：直接调用全局作用域下的 foo 变量
+var foo = 1;
+function test() {
+    var foo = 2;
+    window.foo = 3;
+    return foo;
+}
+test(); // 2
+foo; // 3
+```
+
+```js
+// 写法二：使用 call 函数修改 eval 执行的上下文为全局作用域
+var foo = 1;
+function test() {
+    var foo = 2;
+    eval.call(window, 'foo = 3');
+    return foo;
+}
+test(); // 2
+foo; // 3
+```
+
+在任何情况下我们都应该避免使用 eval 函数。99.9% 使用 eval 的场景都有不使用 eval 的解决方案。
+
+#### 伪装的 eval
+
+定时函数 setTimeout 和 setInterval 都可以接受字符串作为它们的第一个参数。 这个字符串总是在全局作用域中执行，因此 eval 在这种情况下没有被直接调用。
+
+#### 安全问题
+
+eval 也存在安全问题，因为它会执行任意传给它的代码， 在代码字符串未知或者是来自一个不信任的源时，绝对不要使用 eval 函数。
+
+#### 结论
+
+绝对不要使用 eval，任何使用它的代码都会在它的工作方式，性能和安全性方面受到质疑。 如果一些情况必须使用到 eval 才能正常工作，首先它的设计会受到质疑，这不应该是首选的解决方案， 一个更好的不使用 eval 的解决方案应该得到充分考虑并优先采用。
+
+### 对象比较
+
+虽然 == 和 === 操作符都是等于操作符，但是当其中有一个操作数为对象时，行为就不同了。
+
+```js
+{} === {};                   // false
+new String('foo') === 'foo'; // false
+new Number(10) === 10;       // false
+var foo = {};
+foo === foo;                 // true
+```
+
+这里等于操作符比较的不是值是否相等，而是是否属于同一个身份；也就是说，只有对象的同一个实例才被认为是相等的。 这有点像 Python 中的 is 和 C 中的指针比较。
+
+## 阅读
+
+[浅谈API安全设计](http://www.jianshu.com/p/d7c52d113a68)
+
+[JavaScript问题集锦](https://github.com/creeperyang/blog/issues/2)
+
+[一种面试思路](http://www.jackpu.com/-pian-fei-chang-bu-cuo-de-qian-duan-mian-shi-wen-zhang/)
+[Interviewing a front-end developer](http://blog.sourcing.io/interview-questions)
+
+## 站点
+
+[JavaScript Garden](http://bonsaiden.github.io/JavaScript-Garden/zh/)

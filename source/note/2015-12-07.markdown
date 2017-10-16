@@ -1,0 +1,70 @@
+---
+layout: page
+title: "2015-12-07"
+date: 2015-12-07 00:24
+comments: true
+sharing: true
+footer: true
+---
+
+## uuid
+
+http://jsfiddle.net/briguy37/2mvfd/
+
+```js
+function generateUUID() {
+    var d = new Date().getTime();
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = (d + Math.random()*16)%16 | 0;
+        d = Math.floor(d/16);
+        return (c=='x' ? r : (r&0x3|0x8)).toString(16);
+    });
+    return uuid;
+};
+```
+
+http://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
+
+```js
+(function(scope){
+
+  var dec2hex = [];
+  for (var i=0; i<=15; i++) {
+    dec2hex[i] = i.toString(16);
+  }
+
+  var UUID = function() {
+    var uuid = '';
+    for (var i=1; i<=36; i++) {
+      if (i===9 || i===14 || i===19 || i===24) {
+        uuid += '-';
+      } else if (i===15) {
+        uuid += 4;
+      } else if (i===20) {
+        uuid += dec2hex[(Math.random()*4|0 + 8)];
+      } else {
+        uuid += dec2hex[(Math.random()*15|0)];
+      }
+    }
+    return uuid;
+  };
+
+  if (typeof exports !== 'undefined') {
+    module.exports = UUID;
+  } else {
+    scope.UUID = UUID;
+  }
+
+})(this);
+```
+
+https://github.com/makeable/uuid-v4.js
+
+http://broofa.github.io/node-uuid/docs/uuid.html
+
+
+Refused to get unsafe header "Location"
+
+http://www.w3.org/TR/cors/#access-control-expose-headers-response-header
+
+http://ued.taobao.org/blog/2012/06/debug-with-chrome-dev-tool/

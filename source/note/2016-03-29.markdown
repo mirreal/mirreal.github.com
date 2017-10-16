@@ -1,0 +1,101 @@
+---
+layout: page
+title: "2016-03-29"
+date: 2016-03-29 09:48
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### event.stopPropagation();
+
+阻止当前事件的进一步冒泡行为。
+
+preventDefault 是另外一个相关的方法，它可以阻止事件触发后默认动作的发生。
+
+
+## 几种 css 箭头
+
+### 1
+
+```css
+.arrow-right {
+  width: .4rem;
+  height: .4rem;
+  border: none;
+  border-right: .1rem solid #b5b9bb;
+  border-top: .1rem solid #b5b9bb;
+  transform: rotate(45deg) translate(0);
+  -webkit-transform: rotate(45deg) translate(0);
+}
+```
+### 2
+
+```css
+.arrow-bottom {
+  position: absolute;
+  left: 14px;
+  bottom: -7px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid #ABABAB;
+}
+.arrow-bottom:after {
+  content: ' ';
+  position: absolute;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #fff;
+  left: -4px;
+  top: -7px;
+}
+```
+向左
+
+```css
+.arrow-left {
+  position: absolute;
+  right: auto;
+  top: 14px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 7px solid #ABABAB;
+}
+.arrow-left:after {
+  content: ' ';
+  position: absolute;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 6px solid #fff;
+  top: -4px;
+  right: -7px;
+}
+```
+
+### 3
+
+http://www.cssarrowplease.com/
+
+
+## 问题
+
+### git crash
+
+```
+fatal: Unable to create '/Users/<user>/<project>/.git/index.lock': File exists.
+
+If no other git process is currently running, this probably means a
+git process crashed in this repository earlier. Make sure no other git
+process is running and remove the file manually to continue.
+```
+
+删掉就好

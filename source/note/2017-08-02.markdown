@@ -1,0 +1,19 @@
+---
+layout: page
+title: "2017-08-02"
+date: 2017-08-02 20:25
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### 设置换行符模式
+
+```text
+]
+env: node\r: No such file or directory
+```
+
+原因是在 windows 下上传 package 时，使用 CRLF 换行模式

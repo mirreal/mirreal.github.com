@@ -1,0 +1,39 @@
+---
+layout: page
+title: "2016-07-08"
+date: 2016-07-08 13:44
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+JavaScript SDK Design Guide @天默
+
+http://js8.in/2016/06/29/javascript%20sdk(jssdk)%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/
+
+http://js8.in/2016/06/29/javascript sdk(jssdk)设计指南/
+
+http://www.zcfy.cc/original/403
+
+http://sdk-design.js.org/
+
+## 聚沙
+
+### typeof
+
+```text
+type         result
+Undefined   "undefined"
+Null        "object"
+Boolean     "boolean"
+Number      "number"
+String      "string"
+Symbol      "symbol"
+Host object Implementation-dependent
+Function    "function"
+Object      "object"
+```
+
+[MORE](http://blog.mirreal.net/note/2016-07-08.html)

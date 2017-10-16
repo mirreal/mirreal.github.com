@@ -1,0 +1,16 @@
+---
+layout: page
+title: "2016-01-30"
+date: 2016-01-30 12:42
+comments: true
+sharing: true
+footer: true
+---
+
+## issues
+
+`insertAdjacentHTML()`将指定的文本解析为 HTML 或 XML，然后将结果节点插入到 DOM 树中的指定位置处
+
+`git revert`用一个新提交来消除一个历史提交所做的任何修改.
+
+`git reset` 取消已经暂存的文件

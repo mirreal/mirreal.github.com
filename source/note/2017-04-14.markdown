@@ -1,0 +1,39 @@
+---
+layout: page
+title: "2017-04-14"
+date: 2017-04-14 18:30
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### 不解析 requireJs
+
+涉及到 `geo.js` 里面的 `require(['googlemap'], function() { })`
+
+这里 `require` 和 `commonJs` 里的 `require` 不同，推荐在使用 `requireJs` 的语义下，使用 `requirejs` 方法代替 `require`。
+
+然后，在 `webpack` 配置中，我们应该忽略 `requireJs` 的解析，参考：[Rule.parser](https://webpack.js.org/configuration/module/#rule-parser) ，like this:
+
+```js
+{
+    test: /\.jsx?$/,
+    parser: {
+        requireJs: false
+    },
+    loader: 'babel-loader'
+}
+```
+
+http://git.dev.sh.ctripcorp.com/IRDC/Flight-H5/issues/52
+
+### tree
+
+生成目录树
+
+### cancel rebase
+
+
+`git rebase` 不成功可以 `git rebase --abort` 取消

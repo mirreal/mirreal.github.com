@@ -1,0 +1,48 @@
+---
+layout: page
+title: "2016-03-24"
+date: 2016-03-24 00:32
+comments: true
+sharing: true
+footer: true
+---
+
+## 题目
+
+JSONP，跨域，安全策略，以及 WHY
+
+数据预览
+
+服务器端、浏览器端
+
+原生实现，包装 Api
+
+## 聚沙
+
+### will-change
+
+这是一个实验中的功能
+
+CSS 属性 will-change 为web开发者提供了一种告知浏览器该元素会有哪些变化的方法，这样浏览器可以在元素属性真正发生变化之前提前做好对应的优化准备工作。 这种优化可以将一部分复杂的计算工作提前准备好，使页面的反应更为快速灵敏。
+
+### letter-spacing
+
+文字的间距行为
+
+#### 语法：
+
+```css
+letter-spacing: normal;
+
+letter-spacing: 0.3em;
+letter-spacing: 3px;
+letter-spacing: .3px;
+
+letter-spacing: inherit;
+```
+
+## 阅读
+
+[setTimout( , 0)](https://github.com/oadaM92/oadaM92-blog/tree/master/blogs/2016-03-21-setTimout(0))
+
+[如何在 Git 中使用撤消操作](https://egoistian.com/2015/10/04/how-to-undo-with-git/)

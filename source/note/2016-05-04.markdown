@@ -1,0 +1,149 @@
+---
+layout: page
+title: "2016-05-04"
+date: 2016-05-04 09:55
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[支付宝架构师：从工程师到架构师的成长之路](http://www.scalerstalk.com/838-architect)
+
+
+## 聚沙
+
+### 条件注释【续】
+
+判断浏览器
+
+条件注释判断浏览器
+
+```html
+<!--[if !IE]><!--[if IE]><!--[if lt IE 6]><!--[if gte IE 6]>
+<!--[if !IE]><!--> 除IE外都可识别 <!--<![endif]-->
+<!--[if IE]> 所有的IE可识别 <![endif]-->
+<!--[if IE 6]> 仅IE6可识别 <![endif]-->
+<!--[if lte IE 6]> IE6以及IE6以下版本可识别 <![endif]-->
+<!--[if gte IE 6]> IE6以及IE6以上版本可识别 <![endif]-->
+<!--[if IE 7]> 仅IE7可识别 <![endif]-->
+<!--[if lte IE 7]> IE7以及IE7以下版本可识别 <![endif]-->
+<!--[if gte IE 7]> IE7以及IE7以上版本可识别 <![endif]-->
+<!--[if IE 8]> 仅IE8可识别 <![endif]-->
+<!--[if IE 9]> 仅IE9可识别 <![endif]-->
+```
+
+```
+!	[if !IE]	The NOT operator. This is placed immediately in front of the feature, operator, or subexpression to reverse the Boolean meaning of the expression.
+NOT运算符。这是摆立即在前面的功能，操作员，或子表达式扭转布尔表达式的意义。
+lt	[if lt IE 5.5]	The less-than operator. Returns true if the first argument is less than the second argument.
+小于运算符。如果第一个参数小于第二个参数，则返回true。
+lte	[if lte IE 6]	The less-than or equal operator. Returns true if the first argument is less than or equal to the second argument.
+小于或等于运算。如果第一个参数是小于或等于第二个参数，则返回true。
+gt	[if gt IE 5]	The greater-than operator. Returns true if the first argument is greater than the second argument.
+大于运算符。如果第一个参数大于第二个参数，则返回true。
+gte	[if gte IE 7]	The greater-than or equal operator. Returns true if the first argument is greater than or equal to the second argument.
+大于或等于运算。如果第一个参数是大于或等于第二个参数，则返回true。
+( )	[if !(IE 7)]	Subexpression operators. Used in conjunction with boolean operators to create more complex expressions.
+子表达式运营商。在与布尔运算符用于创建更复杂的表达式。
+&	[if (gt IE 5)&(lt IE 7)]	The AND operator. Returns true if all subexpressions evaluate to true
+AND运算符。如果所有的子表达式计算结果为true，返回true
+|	[if (IE 6)|(IE 7)]	The OR operator. Returns true if any of the subexpressions evaluates to true.
+OR运算符。返回true，如果子表达式计算结果为true。
+```
+
+但条件注释放 awp 就没用了，平台会进行代码压缩，把注释压缩掉
+
+http://kangax.github.io/compat-table/es5/
+
+http://www.cnblogs.com/dtdxrk/archive/2012/03/06/2381868.html
+
+
+### IE9, IE10
+
+
+https://github.com/babel/babelify/issues/133
+
+
+两个插件：
+
+http://babeljs.io/docs/plugins/transform-es2015-classes/
+
+http://babeljs.io/docs/plugins/transform-proto-to-assign/
+
+### chrome 滚动条
+
+```
+::-webkit-scrollbar 滚动条整体部分
+::-webkit-scrollbar-button 滚动条两端的按钮
+::-webkit-scrollbar-track 外层轨道
+::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分（除去）
+::-webkit-scrollbar-thumb （滚动条里面可以拖动的那个）
+::-webkit-scrollbar-corner 边角
+::-webkit-resizer 定义右下角拖动块的样式
+```
+
+
+http://alfred-sun.github.io/blog/2014/12/24/scrollbar-customized-with-css-style/
+
+
+### git 文件名大小写不敏感的问题
+
+故事的起源大概是 之前有人写了个 `priceDetail` 的模块，其实就是个文件夹，然后开心地提交上去了。
+
+
+咦，也许变量是驼峰命名的，也许不是，谁知道呢，看着不顺眼，不看啊
+
+```js
+var Pricedetail = require('./priceDetail/index');
+```
+
+后来，有人觉得 这个文件夹的命名方式跟项目其他文件命名方式不符，然后就换成了 `pricedetail`，然后顺便在引用的地方改了一下：
+
+```js
+var Pricedetail = require('./pricedetail/index');
+```
+
+然后又开心地提交上去了，打包，发布，一切都是那么顺滑，什么问题都没有。
+
+可惜的是，TA 忽略了 git 大小写不敏感这个问题，文件夹的改动并没有提交上去。
+
+
+然后，有天另一个人想修改点东西，把代码 pull 下来，开始跑，啊，报错了，找不到 `pricedetail/index` 这个模块。
+
+这个人也没深究，原来是谁把模块名字写错了，好吧，我改过来好了，改成 `priceDetail`，一切又正常了。
+
+
+可是，在另外一边的人再一次更新代码的时候，发现哪个傻逼把名字改错了，于是又改回去，所以又变回 `pricedetail`。
+
+
+一来一去，改过来，改过去，改过来，改过去...
+
+今天，又有人过来问我怎么跑不起来了，我也郁闷，怎么老是有人在这个问题上改来改去的。
+
+想想，只是个 git 文件大小写不敏感的故事。
+
+
+#### 后续：
+
+你想大小写敏感，也行，改改配置就 okay 了：
+
+```
+git config core.ignorecase false  
+```
+
+
+```
+Add ignorecase = false to [core] in .git/config;
+```
+
+或则全局修改
+
+```
+git config core.ignorecase false  --global
+```
+
+```
+ignorecase = false
+```

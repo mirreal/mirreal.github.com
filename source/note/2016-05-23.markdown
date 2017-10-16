@@ -1,0 +1,67 @@
+---
+layout: page
+title: "2016-05-23"
+date: 2016-05-23 13:29
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[4类 JavaScript 内存泄露及如何避免](http://jinlong.github.io/2016/05/01/4-Types-of-Memory-Leaks-in-JavaScript-and-How-to-Get-Rid-Of-Them/)
+
+[Weex 版扫雷游戏开发](https://www.sdk.cn/news/3549)
+
+[Vue.js：极大提升开发效率的前端组件化方案](https://blog.wilddog.com/?p=1412)
+
+
+## 聚沙
+
+### markdown 2 html
+
+```js
+var headline = /^(\#{1,6})([^\#\n]+)$/m;
+var links = /!?\[([^\]<>]+)\]\(([^ \)<>]+)( "[^\(\)\"]+")?\)/g;
+
+while ((stra = headline.exec(str)) !== null) {
+  count = stra[1].length;
+  str = str.replace(stra[0], '<h' + count + '>' + stra[2] + '</h' + count + '>' + '\n');
+}
+
+while ((stra = links.exec(str)) !== null) {
+  if (stra[0].substr(0, 1) === '!') {
+    str = str.replace(stra[0], '<img src="' + stra[2] + '" alt="' + stra[1] + '" title="' + stra[1] + '" />\n');
+  } else {
+    str = str.replace(stra[0], '<a href="' + stra[2] + '">' + stra[1] + '</a>\n');
+  }
+}
+```
+
+### FSEvents.framework
+
+起初怀疑是多个 server 的冲突问题，后来发现几个应用的监听都失败了。
+
+查了一些资料，我遇到的这种情况，应该是内核的缘故，至于根本原因，不得而知，因为我可耻地重启了，失掉了这机会
+
+https://github.com/gulpjs/gulp/issues/1499
+
+http://stackoverflow.com/questions/32258853/gulp-watch-task-is-throwing-an-error-fsevents-framework-fseventstreamstart-r
+
+https://developer.apple.com/library/mac/documentation/Darwin/Reference/FSEvents_Ref/
+
+https://github.com/nodejs/node/issues/854
+
+
+## 猿小报
+
+>
+作为本期猿小报的主编，在这里很真诚地欢迎大家投稿。最近看到什么新鲜的、好玩的、有趣的、有意思的博客、资讯、趋势、分析、demo...统统都行。作为主编，在此承诺，大家只要推荐，就一定会被采用，因为我们还远远没有达到投稿太多，筛选不过来的困境。事实上的情况是，虽然我们每期都会在小报最后注明"欢迎大家推荐自己读过的好文章"，却完全形同虚设，期待由你来改变这一窘境。
+
+>
+你要做的真的很简单，只需把链接发送给我，顺便附上一两句推荐语或者感想。期待你们的力量，和一个更多元化、更具活力的猿小报。
+
+
+## 乱弹
+
+* 无端的焦虑，将从生理和心理上杀死你

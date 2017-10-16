@@ -1,0 +1,134 @@
+---
+layout: page
+title: "2016-05-12"
+date: 2016-05-12 09:56
+comments: true
+sharing: true
+footer: true
+---
+
+## 文章
+
+[Flexbox and Truncated Text](https://css-tricks.com/flexbox-truncated-text/)
+
+解决缩放时文字溢出的问题
+
+[5 种方法教你重置 Mac 用户登录密码](http://sspai.com/34023)
+
+[从柏拉图看 VR 的前世今生，为什么 VR 是中世纪的望远镜](http://www.ifanr.com/655063)
+
+## 聚沙
+
+### 开放-封闭原则（OCP，Open - Closed Priciple）
+
+OCP的核心如下：
+
+> Open for extension, Closed for modification
+
+翻译过来是：对扩展开放，对修改封闭
+
+需求总是变化的，面对变化，一个优秀的程序（类，组件）应该是通过扩展来适应新的变化，而不是通过修改
+
+另一方面，也就是说，当一个程序（类，组件）写好之后，就不应该再修改它的代码
+
+
+
+http://imweb.io/topic/5616652d5d6f37745e8f496f
+
+### 游离的 DOM
+
+游离的 dom 元素是不能用使用那些 api 的
+
+
+### 实现一个 Deferred 对象
+
+```js
+let events = require('events');
+let util = require('util');
+
+let MyPromise = function() {
+};
+util.inherits(MyPromise, events.EventEmitter);
+
+MyPromise.prototype.then = function(resolve, reject, progress){
+  if (typeof resolve === 'function') {
+    this.once('success', resolve);
+  }
+  if (typeof reject === 'function') {
+    this.once('error', reject);
+  }
+  if (typeof progress === 'function') {
+    this.on('progress', progress);
+  }
+  return this;
+};
+
+
+var Deferred = function() {
+  this.state = 'pending';
+  this.promise = new MyPromise();
+};
+
+Deferred.prototype.resolve = function(obj) {
+  this.state = 'fulfilled';
+  this.promise.emit('success', obj);
+};
+Deferred.prototype.reject = function(err) {
+  this.state = 'failed';
+  this.promise.emit('error', err);
+};
+Deferred.prototype.progress = function(data) {
+  this.promise.emit('progress', data);
+};
+```
+
+### 代码执行效率
+
+https://jsperf.com/
+
+### 类数组
+
+#### 定义：具有length属性
+
+转化成数组，很简单：
+
+```js
+Array.prototype.slice.call(arrayLike, 0);
+
+// 更简洁的写法
+[].slice.call(arrayLike, 0);
+
+// ES6 的写法
+Array.from(arrayLike);
+```
+
+类数组对象
+
+```js
+let arrayLike = {
+  length: 2,
+  0: 'anything is okay',
+  1: true
+};
+
+
+[].slice.call(arrayLike, 0); // ["anything is okay", true]
+```
+
+当然，`length` 也不一定是 2，数组的 `length` 是可变的，你可以随意扩充，也可以用它来截断
+
+```js
+let a = [4, 3, 6, 8, 2, 5, 9];
+
+a.length = 4; // [4, 3, 6, 8]
+a.length = 12; // [4, 3, 6, 8, undefined × 8]
+```
+
+类数组函数
+
+函数也有length属性，其值等于函数要接收的参数。
+
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-05-12.html)

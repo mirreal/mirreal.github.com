@@ -1,0 +1,22 @@
+---
+layout: page
+title: "2016-04-15"
+date: 2016-04-15 09:28
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[妖怪和和尚过河问题](http://www.cnblogs.com/zichi/p/5392523.html)
+
+[Mesos 全方位 “烹饪” 指南](http://www.mesoscn.cn/Excellent-article/cook-mesos.html)
+
+
+[如何系统地建立核心用户获取和运营策略](http://36kr.com/p/5044950.html)
+
+产品获取核心用户的 7 个大招，学会通过 4 类运营策略和 7 种留存手段，让核心用户为产品做更大的贡献
+
+
+[我用爬虫一天时间“偷了”知乎一百万用户，只为证明PHP是世界上最好的语言](http://www.epooll.com/archives/806/) @驭曦

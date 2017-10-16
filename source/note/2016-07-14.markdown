@@ -1,0 +1,39 @@
+---
+layout: page
+title: "2016-07-14"
+date: 2016-07-14 14:19
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[理解Mobbing的科学之处](http://www.infoq.com/cn/news/2016/07/understand-science-mobbing)
+
+[为什么Android开发者应该使用FlatBuffers替代JSON](http://www.infoq.com/cn/news/2016/07/FlatBuffers-JSON-Android)
+
+[为什么我不在微信公众号上写文章](http://coolshell.cn/articles/17391.html)
+
+[禅宗程序员的10条准则](https://www.zenprogrammer.org/cn/the10rulesofazenprogrammer.html)
+
+## 聚沙
+
+
+## 新概念
+
+### Mod 编程
+
+Mob编程是一种软件开发方式，在这种方式中，整个团队会在同一时间、同一空间、同一台电脑上从事同一件事情。这类似于结对编程，结对编程中两个人会使用同一台电脑，进行协作，同时编写同一段代码。
+至于一个团队如何开发软件，在此有一些常用的实践方法：
+
+* 独立编程是现在最常用的实践方法，不管是好的还是坏的，所有的东西都进入到了代码里，
+* 结对编程是第二最为人熟知的方法，两个人的更好的想法会进入到代码里，
+* Mob编程可能是最无人知道的开发方式，但是根据Llewellyn所说——它不是获取人们的大部分想法，而是选择了最好的想法
+
+
+### 本杰明 富兰克林 效应
+
+相比那些被你帮助过的人，那些曾经帮助过你的人会更愿意再帮你一次。换句话说，让别人喜欢你的最好方法不是去帮助他们，而是让他们来帮助你。
+
+当我们认为我们对别人很友好、体贴和尊敬时，事实往往相反：其实是那个人对你很友好、体贴和尊敬。

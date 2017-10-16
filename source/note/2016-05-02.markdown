@@ -1,0 +1,35 @@
+---
+layout: page
+title: "2016-05-02"
+date: 2016-05-02 08:48
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### events 模块
+
+```js
+const EventEmitter = require('events');
+```
+
+emitter.on(eventName, listener)
+
+emitter.emit(eventName[, arg1][, arg2][, ...])
+
+emitter.removeListener(eventName, listener)
+
+emitter.removeAllListeners([eventName])
+
+
+### Node es6
+
+* shipping （已经分发并默认开启的特性）
+* staged （已经分发， 但需要使用 –harmony 参数开启的特性）
+* in progress （开发中， 还不稳定或者未实现的特性， 不推荐使用）
+
+```
+node --v8-options | grep "in progress"
+```

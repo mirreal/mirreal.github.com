@@ -1,0 +1,27 @@
+---
+layout: page
+title: "2016-12-09"
+date: 2016-12-09 14:13
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+###
+
+focus 事件
+
+blur
+
+
+理解空值
+
+[]
+
+{}
+
+''
+
+' '

@@ -1,0 +1,10 @@
+---
+layout: page
+title: "2016-12-30"
+date: 2016-12-30 14:20
+comments: true
+sharing: true
+footer: true
+---
+
+静态变量

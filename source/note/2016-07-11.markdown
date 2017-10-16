@@ -1,0 +1,31 @@
+---
+layout: page
+title: "2016-07-11"
+date: 2016-07-11 10:29
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[怎么快速找到：附近的人](http://mp.weixin.qq.com/s?__biz=MzA3MDExNzcyNA%3D%3D&mid=2650392165&idx=1&sn=f00f76c64cd3bccff6710947f20c7504&scene=0)
+
+[Immutable](http://pinggod.com/2016/Immutable/)
+
+## 聚沙
+
+### 给循环增加 label
+
+```js
+outer: for(var i = 0; i < 4; i++) {
+  while(i > 2) {
+    continue outer;
+  }
+  console.log(i);
+}
+```
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-07-11.html)

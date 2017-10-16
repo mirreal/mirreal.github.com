@@ -1,0 +1,22 @@
+---
+layout: page
+title: "2017-08-03"
+date: 2017-08-03 23:09
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### 函数重载
+
+```js
+function addMethod(object, name, fn) {
+  var old = object[name]
+  object[name] = function() {
+    if (fn.length === arguments.length) return fn.apply(this, arguments)
+    else if (typeof old === 'function') return old.apply(this, arguments)
+  }
+}
+```

@@ -1,0 +1,98 @@
+---
+layout: page
+title: "2016-06-12"
+date: 2016-06-11 22:56
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+
+[抽象语法树在 JavaScript 中的应用](http://tech.meituan.com/abstract-syntax-tree.html)
+
+[如何编写避免垃圾开销的实时 Javascript 代码](https://github.com/xitu/gold-miner/blob/master/TODO/how-to-write-low-garbage-real-time-javascript.md)
+
+https://www.scirra.com/blog/76/how-to-write-low-garbage-real-time-javascript
+
+[Guido老爹谈Python的未来](http://blog.codingpy.com/article/guido-van-rossum-on-pythons-next-steps/)
+
+
+## 聚沙
+
+### Chrome plugin
+
+http://open.chrome.360.cn/extension_dev/overview.html
+
+#### 文件
+
+每个应用（扩展）都应该包含下面的文件：
+
+* 一个manifest文件
+* 一个或多个html文件（除非这个应用是一个皮肤）
+* 可选的一个或多个javascript文件
+* 可选的任何需要的其他文件，例如图片
+
+#### 页面
+
+* 绝大多数应用（扩展）都包含一个背景页面(background page)，在 background.html 文件里定义了 browser action 和 javascript 代码。在两个窗口里browser action 都可以工作。
+* 背景页面并不是应用（扩展）中唯一的页面。例如，一个browser action可以包含一个弹窗(popup)，而弹窗就是用html页面实现的。应用（扩展）还可以使用chrome.tabs.create()或者window.open()来显示内部的HTML文件。
+
+
+#### Content scripts
+
+如果一个应用（扩展）需要与web页面交互，那么就需要使用一个content script。Content script脚本是指能够在浏览器已经加载的页面内部运行的javascript脚本。可以将content script看作是网页的一部分，而不是它所在的应用（扩展）的一部分。
+
+#### 通信
+
+一个应用（扩展）中的HTML页面间经常需要互相通信。由于一个应用（扩展）的所有页面是在同一个进程的同一个线程中运行的，因此它们之间可以直接互相调用各自的函数。可以使用chrome.extension中的方法来获取应用（扩展）中的页面，例如getViews()和getBackgroundPage()。
+
+
+#### manifest
+
+```js
+{
+  // 必须的字段
+  "name": "My Extension",
+  "version": "versionString",
+  "manifest_version": 2,
+  // 建议提供的字段
+  "description": "A plain text description",
+  "icons": { ... },
+  "default_locale": "en",
+  // 多选一，或者都不提供
+  "browser_action": {...},
+  "page_action": {...},
+  "theme": {...},
+  "app": {...},
+  // 根据需要提供
+  "background": {...},
+  "chrome_url_overrides": {...},
+  "content_scripts": [...],
+  "content_security_policy": "policyString",
+  "file_browser_handlers": [...],
+  "homepage_url": "http://path/to/homepage",
+  "incognito": "spanning" or "split",
+  "intents": {...}
+  "key": "publicKey",
+  "minimum_chrome_version": "versionString",
+  "nacl_modules": [...],
+  "offline_enabled": true,
+  "omnibox": { "keyword": "aString" },
+  "options_page": "aFile.html",
+  "permissions": [...],
+  "plugins": [...],
+  "requirements": {...},
+  "update_url": "http://path/to/updateInfo.xml",
+  "web_accessible_resources": [...]
+}
+```
+
+## 站点
+
+* 这里是一个提供用户脚本的网站 https://greasyfork.org/zh-CN
+* 而这，是一个可以很方便运行脚本的扩展 https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
+
+
+[MORE](http://blog.mirreal.net/note/2016-06-12.html)

@@ -1,0 +1,29 @@
+---
+layout: page
+title: "2016-04-12"
+date: 2016-04-12 19:42
+comments: true
+sharing: true
+footer: true
+---
+
+##
+
+[Flickr 布局开源](http://flickr.github.io/justified-layout/)
+
+
+## 阅读
+
+[跨域解决方案](http://blog.csdn.net/liaozhongping/article/details/51038636)
+
+
+[网易漫画Swift混编实践](http://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng%3D%3D&mid=403474677&idx=1&sn=5163adb2d80aa5b4f0099f79e6d783e1&scene=0)
+
+<!-- [React Native 蛮荒开发生存指南](https://segmentfault.com/a/1190000004910600) -->
+
+## 聚沙
+
+> “There are only two hard problems in computer science: cache-invalidation and naming things.”
+“在计算机科学界只有两件头疼的事：缓存失效和命名问题”
+>
+— Phil Karlton

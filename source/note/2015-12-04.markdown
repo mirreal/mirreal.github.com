@@ -1,0 +1,54 @@
+---
+layout: page
+title: "2015-12-04"
+date: 2015-12-04 00:29
+comments: true
+sharing: true
+footer: true
+---
+
+## 一个版本比较的方法
+
+```js
+function versionCompare(versionA, versionB) {
+  var versionAList = versionA.split('.');
+  var versionBList = versionB.split('.');
+  var maxLen = Math.max( versionAList.length, versionBList.length );
+
+  var result, a, b;
+  for (var i = 0; i < maxLen; i++) {
+
+    a = ~~versionAList[i];
+    b = ~~versionBList[i];
+
+    if(a > b) result = 1;
+    else if (a < b) result = -1;
+    else result = 0;
+
+    if (result !== 0) return result;
+  }
+  return result;
+}
+```
+
+## palceholder color
+
+```css
+::-webkit-input-placeholder {
+  color: red;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: red;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: red;
+}
+
+:-ms-input-placeholder {
+  color: red;
+}
+```
+
+## 分享一个图片上的 [移动端图片格式调研](http://blog.ibireme.com/2015/11/02/mobile_image_benchmark/)

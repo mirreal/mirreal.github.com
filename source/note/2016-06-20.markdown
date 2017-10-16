@@ -1,0 +1,58 @@
+---
+layout: page
+title: "2016-06-20"
+date: 2016-06-20 13:42
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[无穷集合与 ES6 生成器](https://www.h5jun.com/post/infinite-collections-with-es6-generators.html)
+
+[Node稳定性的研究心得](http://www.cnblogs.com/rubylouvre/p/4442619.html)
+
+
+## 聚沙
+
+### mongo
+
+```js
+db.dropDatabase()
+```
+
+### koa
+
+开发 JSONP 接口：
+
+引入 `koa-safe-jsonp` 模块
+
+```js
+const jsonp = require('koa-safe-jsonp');
+
+jsonp(app, {
+  callback: 'callback', // default is 'callback'
+  limit: 64, // max callback name string length, default is 512
+});
+```
+
+使用：
+
+```js
+exports.score = function*(next) {
+  let params = this.params
+  let groupId = params.id;
+  let userId = params.userId;
+
+  let userInfo = this.userInfo;
+  let scoreType = this.scoreType;
+  let list = yield scoreModel.getScoreListByUserId(groupId, userId);
+
+  // ...
+
+  yield this.jsonp = scoreList;
+};
+```
+
+[MORE](http://blog.mirreal.net/note/2016-06-20.html)

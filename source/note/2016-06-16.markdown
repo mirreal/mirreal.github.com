@@ -1,0 +1,32 @@
+---
+layout: page
+title: "2016-06-16"
+date: 2016-06-16 00:16
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[javascript 的 api 设计原则](http://www.cnblogs.com/constantince/archive/2016/06/13/5580003.html)
+
+[Improving CSS quality at Facebook and beyond](https://code.facebook.com/posts/879890885467584/improving-css-quality-at-facebook-and-beyond/)
+
+[Javascript Debugging With Black Box](https://raygun.com/blog/2015/05/javascript-debugging-with-black-box/)
+
+## 聚沙
+
+### betterParseInt
+
+```js
+var betterParseInt = function(str) {
+  str = str.trim();
+  if(/^(\-|\+)?\d+$/.test(str))
+    return Number(str);
+  return NaN;
+}
+
+```
+
+分割

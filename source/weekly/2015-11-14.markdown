@@ -1,0 +1,20 @@
+---
+layout: page
+title: "2015-11-14"
+date: 2015-11-14 13:00
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### decodeURI 和 decodeURIComponent 的区别
+
+通常是，decodeURI 对 encodeURI 解码，decodeURIComponent 对 encodeURIComponent 解码。
+
+但是 encodeURI 对某些字符不会进行编码，比如 ”:”, (%3A)“,”(%2C)
+
+### document.body.scrollTop
+
+通过设置 `document.body.scrollTop` 可以改变当前页面位置

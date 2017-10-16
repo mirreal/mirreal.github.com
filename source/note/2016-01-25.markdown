@@ -1,0 +1,29 @@
+---
+layout: page
+title: "2016-01-25"
+date: 2016-01-25 23:28
+comments: true
+sharing: true
+footer: true
+---
+
+## element.insertAdjacentHTML
+
+### 概述
+
+insertAdjacentHTML() 将指定的文本解析为 HTML 或 XML，然后将结果节点插入到 DOM 树中的指定位置处。该方法不会重新解析调用该方法的元素，因此不会影响到元素内已存在的元素节点。从而可以避免额外的解析操作，比直接使用 innerHTML 方法要快。
+
+### 语法
+
+```js
+element.insertAdjacentHTML(position, text);
+```
+
+position 是相对于 element 元素的位置，并且只能是以下的字符串之一：
+
+* beforebegin 在 element 元素的前面。
+* afterbegin 在 element 元素的第一个子节点前面。
+* beforeend 在 element 元素的最后一个子节点后面。
+* afterend 在 element 元素的后面。
+
+text 是字符串，会被解析成 HTML 或 XML，并插入到 DOM 树中。

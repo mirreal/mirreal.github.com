@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 实习 | Mirreal Note]]></title>
+  <link href="http://blog.mirreal.net/blog/categories/shi-xi/atom.xml" rel="self"/>
+  <link href="http://blog.mirreal.net/"/>
+  <updated>2016-03-13T14:53:42+08:00</updated>
+  <id>http://blog.mirreal.net/</id>
+  <author>
+    <name><![CDATA[Mirreal Ellison]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[第一次实习生体验]]></title>
+    <link href="http://blog.mirreal.net/blog/2014/11/29/my-first-internship/"/>
+    <updated>2014-11-29T23:21:08+08:00</updated>
+    <id>http://blog.mirreal.net/blog/2014/11/29/my-first-internship</id>
+    <content type="html"><![CDATA[<p>实习，也是第一份工作。</p>
+
+<p>一直想对此写点什么。在这段并不是太长的时间里，学到的很多，有些东西可能无法言表，就像是某种潜移默化的影响和变化。</p>
+
+<p>就之前的工作而言，虽说没有遇到什么太复杂的任务，主要是学习和熟悉。但是，真的进入工作环境，才知道很多东西都要花时间，去了解一些具体的特别细节的东西。以前自己学习时候更多的在于逻辑实现，随随便便就算了，哪里想过太多。我也不清楚，我怎么就成了一名前端工程师了。</p>
+
+<!-- more -->
+
+
+<p>回想最初的学习过程中，花了很多时间去掌握Javascript这门语言，但并非研究其在浏览器中的各种用法。布局这种事，也相当马虎，或者说对CSS从来都没上心，和很多做后端对css的认识类似，完完全全一个新手的姿态。可是，作为一个前端工程师，如果知道的CSS知识比一个后端开发者多不了多少，那未免显得太不合格。</p>
+
+<p>在秋季招聘季之初，和很多人一样显得特别迷茫，不知道该何去何从，投递过很多不同的职位，什么运维，测试，研发，网络都有。在那时候，对前端工程师的理解特别片面和错误，在经过美团面试之后才决定走上前端开发的路。可是，校招这种事就像一阵风一样，来得快去得也快，等到我坚定自己的路线之后，仿佛什么都晚了，虽然我仍在进行各种尝试，可是效果甚微。</p>
+
+<p>那一段时间里，也让我明白一件很重要的事，以前的我太局限于自己的象牙塔，外面的洪荒世界让我不敢踏出。但是呢，早点失败，就可能早点成功，没能勇敢地走出去是大学里最大的遗憾。如果有机会早点接触这个真实的世界，现在我的处境肯定会更好。</p>
+]]></content>
+  </entry>
+  
+</feed>

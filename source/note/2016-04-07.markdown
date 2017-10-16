@@ -1,0 +1,50 @@
+---
+layout: page
+title: "2016-04-07"
+date: 2016-04-07 13:01
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### CPS
+
+Implementing call/cc in JavaScript
+
+If one were to translate to continuation-passing style in JavaScript, call/cc has a simple definition:
+
+```js
+function callcc (f,cc) {
+  f(function(x,k) { cc(x) },cc)
+}
+```
+
+
+## 阅读
+
+[如何实现一个 Virtual DOM 算法](https://github.com/livoras/blog/issues/13) 已经被很多人推荐过了
+
+
+[豆瓣混合开发实践](http://lincode.github.io/Hybrid-Rexxar)
+
+[Web Animation 制作指南](http://www.w3cplus.com/animation/web-animation.html)
+
+
+[再三谈加班](http://www.jianshu.com/p/e1469d29a216)
+
+[怎样使用 GitHub？](https://www.zhihu.com/question/20070065/answer/79557687)
+
+
+## JOKE
+
+```sh @黑纸
+一只鹦鹉飞到台湾总统府，军警要抓它，
+鹦鹉说：“你敢，我找我弟弟”，
+随后鹦鹉大喊；“英九，英九，我是英五啊”！
+今年这只鹦鹉又飞到总统府，
+军警说：“你弟弟下台了”，
+鹦鹉说：“我知道，我找我妹妹”，
+鹦鹉大喊：“英文，英文，我是英武啊”！
+```

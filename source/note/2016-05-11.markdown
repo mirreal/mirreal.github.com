@@ -1,0 +1,66 @@
+---
+layout: page
+title: "2016-05-11"
+date: 2016-05-11 00:42
+comments: true
+sharing: true
+footer: true
+---
+
+
+
+## 聚沙
+
+### jsdoc
+
+
+http://usejsdoc.org/
+
+http://www.css88.com/doc/jsdoc/index.html
+
+
+### 逻辑运算
+
+#### xor
+
+
+```js
+function xor(a, b) {
+  return (a && !b) || (~a && b)
+  // return (a || b) && (!a || !b)
+}
+
+// test
+xor(false, false);
+xor(false, true);
+xor(true, false);
+xor(true, true);
+```
+
+#### xnor xor 的反
+
+```js
+function xnor(a, b) {
+  return !xor(a, b);
+}
+```
+
+### 补码表示法
+
+关于计算机如何处理有符号数字的问题
+
+使用补码
+
+如何阅读一个补码表示法的有符号数字：
+
+正数就是正数
+
+负数的值是对当前码 取反+1，即负数的绝对值等于它的补码
+
+例子？就没有怎地
+
+
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-05-11.html)

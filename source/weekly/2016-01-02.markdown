@@ -1,0 +1,24 @@
+---
+layout: page
+title: "2016-01-02"
+date: 2016-01-02 12:45
+comments: true
+sharing: true
+footer: true
+---
+
+## issues
+
+* 两次URL编码的问题
+
+据说是一直有这个问题，容器编码问题导致解码成乱码，所以使用两次编码这样的hack方法。Kissy的io发起的请求直接把就是两次URL编码。
+
+* 在 url 上增加参数查询
+
+```javascript
+function appendQuery(url, query) {
+  if (query == '') return url
+    return (url + '&' + query).replace(/[&?]{1,2}/, '?')
+  }
+}
+```

@@ -1,0 +1,22 @@
+---
+layout: page
+title: "2015-11-30"
+date: 2015-11-30 00:36
+comments: true
+sharing: true
+footer: true
+---
+
+## tab or space
+
+## ajax 302 failed
+
+在我搜索Ajax 302时，搜出一堆关于302如何被解释成404的问题，还有原理，但显然不是我想要的
+
+ajax -> browser -> server -> 302 -> browser(redirect) -> server -> browser -> ajax callback
+
+### 同源
+
+如果两个页面拥有相同的协议（protocol），端口（如果指定），和主机，那么这两个页面就属于同一个源（origin）。
+
+其实，对，是端口的问题。

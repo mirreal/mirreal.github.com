@@ -1,0 +1,26 @@
+---
+layout: page
+title: "2016-03-11"
+date: 2016-03-11 21:21
+comments: true
+sharing: true
+footer: true
+---
+
+## 词典
+
+CORS
+
+跨站 HTTP 请求(Cross-site HTTP request)
+
+window.postMessage
+
+window.postMessage 是一个用于安全的使用跨源通信的方法
+
+## 工具
+
+设计师调色 http://colorbrewer2.org/
+
+## 英文
+
+abort 中止，流产

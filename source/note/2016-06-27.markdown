@@ -1,0 +1,37 @@
+---
+layout: page
+title: "2016-06-27"
+date: 2016-06-27 19:54
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+
+### 修改 MAC 管理员账户密码
+
+黑客解决方法。
+
+开机， 启动时按“cmd+S”。这时进入单一用户模式（Single user model）。
+
+Mac OS的单一用户模式有准入特权（Root access privilege）而不要求根密码（root password）。
+
+出现像DOS一样的提示符 #root>。
+
+在#root>下逐步输入以下命令，注意空格，大小写
+
+```sh
+//执行硬盘检测（只读）, 这一步可以省略
+/sbin/fsck -y
+
+//加载文件系统（读/写）
+/sbin/mount -uaw
+
+//删除初始化设置时的OSX生成的隐藏文件”.applesetupdone”
+rm /var/db/.AppleSetupDone
+
+//重启
+reboot
+```

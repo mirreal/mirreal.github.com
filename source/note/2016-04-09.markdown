@@ -1,0 +1,14 @@
+---
+layout: page
+title: "2016-04-09"
+date: 2016-04-09 09:17
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[七年iOS工作经验的我为什么放弃了iOS而选择了Android](http://www.codeceo.com/article/why-giveup-ios-choose-android.html)
+
+[A-Frame入门 —— Web也能做虚拟现实了](http://aerotiger.info/archives/a-frame-the-easiest-way-to-bring-vr-to-the-web-today.html)

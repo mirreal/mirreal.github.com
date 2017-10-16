@@ -1,0 +1,14 @@
+---
+layout: page
+title: "2015-12-08"
+date: 2015-12-08 00:21
+comments: true
+sharing: true
+footer: true
+---
+
+## z-index
+
+http://www.w3.org/wiki/CSS/Properties/z-index
+
+> Only works on positioned elements(position: absolute;, position: relative; or position: fixed;).

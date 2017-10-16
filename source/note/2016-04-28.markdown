@@ -1,0 +1,49 @@
+---
+layout: page
+title: "2016-04-28"
+date: 2016-04-28 09:34
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[【译】互联网公司真的是「看重能力，不看重学历」吗？](http://blog.zhangjd.me/2016/04/25/dropouts-need-not-apply-silicon-valley-asks-mostly-for-developers-with-degrees/)
+
+
+[Node.js : 我只需要一个店小二](http://mp.weixin.qq.com/s?__biz=MzAxOTc0NzExNg==&mid=2665513044&idx=1&sn=9b8526e9d641b970ee5ddac02dae3c57#rd)
+
+
+[Node+React小爬虫：从开发到部署](http://www.ido321.com/1674.html)
+
+
+[函数式非凡的抽象能力](https://zhuanlan.zhihu.com/p/20482423)
+
+## 聚沙
+
+### 通信
+
+https://www.ibm.com/developerworks/cn/web/wa-lo-comet/
+
+
+### 模块
+
+http://www.infoq.com/cn/articles/es6-in-depth-modules
+
+http://justineo.github.io/singles/writing-modular-js/
+
+http://www.ruanyifeng.com/blog/2012/10/asynchronous_module_definition.html
+
+
+### ie8 script error
+
+https://support.microsoft.com/zh-cn/kb/308260
+
+
+### ie10 一个暂不知道的错误
+
+
+## 想法
+
+读到 姚期智

@@ -1,0 +1,42 @@
+---
+layout: page
+title: "2016-03-14"
+date: 2016-03-14 17:02
+comments: true
+sharing: true
+footer: true
+---
+
+## 2016 Wherever I May Roam
+
+For Winnie 一个玩具
+
+WebGl three.js
+
+微信公众平台 & 云服务 重新搭建起来
+
+### 题目聚合
+
+获取search的几种方式
+
+科学上网
+
+前端测试工具
+
+异步原理
+
+翻墙软件
+
+### 笔记大全
+
+跨域通信
+
+异步
+
+万恶的eval()
+
+圆括号运算符 大括号运算符 字符串
+
+运算是什么
+
+表达式和变量

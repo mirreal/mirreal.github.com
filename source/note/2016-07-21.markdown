@@ -1,0 +1,47 @@
+---
+layout: page
+title: "2016-07-21"
+date: 2016-07-21 13:48
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[字体排版手册](http://www.zcfy.cc/article/696)
+
+http://typographyhandbook.com/
+
+[Data Guard运维中的实战经验和技巧](http://dbaplus.cn/news-21-518-1.html)
+
+
+[Swift 3中的新特性](http://www.cocoachina.com/swift/20160713/17028.html)
+
+https://www.raywenderlich.com/135655/whats-new-swift-3
+
+[CSS的clip-path](http://www.w3cplus.com/css3/introducing-css-clip-path-property.html)
+
+[通过 React 来提高 Angular 的性能](https://aleen42.gitbooks.io/personalwiki/content/translation/improve_angular_performance_with_react/improve_angular_performance_with_react.html)
+
+[学习如何构建自动化、跨浏览器的JavaScript单元测试](http://www.jianshu.com/p/d079b9c61450)
+
+https://philipwalton.com/articles/learning-how-to-set-up-automated-cross-browser-javascript-unit-testing
+
+## 聚沙
+
+### 6 rules
+
+> 简明扼要的注释 + 契约式/防御式编程 + 更短小的逻辑块 + 复用公共库 + 严格测试
+
+1. 在方法前面编写简明扼要的注释： 方法用途， 接收参数，  返回值， 注意事项， 作者， 时间。
+
+2. 契约式编程： 在方法入口处编写前置条件校验，在方法出口处编写后置结果校验 ；
+
+3. 防御式编程： 编程时严格校验参数和前置条件； 仔细考虑各种错误与异常的定位和处理；
+
+4. 编写和保持短小逻辑块， 易于为人的脑容量一次性处理， 容易测试；
+
+5. 复用经过严格测试的可靠的公共库； 如果库没有经过很好的测试，但有很好的用处， 帮助其添加测试；
+
+6. 对所编写的代码， 如果不是逻辑元， 都要进行严格测试。

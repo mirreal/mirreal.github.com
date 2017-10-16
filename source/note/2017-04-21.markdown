@@ -1,0 +1,36 @@
+---
+layout: page
+title: "2017-04-21"
+date: 2017-04-21 18:01
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+http://huziketang.com/books/react/
+
+[11 lessons learned as a React contractor](https://hackernoon.com/11-lessons-learned-as-a-react-contractor-f515cd0491cf)
+
+####  [单页应用的数据流方案探索](https://zhuanlan.zhihu.com/p/26426054)
+
+徐飞同志在 QCon 北京的分享，主要探讨在前端组件化开发大型应用的组件间通信问题，介绍了 MVI 架构理念。分析目前一些解决方案解决什么问题，还存在什么问题，并提出一套组件化开发的机制来保证对数据流的控制。
+
+#### [[译] 我是如何成为一名更优秀的程序员的](https://loveky.github.io/2017/04/18/translate-how-i-became-better-programmer/)
+
+作者将自己编程路上的心路历程总结下来，希望对你会有所启发。
+
+#### [如何处理好前后端分离的 API 问题](https://zhuanlan.zhihu.com/p/26385106)
+
+## 聚沙
+
+### 强推
+
+```
+git push -f
+```
+
+### mock data
+
+https://github.com/nuysoft/Mock

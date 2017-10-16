@@ -1,0 +1,16 @@
+---
+layout: page
+title: "2016-5-20"
+date: 2016-05-20 00:56
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[IE为什么把火狐和Chrome给打伤了](http://mp.weixin.qq.com/s?__biz=MzAxOTc0NzExNg==&mid=417017336&idx=1&sn=b3b5691b136457fe1c0a27d4b6548a54&scene=21#wechat_redirect)
+
+[XSS终结者-CSP理论与实践](https://github.com/joeyguo/blog/issues/5)
+
+[Python爬虫实战四之抓取淘宝MM照片](http://cuiqingcai.com/1001.html)

@@ -1,0 +1,32 @@
+---
+layout: page
+title: "2016-03-21"
+date: 2016-03-21 20:48
+comments: true
+sharing: true
+footer: true
+---
+
+## 【阅读】
+
+如何用Python写一个贪吃蛇AI
+http://www.hawstein.com/posts/snake-ai.html
+
+三步将 React Native 项目运行在 Web 浏览器上面
+http://taobaofed.org/blog/2016/03/11/react-web-intro/
+
+## 【英文】
+
+schema ['skimə] 模式
+
+## 【追踪一个 BUG 】
+
+Octopress
+
+rake generate 报错，导致修改无法执行
+
+猜测，文章代码错误导致解析出错
+
+文件某个地方引入看不见的字符
+
+原来不是，是因为有个分类

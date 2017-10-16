@@ -1,0 +1,99 @@
+---
+layout: page
+title: "2016-06-22"
+date: 2016-06-22 09:28
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[暴走漫画基于公有云的全面容器化架构实践](https://www.sdk.cn/news/3927)
+
+["A fairer Vue of React" - Comparing React to Vue for dynamic tabular data, part 2.](https://github.com/xitu/gold-miner/blob/master/TODO/a-fairer-vue-of-react-comparing-react-to-vue-for-dynamic-tabular-data-part-2.md)
+
+https://engineering.footballradar.com/a-fairer-vue-of-react-comparing-react-to-vue-for-dynamic-tabular-data-part-2/
+
+
+## 聚沙
+
+### git clone nvm
+
+直接从 GitLab clone nvm 到本地, 这里假设大家都使用 ~/git 目录存放 git 项目:
+
+```sh
+$ cd ~/git
+$ git clone http://gitlab.alibaba-inc.com/node/nvm.git
+```
+
+配置终端启动时自动执行 source ~/git/nvm/nvm.sh, 在 ~/.bashrc, ~/.bash_profile, ~/.profile, 或者 ~/.zshrc 文件添加以下命令:
+
+```sh
+source ~/git/nvm/nvm.sh
+```
+
+重新打开你的终端, 输入 nvm，通过 nvm 安装任意版本的 node
+
+nvm 默认是从 http://web.npm.alibaba-inc.com/mirrors 镜像下载:
+
+```sh
+$ nvm install 4.2.3
+# 也支持安装 iojs
+# $ nvm install iojs-1.4.3
+```
+
+你可以查看一下你当前已经安装的版本:
+
+```sh
+$ nvm ls
+```
+
+### mongoDB
+
+```sh
+curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.0.6.tgz    # 下载
+tar -zxvf mongodb-linux-x86_64-3.0.6.tgz                                   # 解压
+mv  mongodb-linux-x86_64-3.0.6/ /usr/local/mongodb                         # 将解压包拷贝到指定目录
+```
+
+/*MongoDB 的可执行文件位于 bin 目录下，所以可以将其添加到 PATH 路径中：<mongodb-install-directory> 为你 MongoDB 的安装路径。如本文的 /usr/local/mongodb 。*/
+
+export PATH=<mongodb-install-directory>/bin:$PATH
+
+```sh
+export PATH=/usr/local/mongodb/bin:$PATH
+```
+
+
+### forever
+
+```sh
+forever list
+```
+
+```sh
+forever start server/index.js
+```
+
+### mongodb 后台
+
+```text
+# 方法1：(推荐)
+# --fork 选项将会通知 mongod 在后台运行
+/path/to/MongoDB_Dir/bin/mongod --logpath /path/to/file.log --logappend --fork
+
+# 方法2：
+# 将输出重定向到 file.log 文件
+# & 将该进程置于后台运行
+/path/to/MongoDB_Dir/bin/mongod >> /path/to/file.log &
+
+# 还可以这样运行(不记录日志)
+# 因为所有重定向到位桶文件 /dev/null 的信息都会被丢弃
+/path/to/MongoDB_Dir/bin/mongod >> /dev/null &
+```
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-06-22.html)
+

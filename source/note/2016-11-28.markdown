@@ -1,0 +1,21 @@
+---
+layout: page
+title: "2016-11-28"
+date: 2016-11-28 11:19
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### json -> xml
+
+
+### CRLF
+
+### 一个以为是由于 assign 导致的问题
+
+Object.assign
+
+JSON.stringify

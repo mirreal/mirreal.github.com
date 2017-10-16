@@ -1,0 +1,60 @@
+---
+layout: page
+title: "2016-06-21"
+date: 2016-06-21 09:19
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[如何十倍提升你的 webpack 构建效率](http://eternalsky.me/ru-he-10-bei-ti-gao-ni-de-webpack-gou-jian-xiao-lu/)
+
+[实战函数式编程：使用Ramda.js](http://www.zcfy.cc/article/577)
+
+[艾舍尔的《画手》与尾递归](http://www.jianshu.com/p/78413f17bfce)
+
+[再看API设计——从黑客的角度](http://insights.thoughtworkers.org/api-design-on-hacker-side/)
+
+## 聚沙
+
+### installing Node.js via source code
+
+download
+
+```sh
+curl https://nodejs.org/dist/v6.2.2/node-v6.2.2.tar.gz -o node.tar.gz
+```
+extract
+
+```sh
+tar -xvf node.tar.gz
+```
+
+run configure
+
+```sh
+./configure
+```
+
+compile
+
+```sh
+make
+```
+
+### shell 单词之间移动
+
+```text
+alt+b 前移一个单词
+alt+f 后移一个单词
+```
+
+前提是对于 Mac OS 的系统 terminal，需要设置“使用option键作为meta键”
+
+或者是使用 `ctrl` + 方向键
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-06-21.html)

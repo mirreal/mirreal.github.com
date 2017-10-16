@@ -1,0 +1,42 @@
+---
+layout: page
+title: "2017-05-17"
+date: 2017-05-17 17:39
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### 配置 alias 时拼写错误导致的 bug
+
+搜索后无法跳转，仅排查，是 `format` 函数失效，没有生产对应的 URL，导致跳转失败。
+
+原因是 `webpack.config.js` 配置拼写错误：
+
+```js
+alias: {
+    // lib
+    'underscore': 'lib/underscore',
+    'utility': 'lib/utility',
+    'utilU': 'lib/util',
+    'urlUtil': 'lib/url',
+    'dateUtils': 'lib/dateUtils',
+```
+
+应该是：
+
+```
+'util': 'lib/util',
+```
+
+因为拼写错误，导致 `webpack` 在打包时，将 `node_modules` 目录下的 `util` 打包进来，（不知道是哪个包依赖 `util`）。
+
+然后覆盖掉原来的 `format` 方法
+
+总结：配置 alias 得谨慎，或者不要配置别名
+
+### 关于 react 和 iscroll 的点击问题
+
+https://zhuanlan.zhihu.com/p/25369923

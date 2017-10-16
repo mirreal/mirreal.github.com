@@ -1,0 +1,44 @@
+---
+layout: page
+title: "2016-04-22"
+date: 2016-04-22 12:42
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### Javascript eventEmitter
+
+
+
+### 一大堆兼容性问题
+
+* Promise
+* jQuery 2.X 不支持 IE8
+
+
+### 307 内部跳转
+
+http 转成 https
+
+
+### createRandomArray
+
+```js
+function createRandomArray(num) {
+  var list = [];
+
+  while(1) {
+    var randomNumber = Math.floor( Math.random() * num );
+    if ( list.indexOf(randomNumber) === -1 ) {
+      list.push(randomNumber)
+    }
+
+    if (list.length === num) break;
+  }
+
+  return list;
+}
+```

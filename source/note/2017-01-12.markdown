@@ -1,0 +1,212 @@
+---
+layout: page
+title: "2017-01-12"
+date: 2017-01-12 19:49
+comments: true
+sharing: true
+footer: true
+---
+
+## Javascript code styles
+
+
+### preset airbnb
+
+```js
+{
+    // 在函数表达式前禁用空格（）或 {}
+    "disallowSpacesInNamedFunctionExpression": {
+        // 对 () 禁用
+        "beforeOpeningRoundBrace": true
+    },
+    // 在函数声明前禁用空格（）或 {}
+    "disallowSpacesInFunctionDeclaration": {
+        "beforeOpeningRoundBrace": true
+    },
+    // 打开方括号后和关闭前不允许空格，报告所有括号，甚至属性访问器
+    "disallowSpacesInsideBrackets": true,
+    // 禁用空块
+    "disallowEmptyBlocks": true,
+    // 在函数调用表达式前禁用 space
+    "disallowSpacesInCallExpression": true,
+    // 在数组方括号后和关闭之前禁用空格，仅报告数组，而不是属性访问器
+    "disallowSpacesInsideArrayBrackets": true,
+    // 打开圆括号后和关闭之前禁用 space
+    "disallowSpacesInsideParentheses": true,
+    // 在对象中尽可能禁用引号
+    "disallowQuotedKeysInObjects": true,
+    // 在对象 key 后禁用 space
+    "disallowSpaceAfterObjectKeys": true,
+    // 在对象 value 前需要 space
+    "requireSpaceBeforeObjectValues": true,
+    // 在前置一元运算符后禁用 space
+    "disallowSpaceAfterPrefixUnaryOperators": true,
+    // 在后置一元运算符后禁用 space
+    "disallowSpaceBeforePostfixUnaryOperators": true,
+    // 在二元运算符前禁用 space
+    "disallowSpaceBeforeBinaryOperators": [
+        ","
+    ],
+    // 禁用混合使用 space 和 tab
+    "disallowMixedSpacesAndTabs": true,
+    // 行尾不能以空白结束
+    "disallowTrailingWhitespace": true,
+    // 在 array 和 object 需要一个额外的分号
+    "requireTrailingComma": { "ignoreSingleLine": true },
+    // 是否需要在分号后加空格
+    "requireSpaceAfterComma": true,
+    // 在进行布尔比较时，需要变量在左边
+    "disallowYodaConditions": true,
+    // 禁用关键字
+    "disallowKeywords": [ "with" ],
+    // 在新行禁用关键字
+    "disallowKeywordsOnNewLine": ["else"],
+    // 禁用多行空白
+    "disallowMultipleLineBreaks": true,
+    // 禁用多行字符串不使用 +
+    "disallowMultipleLineStrings": true,
+    // 禁用多个声明
+    "disallowMultipleVarDecl": true,
+    // 在逗号前禁用空格
+    "disallowSpaceBeforeComma": true,
+    // 在分号前禁用空格
+    "disallowSpaceBeforeSemicolon": true,
+    // 在模板字符串变量禁用空格
+    "disallowSpacesInsideTemplateStringPlaceholders": true,
+    // 禁用数组解构
+    "disallowArrayDestructuringReturn": true,
+    // 在块语句是否需要括号
+    "requireSpaceBeforeBlockStatements": true,
+    // 是否需要在立即调用函数表达式周围加括号
+    "requireParenthesesAroundIIFE": true,
+    // 需要在立即调用的函数表达式周围加括号
+    "requireSpacesInAnonymousFunctionExpression": {
+        "beforeOpeningRoundBrace": true,
+        "allExcept": ["shorthand"]
+    },
+    // 在条件语句需要空格
+    "requireSpacesInConditionalExpression": true,
+    // 需要块以换行开始和结束 ?
+    "requireBlocksOnNewline": 1,
+    // 在换行时需要分号
+    "requireCommaBeforeLineBreak": true,
+    // 在二元运算符前需要空格
+    "requireSpaceBeforeBinaryOperators": true,
+    // 在二元运算符后需要空格
+    "requireSpaceAfterBinaryOperators": true,
+    // 需要驼峰命名或者 UPPERCASE_WITH_UNDERSCORES
+    "requireCamelCaseOrUpperCaseIdentifiers": { "ignoreProperties": true },
+    // 需要 $ 在 jquery 选择器元素
+    "requireDollarBeforejQueryAssignment": true,
+    // 在文件末需要换行符
+    "requireLineFeedAtFileEnd": true,
+    // 需要大写构造函数
+    "requireCapitalizedConstructors": true,
+    // 尽可能使用点表达式访问成员
+    "requireDotNotation": true,
+    // 在 for 表达式需要空格
+    "requireSpacesInForStatement": true,
+    // Requires space after opening object curly brace and before closing
+    "requireSpacesInsideObjectBrackets": "all",
+    // 在参数之间需要空格
+    "requireSpaceBetweenArguments": true,
+    // 需要 {}
+    "requireCurlyBraces": [
+        "do"
+    ],
+    // 在关键字后需要空格
+    "requireSpaceAfterKeywords": [
+        "if",
+        "else",
+        "for",
+        "while",
+        "do",
+        "switch",
+        "case",
+        "return",
+        "try",
+        "catch",
+        "typeof"
+    ],
+    // 在行注释前需要新行
+    "requirePaddingNewLinesBeforeLineComments": {
+        "allExcept": "firstAfterCurly"
+    },
+    // 在块后需要新行
+    "requirePaddingNewLinesAfterBlocks": true,
+    "requireSemicolons": true,
+    // 要求箭头函数在返回单个语句时使用表达式主体
+    "requireShorthandArrowFunctions": true,
+    // Requires space after opening object curly brace and before closing in import statements
+    "requireSpacesInsideImportedObjectBraces": true,
+    "safeContextKeyword": "_this",
+    "validateLineBreaks": "LF",
+    // Requires all quote marks to be either the supplied value, or consistent if true
+    "validateQuoteMarks": { "mark": "'", "escape": true, "ignoreJSX": true },
+    "validateIndentation": 2,
+    "maximumLineLength": {
+        "value": 100,
+        "allExcept": ["urlComments"]
+    }
+}
+```
+
+### .jscsrc
+
+```js
+{
+    // JSCS 预置规则 ,这里采用 airbnb，其他包括 crockford、google、grunt、idiomatic、jquery、mdcs、node-style-guide、wordpress
+    "preset": "airbnb",
+    // 需要执行代码检查的文件后缀
+    "fileExtensions": [".js", ".jsx"],
+    // 不执行的文件
+    "excludeFiles": [
+        "src/**/node_modules"
+    ],
+    // 最大错误，超出这个值将不在执行
+    "maxErrors": 60,
+    // 是否需要分号，建议设置成 false，即：不适用分号
+    "requireSemicolons": false,
+    // 是否需要在立即调用函数表达式周围加括号
+    "requireParenthesesAroundIIFE": true,
+    // 设置最大行长
+    "maximumLineLength": 120,
+    // 设置换行符，CR、LF、CRLF
+    "validateLineBreaks": "LF",
+    // 设置缩进长度，两个空格、四个空格、TAB 2、4、\t
+    "validateIndentation": 4,
+    // 在数组或对象字面量的最后一个元素后面禁用一个额外的逗号
+    "disallowTrailingComma": true,
+    // 在函数表达式和函数声明中禁止未使用的参数
+    "disallowUnusedParams": true,
+    // 在打开对象大括号和关闭之前禁用 space
+    "disallowSpacesInsideObjectBrackets": true,
+    // 不允许隐式类型转换 "numeric", "boolean", "binary", "string"
+    "disallowImplicitTypeConversion": ["string"],
+    // 设置对 this 的引用 "that", "_this"
+    "safeContextKeyword": "ctx",
+    // 设置 jsDoc 规则
+    "jsDoc": {
+        // 预设
+        "checkAnnotations": "closurecompiler",
+        // 检查参数名字是否一致
+        "checkParamNames": true,
+        // 是否需要参数类型
+        "requireParamTypes": true,
+        // 是否检查荣誉参数
+        "checkRedundantParams": true,
+        // 是否检查返回类型
+        "checkReturnTypes": true,
+        // 是否检查冗余的返回类型
+        "checkRedundantReturns": true,
+        // 时候需要返回类型
+        "requireReturnTypes": true,
+        // 检查类型 ？
+        "checkTypes": "capitalizedNativeCase",
+        // 检查冗余权限声明
+        "checkRedundantAccess": true,
+        // 是否需要在描述后隔行
+        "requireNewlineAfterDescription": true
+    }
+}
+```

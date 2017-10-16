@@ -1,0 +1,19 @@
+---
+layout: page
+title: "2016-04-29"
+date: 2016-04-29 10:23
+comments: true
+sharing: true
+footer: true
+---
+
+## quiz
+
+使用数组 `var arr = [8,1,2,5,7,3,0,4];` ，至少写出两种方法，在控制台中依次打印出：0,1,2,3,5,7,8
+
+a,b,c三个条件全真时为假，全假时也为假，请问如何判断？ 至少写出两种方式。
+
+
+## 阅读
+
+[随机数](http://pinggod.com/2016/Math-random/)

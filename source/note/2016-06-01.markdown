@@ -1,0 +1,71 @@
+---
+layout: page
+title: "2016-06-01"
+date: 2016-06-01 13:34
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[一个 Java 程序员眼中的 Go 语言](http://blog.jobbole.com/101835/)
+
+https://javax0.wordpress.com/2016/04/27/comparing-golang-with-java/
+
+
+[我的开源项目从0到1024的过程](http://blog.jobbole.com/101734/)
+
+
+[为什么给类、方法、变量命名这么难？](http://blog.jobbole.com/101502/)
+
+## 聚沙
+
+### MongoDb
+
+#### Install MongoDB Community Edition with Homebrew
+
+1.Update Homebrew’s package database
+
+```sh
+brew update
+```
+
+2.Install MongoDB
+
+```sh
+brew install mongodb
+```
+
+#### Run MongoDB
+
+
+1.Create the data directory.
+
+```sh
+mkdir -p /data/db
+```
+
+2.Set permissions for the data directory.
+
+3.Run MongoDB
+
+Run without specifying paths
+
+```sh
+mongod
+```
+Specify the path of the data directory
+
+```sh
+mongod --dbpath <path to data directory>
+```
+
+## 乱弹
+
+* 在写代码的时候，你要经常想着，那个最终维护你代码的人可能将是一个有暴力倾向的疯子，并且他还知道你住在哪里
+
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-06-01.html)

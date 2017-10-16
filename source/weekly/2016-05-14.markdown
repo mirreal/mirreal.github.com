@@ -1,0 +1,30 @@
+---
+layout: page
+title: "2016-05-14"
+date: 2016-05-15 19:19
+comments: true
+sharing: true
+footer: true
+---
+
+## 小报
+
+[【译】V8 团队眼中的 ES6、ES7及未来](https://www.h5jun.com/post/v8-es6-es7-and-beyond.html)
+
+可以预见在将来 ECMAScript 升级会变得更频繁而细碎，ES6、ES7 带来的新特性和修正让 javascript 这门曾饱受争议的语言，逐渐演变成一门表达能力强，定义明确，更容易开发高效、安全、正确的编程语言。
+
+
+[Promise 反模式](http://taobaofed.org/blog/2016/05/03/promise-anti-patterns/)
+
+Promises 所做的承诺是保证异步代码顺序执行，并能够链式管理异常和错误，让代码更加清晰易懂。如何更好地使用 Promise，这里有一些经验和方法。
+
+[使用CSS技术实现Netflix Logo动画效果](https://zhuanlan.zhihu.com/p/20858727)
+
+看作者如何用 CSS 重现 Netflix 商标效果，感觉很强大。
+
+
+[从柏拉图看 VR 的前世今生，为什么 VR 是中世纪的望远镜](http://www.ifanr.com/655063)
+
+一种思想一旦适应了时代，就有无比的力量。现在的 VR 也许只是列文虎克磨出的一小块镜面，但这并不是终点，只是时代开始的曙光。
+
+## 

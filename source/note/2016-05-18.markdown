@@ -1,0 +1,107 @@
+---
+layout: page
+title: "2016-05-18"
+date: 2016-05-18 08:42
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[高效使用 JavaScript 闭包-避免 Node.js 应用程序中的内存泄漏](http://www.ibm.com/developerworks/cn/web/wa-use-javascript-closures-efficiently/index.html)
+
+[ThreeJS 轻松实现主视觉太阳系漫游](https://zhuanlan.zhihu.com/p/20796329)
+
+[JavaScript定时器与执行机制解析](http://www.alloyteam.com/2016/05/javascript-timer/)
+
+
+[Chrome 50发布，有哪些技术更新需要关注](https://www.qianduan.net/chrome-50-features/)
+
+## 聚沙
+
+### 保护版权内容
+
+#### user-select
+
+```css
+.control-select {
+   user-select: none; /* 禁止选择 */
+   user-select: auto; /* 浏览器来决定是否允许选择 */
+   user-select: all; /* 可以选择任何内容 */
+   user-select: text; /* 只能选择文本 */
+   user-select: contain; /* 选择绑定的元素以内的内容 */
+ }
+```
+
+#### js
+
+```js
+//禁用选择
+function disableSelection() {  
+   document.onselectstart = function() {return false;} // IE 浏览器
+   document.onmousedown = function() {return false;} // 其它浏览器
+}
+//启用选择
+function enableSelection() {  
+   document.onselectstart = null; // IE 浏览器
+   document.onmousedown = null; // 其它浏览器
+}
+```
+
+### setImmediate
+
+这算一个比较新的定时器，目前IE11/Edge支持、Nodejs支持，Chrome不支持。
+
+从API名字来看很容易联想到setTimeout(0)，不过setImmediate应该算是setTimeout(0)的替代版。
+
+在IE11/Edge中，setImmediate延迟可以在1ms以内，而setTimeout有最低4ms的延迟，所以setImmediate比setTimeout(0)更早执行回调函数。
+
+不过在Nodejs中，两者谁先执行都有可能，原因是Nodejs的事件循环和浏览器的略有差异。
+
+### 定时器
+
+http://www.alloyteam.com/2016/05/javascript-timer
+
+http://www.alloyteam.com/2015/10/turning-to-javascript-series-from-settimeout-said-the-event-loop-model/
+
+### 字符串翻转
+
+```js
+str.split('').reverse().join('');
+```
+
+ES 6 的写法：
+
+```js
+[...str].reverse().join('');
+```
+
+and
+
+```js
+[...str].reduceRight( (prev, curr) => prev + curr );
+```
+
+http://www.w3cplus.com/javascript/how-to-reverse-a-string-in-javascript-in-different-ways.html
+
+## zhuangbility
+
+http://mikeking.io/devtools-author/
+
+https://github.com/equinusocio/material-theme
+
+## beautiful demo
+
+chineseflower http://www.chineseflower.fr/
+
+
+## G2
+
+https://g2.alipay.com/
+
+阿里终于有可以跟百度 echarts 抗衡的东西，还是支付宝
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-05-18.html)

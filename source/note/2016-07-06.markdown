@@ -1,0 +1,36 @@
+---
+layout: page
+title: "2016-07-06"
+date: 2016-07-06 12:24
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[不止于思路，谈高性能服务器架构之道](http://dbaplus.cn/news-21-504-1.html)
+
+[支付宝前端应用架构的发展和选择](https://github.com/sorrycc/blog/issues/6)
+
+[消息队列设计精要](http://tech.meituan.com/mq-design.html)
+
+[详解Android N适配要点](https://zhuanlan.zhihu.com/p/21461478)
+
+
+## project
+
+[You-Dont-Need-Lodash-Underscore](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore)
+
+感觉就像是又实现了一个类 underscore 或者 lodash
+
+
+## 乱弹
+
+pipeline 式的消息结构还是挺棒的，较之最初的设计，到最后所有的组件都可以 pipeline 化。
+
+只要按照定义的接口，所有的组件可以互相隔离，插件化。最终的样子就是保留一个核心，和扩展的插件。赞。
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-07-06.html)

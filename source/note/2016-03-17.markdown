@@ -1,0 +1,12 @@
+---
+layout: page
+title: "2016-03-17"
+date: 2016-03-17 19:27
+comments: true
+sharing: true
+footer: true
+---
+
+## 浏览器缓存
+
+基于 HTTP 协议的内容

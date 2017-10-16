@@ -1,0 +1,38 @@
+---
+layout: page
+title: "2016-04-14"
+date: 2016-04-14 20:27
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[程序员眼中的古典名画](http://www.codingpy.com/article/classic-paintings-in-the-eye-of-a-programmer/)
+[Classic Programmer Paintings](http://classicprogrammerpaintings.tumblr.com/)
+
+[给年轻程序员们的10点启示](http://www.jianshu.com/p/19783ae9bcad)
+
+[图解 Flux](https://www.sdk.cn/news/2950)
+[来自野狗](http://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&mid=402399949&idx=1&sn=ed65a7694f70c0ef029ad8fb466547f3#rd)
+
+[在JavaScript函数式编程里使用Map和Reduce方法](http://www.codeceo.com/article/javascript-map-reduce-method.html)
+[Using Map and Reduce in Functional JavaScript](http://www.sitepoint.com/map-reduce-functional-javascript/)
+
+
+[浅谈浏览器HTTP的缓存机制](http://www.codeceo.com/article/broswer-http-cache.html)
+
+
+[12行JS代码的DoS攻击分析及防御](http://www.codeceo.com/article/12-line-js-dos-attack.html)
+
+## 聚沙
+
+### 平滑回到顶部
+
+```js
+$("a[href='#top']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+```

@@ -1,0 +1,28 @@
+---
+layout: page
+title: "2017-02-15"
+date: 2017-02-15 19:05
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### Do not copy source file when optimizing using requirejs
+
+http://stackoverflow.com/questions/11897286/do-not-copy-source-file-when-optimizing-using-requirejs
+
+不过，似乎仍有问题，所以，打算放弃 r.js
+
+### console.time() 和 console.timeEnd()
+
+使用这两个函数来计时
+
+### raw.githubusercontent.com
+
+## 阅读
+
+[深入 Promise(二)——进击的 Promise](https://zhuanlan.zhihu.com/p/25198178)
+
+[JavaScript Promise迷你书](http://liubin.org/promises-book/)

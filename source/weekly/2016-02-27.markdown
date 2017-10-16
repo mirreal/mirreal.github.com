@@ -1,0 +1,32 @@
+---
+layout: page
+title: "2016-02-27"
+date: 2016-02-27 17:17
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+Instagram上各种漂亮的滤镜不是什么神秘的事，使用 SVG 的 feColorMatrix 也能轻松做出令人惊叹的视觉效果
+
+[Finessing `feColorMatrix`](http://alistapart.com/article/finessing-fecolormatrix)
+
+正值元宵佳节，作者从煮汤圆这件事来通俗的普及架构知识，很应景的介绍
+
+[从元宵节煮汤圆看架构的识别与设计](http://mp.weixin.qq.com/s?__biz=MzA5Nzc4OTA1Mw==&mid=409250110&idx=1&sn=523e06634ecba32a08a614c58b6d35fb)
+
+百花齐放的环境允许任何人都可以选择最适合自己的方式，对此也有人回应到：1. 我为什么使用grunt； 2. 我为何放弃grunt转投gulp； 3. 我为何放弃gulp与grunt，转投npm scripts； 4. 我为何放弃前端
+
+[我为何放弃Gulp与Grunt，转投npm scripts](http://www.infoq.com/cn/news/2016/02/gulp-grunt-npm-scripts-part2)
+
+## issues
+
+* 怎么用SVG的 `feColorMatrix` （色彩矩阵过滤器）做出各种漂亮的滤镜效果 [Finessing `feColorMatrix`](http://alistapart.com/article/finessing-fecolormatrix)
+
+* [我为何放弃Gulp与Grunt，转投npm scripts](http://www.infoq.com/cn/news/2016/02/gulp-grunt-npm-scripts-part2) 对此，也有人回应 1. 我为什么使用grunt； 2. 我为何放弃grunt转投gulp； 3. 我为何放弃gulp与grunt，转投npm scripts； 4. 我为何放弃前端
+
+* 系统地看一遍CSS布局 [http://zh.learnlayout.com/](http://zh.learnlayout.com/)
+
+* 之前一直想当然的认为 `setTimeout` 和 `setInterval` 返回的是一个普通对象，原来是一个Number类型的Id

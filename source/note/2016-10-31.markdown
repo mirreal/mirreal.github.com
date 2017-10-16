@@ -1,0 +1,49 @@
+---
+layout: page
+title: "2016-10-31"
+date: 2016-10-31 16:16
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### 纯函数式编程 like Haskell
+
+#### 强制 curry 化（柯里化）
+
+> Curry Haskell
+
+```js
+const add = x => y => x + y
+
+// translate
+const add = function(x) {
+  return function(y) {
+    return x + y;
+  }
+}
+```
+
+#### 禁用 for 循环
+
+斐波那契
+
+```js
+// 以下两个版本均为低效实现方法
+// 命令式用法
+let fab = function(n) {
+  if (n <= 1) return n;
+  return fab(n-1) + fab(n-2);
+}
+
+// es6
+const fab = n => n < 2 ? n : fab(n-1) + fab(n-2)
+
+// 高效一点的方式
+let store = [];
+let fab = function(n) {
+
+}
+```

@@ -1,0 +1,34 @@
+---
+layout: page
+title: "2016-03-31"
+date: 2016-03-31 09:20
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[使用机器学习的方法给 Quora 的答案排序](http://www.36dsj.com/archives/45336)
+
+[用三段 140 字符以内的代码生成一张 1024×1024 的图片](http://www.matrix67.com/blog/archives/6039)
+
+## 英文
+
+### subtle
+
+英 ['sʌt(ə)l]  美 ['sʌtl]
+
+adj. 微妙的；精细的；敏感的；狡猾的；稀薄的
+
+## 聚沙
+
+### @忤合 去掉字符串中的 HTML 标签🔗
+
+```js
+function strip(html) {
+   var tmp = document.createElement('div');
+   tmp.innerHTML = html;
+   return tmp.textContent || tmp.innerText || '';
+}
+```

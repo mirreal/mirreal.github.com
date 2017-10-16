@@ -1,0 +1,33 @@
+---
+layout: page
+title: "2016-05-07"
+date: 2016-05-07 00:37
+comments: true
+sharing: true
+footer: true
+---
+
+
+## 聚沙
+
+
+### 很有创意的代码
+
+http://codepen.io/jakealbaugh/full/JoVrdw/
+
+
+### bebel
+
+https://www.zfanw.com/blog/babel-6.html
+
+
+
+https://babeljs.io/docs/learn-es2015/#promises
+
+http://babeljs.io/docs/usage/polyfill/
+
+http://babeljs.io/docs/plugins/transform-runtime/
+
+http://www.ruanyifeng.com/blog/2016/01/babel.html
+
+https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js

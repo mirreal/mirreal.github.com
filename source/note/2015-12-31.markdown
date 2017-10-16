@@ -1,0 +1,25 @@
+---
+layout: page
+title: "2015-12-31"
+date: 2015-12-31 23:56
+comments: true
+sharing: true
+footer: true
+---
+
+## 两次 URL 编码
+
+一般情况下, 发送 encodeURIComponent(parmeName)+"="+encodeURIComponent(parmeValue);
+
+接收时, 直接 String paramValue = request.getParameter(paramName); // 容器自动解码.
+
+我们知道 encodeURIComponent 使用的是 UTF-8 编码规则来编的.
+如果 request.getParameter(paramName) 时,容器也按 UTF-8 解的话,是正确的. 根本无须在客户端
+进行二次的 encodeURIComponent(...)
+
+如果 request.getParameter(paramName),容器没有按 UTF-8 解的话, 结果只有一个,就是乱码!
+容器按什么编码来解码,决定于 request.setCharacterEncoding(***) 或者 服务器程序配置.
+
+如果你在 jsp 程序中,能够 request.setCharacterEncoding("UTF-8"), 并且 修改服务器配置,让容器在解 GET 提交的参数时,使用 UTF-8.
+
+客户端提交前不用二次编码, 接收时,也只要直接 request.getParameter(paramName) 即可

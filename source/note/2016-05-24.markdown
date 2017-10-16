@@ -1,0 +1,73 @@
+---
+layout: page
+title: "2016-05-24"
+date: 2016-05-24 16:24
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[推荐系统技术之文本相似性计算（一）](http://mp.weixin.qq.com/s?__biz=MjM5ODczNTkwMA%3D%3D&mid=2650107060&idx=1&sn=6e8d1240f1a2d0dea17f0ef52cd2c013)
+
+[一起写一个JSON解析器](http://www.cnblogs.com/absfree/p/5502705.html)
+
+[前端代码的“最后一公里”——module bundler](https://github.com/szrenwei/blog/issues/2)
+
+[从路人甲到英雄无敌](https://segmentfault.com/a/1190000005174755)
+
+## 聚沙
+
+### Palindromes Test
+
+```js
+function palindrome(str) {
+    var re = /[\W_]/g;
+
+    var lowRegStr = str.toLowerCase().replace(re,'');
+
+    var reverseStr = lowRegStr.split('').reverse().join('');
+
+    return reverseStr === lowRegStr;
+}
+```
+
+http://www.w3cplus.com/javascript/palindrome-check-in-javascript.html
+
+
+### Chunky Monkey
+
+名字不是那么熟悉，其实做的事很简单，把一个数组按给定大小分割成小数组
+
+```js
+function chunk(arr, size) {
+  var tempArr = [],
+      newArr=[],
+      len = arr.length;
+  if (len <= size || size <=0){
+    return arr;
+  } else {
+    for (var i = 0; i < len; i += size) {
+      tempArr = arr.slice(i, i + size);
+      newArr.push(tempArr);
+    }
+  }
+  return newArr;
+}
+```
+
+### Octotree
+
+作为一个浏览器扩展，来显示 GitHub/GitLab 代码结构，即代码树
+
+还是有点用处，至少用浏览器看的时候不用那么来回切
+
+https://github.com/buunguyen/octotreeOctotree
+
+## 拿来做 quiz
+
+http://www.w3cplus.com/blogs/airen
+
+
+[MORE](http://blog.mirreal.net/note/2016-05-24.html)

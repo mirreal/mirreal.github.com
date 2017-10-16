@@ -1,0 +1,61 @@
+---
+layout: page
+title: "2016-03-23"
+date: 2016-03-23 16:19
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[一个前端的自我修养](http://taobaofed.org/blog/2016/03/23/the-growth-of-front-end/)
+
+
+## three.js 笔记
+
+### 一堆名词
+
+* Renderer 渲染器
+* Scene 场景
+* Camera 照相机
+
+
+* perspective 透视
+* material 材质
+* Geometry 几何体
+
+
+### 照相机（Camera)
+
+#### 正交投影照相机（Orthographic Camera)
+
+一般说来，对于制图、建模软件通常使用正交投影，这样不会因为投影而改变物体比例；
+
+#### 透视投影照相机（Perspective Camera)
+
+而对于其他大多数应用，通常使用透视投影，因为这更接近人眼的观察效果。
+
+## zoom 和 scale
+
+* zoom相当于是一个放大镜，缩放被zoom的元素不会影响初始或实际视口的大小。
+
+zoom的取值可以为数值和百分比值，不能取负值。
+
+* transform的变换过程实际上是矩阵变换的过程，被transform的元素要经过一系列的矩阵运算最终确定其坐标.
+
+scale()是transform的一个属性值，这是一个缩放函数。当一个元素被定义了transform:scale(x,y)，可以控制其x方向和y方向上的缩放比例，如果只有一个参数，那么第二个参数与第一个参数相等。
+
+scale的取值只能是数值，但是可以为负数。
+
+## 工具
+
+* [Lingo](https://www.lingoapp.com/)：一款整理视觉素材的 Mac App  https://www.lingoapp.com/
+
+## 一句话
+
+Better
+
+to have a 100 people who love you than a million people who sort of like you.
+
+这是著名短租网站 Airbnb 创始人 Brian Chesky 在去年的一次演讲中的一个忠告。中文翻译过来就是：宁愿有100个“脑残粉”，也不要有100万人觉得你的产品还不错。

@@ -1,0 +1,20 @@
+---
+layout: page
+title: "2016-04-18"
+date: 2016-04-18 15:53
+comments: true
+sharing: true
+footer: true
+---
+
+## 英文
+
+### separator
+
+英 ['sepəreɪtə]   美 ['sɛpəretɚ]  
+
+n. 分离器；[计] 分隔符
+
+## 聚沙
+
+### Uncaught (in promise)

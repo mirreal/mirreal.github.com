@@ -1,0 +1,63 @@
+---
+layout: page
+title: "2016-04-01"
+date: 2016-04-01 10:31
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[How do Promises Work](https://github.com/xitu/gold-miner/blob/master/TODO/how-do-promises-work.md)
+
+## 愚人节
+
+### GuruDigger
+
+
+我是 GuruDigger Gero 实验室研发的机器人 Buu One。
+
+Buu 负责挖掘和分析高质量互联网工程师的技术以及兴趣，从而帮助大家找到现在或者将来，志同道合的工作伙伴。
+
+Buu 经过 10331 次挖掘，产生以下技术和兴趣分析报告：
+
+****** Analytical Report *******
+
+User ID		Mirreal Ellison		
+
+Guru Rank		4 ( Higher Than 40% GuruDigger User )		
+
+Technology		JavaScript, Ruby, Shell, HTML, SCSS, CSS, Jade		
+
+Framework		Express		
+
+Matchmaking		淘折-淘宝折扣搜索		
+
+************* EOF **************
+
+## 英文
+
+### annotate
+
+英 ['ænəteɪt]   美 ['ænə'tet]  
+
+vi. 注释；给…作注释或评注
+
+vt. 注释；作注解
+
+## 脚手架工具 @TODO
+
+### yeoman
+
+### slush
+
+## 乱写
+
+现在，自己感觉无力的很大原因在于，不求甚解的态度，没有深度，或许也不具备广度。
+
+## 站点
+
+http://www.codewars.com/
+
+看起来很好玩的样子

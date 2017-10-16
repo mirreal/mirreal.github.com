@@ -1,0 +1,57 @@
+---
+layout: page
+title: "2016-06-02"
+date: 2016-06-01 22:07
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[前端可视化的测试实践](https://zhuanlan.zhihu.com/p/21263120)
+
+ECharts 是基于 JavaScript 的一款开源可视化工具，但对于用户界面通常是比较难测的一种，这里分享了关于 ECharts 作用户界面测试的相关实践。
+
+## 聚沙
+
+### placeholder style
+
+```css
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: @placeholderColor;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: @placeholderColor;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: @placeholderColor;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: @placeholderColor;
+}
+```
+
+溢出
+
+在手机等设备上搜索框和表单字段经常会缩的很短,有时输入框并不能完全显示文字占位符,那么它便会被生硬的"切断".为了防止出现这种难看的效果,可以使用CSS text-overflow: ellipsis; 来省略一中间部分文字.
+
+```css
+input[placeholder] { text-overflow: ellipsis; }
+::-moz-placeholder { text-overflow: ellipsis; } /* firefox 19+ */
+input:-moz-placeholder { text-overflow: ellipsis; }
+```
+
+https://css-tricks.com/almanac/selectors/p/placeholder/
+
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/:-moz-placeholder
+
+
+
+## 乱弹
+
+* 就好像每次抱着“我要好好来一发”的态度开始啪啪啪的时候，总是123提裤子，因为你太专注了，不如背背乘法口诀表分散一下注意力。
+
+
+
+[MORE](http://blog.mirreal.net/note/2016-06-02.html)

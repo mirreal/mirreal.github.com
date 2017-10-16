@@ -1,0 +1,24 @@
+---
+layout: page
+title: "2016-05-07"
+date: 2016-05-03 11:01
+comments: true
+sharing: true
+footer: true
+---
+
+#### [随机数和 Math.random()](http://pinggod.com/2016/Math-random/) http://pinggod.com/2016/Math-random/
+
+当今使用的大部分随机数生成器都不够优秀，而且开发者倾向于拿来就用，不去了解具体的生成策略。V8 中的 Math.random() 使用的 PRNG 算法是 MWC1616，如果只使用 16 位，那么它的循环周期长度就会很短。在质量测试中的表现会很差，对于大多数的重要场景，所伪造的随机性是不安全的。
+
+#### [语句在 JavaScript 中的值](http://blog.csdn.net/aimingoo/article/details/51136511) http://blog.csdn.net/aimingoo/article/details/51136511
+
+ECMAScript 是承认语句有值的，而且也同时承认某些语句是没有值/不产生值，比如空语句、函数声明、变量声明就不产生值 。除了讨论语句是否有值这个问题，还研究了在 ES5 和 ES6 规范下 if/for/while/try 等语句处理返回值的差异性。
+
+#### [支付宝架构师：从工程师到架构师的成长之路](http://www.scalerstalk.com/838-architect) http://www.scalerstalk.com/838-architect
+
+架构师是一个没有被严格定义的角色。权衡，可能是工程师成长为架构师最大的挑战，工程师经常是完美主义的，程序也总是精准精确的，但是架构师要习惯于不完美和一定条件下的不精确。这是一篇思想密度很高的文章，而且很长，但却很有价值。
+
+#### [贴吧 React 最佳实践](https://github.com/fex-team/fit/issues/1) https://github.com/fex-team/fit/issues/1
+
+一个拥有十多年的业务线所积累的业务代码的项目改造实践。

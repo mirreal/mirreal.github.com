@@ -1,0 +1,34 @@
+---
+layout: page
+title: "2016-04-05"
+date: 2016-04-05 09:31
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[How To Get Hundreds of Stars on Your Github Project](https://medium.com/@cwRichardKim/how-to-get-hundreds-of-stars-on-your-github-project-345b065e20a2)
+[如何在Github打造你的爆款开源项目](https://github.com/gaohailang/blog/issues/9)
+
+
+[设计一款移动应用前你应该知道这些事情](https://github.com/xitu/gold-miner/blob/master/TODO/the-basics-of-designing-mobile-apps.md)
+
+[C语言的2016](http://www.infoq.com/cn/articles/c-language-2016)
+
+### 旧文分享
+
+[去除 JavaScript 代码的怪味](http://jinlong.github.io/2015/05/21/eliminate-javascript-code-smells/) @常胤
+
+## 聚沙
+
+### Okay，我竟然不知道 Sketch 有 pages 功能
+
+### npm script
+
+npm 会在项目的 package.json 文件中寻找 scripts 区域，其中包括 `npm test` 和 `npm start` 等命令。
+
+其实 `npm test` 和 `npm start` 是 `npm run test` 和 `npm run start` 的简写。事实上，你可以使用 `npm run` 来运行 scripts 里的任何条目。
+
+使用 `npm run` 的方便之处在于，npm 会自动把 `node_modules/.bin` 加入 `$PATH`，这样你可以直接运行依赖程序和开发依赖程序，不用全局安装了。只要 npm 上的包提供命令行接口，你就可以直接使用它们，方便吧？当然，你总是可以自己写一个简单的小程序。

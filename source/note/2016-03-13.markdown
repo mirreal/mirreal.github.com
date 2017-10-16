@@ -1,0 +1,47 @@
+---
+layout: page
+title: "2016-03-13"
+date: 2016-03-22 19:06
+comments: true
+sharing: true
+footer: true
+---
+
+## git config
+
+三种配置：
+
+- /etc/gitconfig 文件：系统中对所有用户都普遍适用的配置。若使用 git config 时用 --system 选项，读写的就是这个文件。
+- ~/.gitconfig 文件：用户目录下的配置文件只适用于该用户。若使用 git config 时用 --global 选项，读写的就是这个文件。
+- 当前项目的 Git 目录中的配置文件（也就是工作目录中的 .git/config 文件）：这里的配置仅仅针对当前项目有效。每一个级别的配置都会覆盖上层的相同配置，所以 .git/config 里的配置会覆盖/etc/gitconfig 中的同名变量。
+
+```sh
+git config --global user.name "Mirreal"
+git config --global user.email mirreal@gmail.com
+```
+
+直接在 ~/.gitconfig 或者 .git/config 中修改：
+
+```
+[user]
+  name = mirreal
+  email = mirreal@gmail.com
+```
+
+如果用了 --global 选项，那么更改的配置文件就是位于你用户主目录下的那个，以后你所有的项目都会默认使用这里配置的
+
+## 删除分支
+
+### 删除本地分支
+
+```
+git branch -d [test]
+```
+
+### 删除远程分支
+
+```
+git push origin :serverfix
+```
+
+有种方便记忆这条命令的方法：记住我们不久前见过的 `git push [远程名] [本地分支]:[远程分支]` 语法，如果省略 [本地分支]，那就等于是在说“在这里提取空白然后把它变成[远程分支]”。

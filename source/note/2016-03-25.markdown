@@ -1,0 +1,24 @@
+---
+layout: page
+title: "2016-03-25"
+date: 2016-03-25 09:57
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### resize: none
+
+Disabling resizability of textareas
+
+textarea 使用这个属性之后就可以去掉右下角讨厌的缩放
+
+### close button with css
+
+http://codepen.io/ndeniche/pen/ljbDL
+
+## 阅读
+
+[由NPM引发的关于left-pad的那些事儿](http://blog.h5jun.com/post/left-pad.html)

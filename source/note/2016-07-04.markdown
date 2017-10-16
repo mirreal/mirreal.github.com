@@ -1,0 +1,120 @@
+---
+layout: page
+title: "2016-07-04"
+date: 2016-07-04 10:18
+comments: true
+sharing: true
+footer: true
+---
+
+
+## 聚沙
+
+### 如何设置 tbody 滚动
+
+1. 把tbody设置成display:block，然后就对其高度设置一个固定值，overflow设置成auto。
+2. 把thead的tr设置成display:block。
+3. 因为都设置成block所以要给td手动添加宽度 width:200px
+
+
+看看代码是什么样的？
+
+```css
+.table thead {
+    display: block;
+}
+.table tbody {
+    display: block;
+    height: 200px;
+    overflow: auto;
+    text-align: center;
+}
+.table th, .table td {
+    width: 200px;
+}
+```
+
+
+### 对象字面量
+
+```js
+2..toString(); // 第二个点号可以正常解析
+2 .toString(); // 注意点号前面的空格
+(2).toString(); // 2先被计算
+```
+
+### thunk
+
+
+Thunk 函数的含义
+
+编译器的"传名调用"实现，往往是将参数放到一个临时函数之中，再将这个临时函数传入函数体。这个临时函数就叫做 Thunk 函数。
+
+```js
+function f(m){
+  return m * 2;     
+}
+
+f(x + 5);
+
+// 等同于
+
+var thunk = function () {
+  return x + 5;
+};
+
+function f(thunk){
+  return thunk() * 2;
+}
+```
+
+在 JavaScript 语言中，Thunk 函数替换的不是表达式，而是多参数函数，将其替换成单参数的版本，且只接受回调函数作为参数。
+
+```js
+var Thunk = function(fn){
+  return function (){
+    var args = Array.prototype.slice.call(arguments);
+    return function (callback){
+      args.push(callback);
+      return fn.apply(this, args);
+    }
+  };
+};
+```
+
+
+thunkify
+
+```js
+function thunkify(fn){
+  assert('function' == typeof fn, 'function required');
+
+  return function(){
+    var args = new Array(arguments.length);
+    var ctx = this;
+
+    for(var i = 0; i < args.length; ++i) {
+      args[i] = arguments[i];
+    }
+
+    return function(done){
+      var called;
+
+      args.push(function(){
+        if (called) return;
+        called = true;
+        done.apply(null, arguments);
+      });
+
+      try {
+        fn.apply(ctx, args);
+      } catch (err) {
+        done(err);
+      }
+    }
+  }
+};
+```
+
+
+[MORE](http://blog.mirreal.net/note/2016-07-04.html)

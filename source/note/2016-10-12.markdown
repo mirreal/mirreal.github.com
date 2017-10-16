@@ -1,0 +1,41 @@
+---
+layout: page
+title: "2016-10-12"
+date: 2016-10-12 14:15
+comments: true
+sharing: true
+footer: true
+---
+
+
+## 聚沙
+
+### 从零开始
+
+brew tap cask room/cask
+
+https://www.iterm2.com/
+
+vim 配置 https://github.com/yangyangwithgnu/use_vim_as_ide
+
+软件
+
+* Chrome
+* Firefox
+* XTerm
+* Alfred
+* Dash
+* Sublime text
+* Atom
+* WeChat
+* Evernote
+* MacDown
+* Typora
+* Cas Mask
+* App Zapper
+* Charles
+* MPlayer
+* uTorrent
+* Visual studio code
+* Outlook
+* ImageOptim

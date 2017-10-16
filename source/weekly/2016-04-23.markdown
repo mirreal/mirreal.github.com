@@ -1,0 +1,23 @@
+---
+layout: page
+title: "2016-04-23"
+date: 2016-04-17 20:36
+comments: true
+sharing: true
+footer: true
+---
+
+#### [浅谈浏览器HTTP的缓存机制](http://www.codeceo.com/article/broswer-http-cache.html)
+
+针对浏览器的 HTTP 缓存的分析也算是老生常谈，每隔一段时间就会冒出一篇不错的文章，其原理也是各大公司面试时几乎必考的问题。
+
+
+#### [为什么是 JSONP](https://segmentfault.com/a/1190000004953537)
+
+在 WEB 开发中，经常见到诸如 AJAX、JSON、JSONP 这些词，但这三种东西到底是什么，又有什么关系和区别。文章通过一种简单实现详细讲解了 JSONP 的原理，相信不会再有人问起像“为什么 JSONP 不能使用 POST 方法”之类的问题。
+
+
+#### [作为20年开源老兵，我看开源这些年](http://36kr.com/p/5046173.html)
+
+
+#### [如何把 Callback 接口包装成 Promise 接口](http://www.welefen.com/post/how-to-convert-callback-to-promise.html)

@@ -1,0 +1,62 @@
+---
+layout: page
+title: "2016-07-13"
+date: 2016-07-13 15:36
+comments: true
+sharing: true
+footer: true
+---
+
+## 阅读
+
+[3 simple steps to improve your React Redux code](https://www.ckl.io/blog/3-simple-steps-to-improve-react-redux-code/)
+
+## 聚沙
+
+### 比较规则
+
+当比较运算设计类型转换时 (i.e., non–strict comparison), JavaScript 会按以下规则对字符串，数字，布尔或对象类型的操作数进行操作:
+
+* 当比较数字和字符串时，字符串会转换成数字值。 JavaScript 尝试将数字字面量转换为数字类型的值。 首先, 一个数学上的值会从数字字面量中衍生出来，然后得到被四舍五入后的数字类型的值。
+* 如果其中一个操作数为布尔类型，那么布尔操作数如果为true，那么会转换为1，如果为false，会转换为整数0，即0。
+* 如果是一个对象与数字或字符串向比较，JavaScript会尝试返回对象的默认值。**操作符会尝试将对象转换为其原始值（一个字符串或数字值）通过方法valueOf和toString。** 如果尝试转换失败，会产生一个运行时错误。
+* 注意：当且仅当与原始值比较时，对象会被转换为原始值。当两个操作数均为对象时，它们作为对象进行比较，仅当它们引用相同对象是返回true。
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
+
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
+
+http://dorey.github.io/JavaScript-Equality-Table/
+
+
+### Object.is
+
+基本跟 `===` 一致，但有两个地方不同
+
+而且，即便严格相等运算符 === 不会对操作数进行类型转换，但它不能区分两个不同的数字 -0 和 +0，还会把两个 NaN 看成是不相等的。
+
+```js
+// 两个特例，=== 也没法判断的情况
+0 === -0; // true
+NaN === NaN; // false
+
+Object.is(0, -0);            // false
+Object.is(NaN, 0/0);         // true
+```
+
+polyfill
+
+```js
+if (!Object.is) {
+  Object.is = function(x, y) {
+    // SameValue algorithm
+    if (x === y) { // Steps 1-5, 7-10
+      // Steps 6.b-6.e: +0 != -0
+      return x !== 0 || 1 / x === 1 / y;
+    } else {
+      // Step 6.a: NaN == NaN
+      return x !== x && y !== y;
+    }
+  };
+}
+```

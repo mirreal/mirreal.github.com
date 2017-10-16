@@ -1,0 +1,99 @@
+---
+layout: page
+title: "2016-04-09"
+date: 2016-04-07 13:01
+comments: true
+sharing: true
+footer: true
+---
+
+
+## 业界动态
+
+#### [Grunt 发布 1.0](http://gruntjs.com/blog/2016-04-04-grunt-1.0.0-released)
+
+主要是修复了一下 bug，不再支持 Node.js v0.8。
+怎么说呢，看到这条消息，总感觉像过气网红想搞个大新闻刷存在感然而并没有引来大家的关注一样——不是我们前端开发者见异思迁喜新厌旧，只是正如 Reddit 网友所说：JavaScript 工具链是一种还没来得及发布 1.0 就已经过时的工具链。
+
+#### [Meteor 发布 1.3](http://info.meteor.com/blog/announcing-meteor-1.3)
+
+1.3 版本新增的特性包括：ES6 模块的支持、内置单元测试和集成测试、移动端支持的改进等等。
+
+#### [C 语言的 2016](http://www.infoq.com/cn/articles/c-language-2016)
+
+自[70年代初](https://www.bell-labs.com/usr/dmr/www/chist.html)，C 语言已经存在。人们在 C 不同的发展时间点上“学会了 C 语言”，但是知识一般在学习后就停滞了，因此每个人都有自己对 C 语言的理解，这些理解基于他们第一次学习的时间。本文假设我们是在一个现代化的平台、符合现代标准，且没有过多的历史遗漏需求。我们不该只是因为一些公司拒绝升级20年前的老系统而仍然依赖古老的标准。
+
+#### [给 Java 说句公道话](http://www.yinwang.org/blog-cn/2016/01/18/java)
+
+编程使用什么工具是重要的，然而工具终究不如自己的技术重要。很多人花了太多时间，折腾各种新的语言，希望它们会奇迹一般的改善代码质量，结果最后什么都没做出来。选择语言最重要的条件，应该是“够好用”就可以，因为项目的成功最终是靠人，而不是靠语言。
+
+## 前端技术
+
+#### [npm 更改模块下架政策](http://blog.npmjs.org/post/141905368000/changes-to-npms-unpublish-policy)
+
+前段时间，因一个 npm 模块被其作者删除导致许多依赖该模块的项目遇到了问题，这使得 npm 重新制定了一套取消发布的政策。npm 门基本尘埃落定，npm 也公布了他们最新的模块管理政策，主要有以下几点：1）要下架的版本发布小于 24 小时，可以下架，但下架就意味着删除；2）要下架的版本大于 24 小时，不可以下架，如果你执意下架，则需要联系 npm；3）联系 npm 后，npm 会检查下架是否会影响其他包，在不影响其他包的前提下，准许下架或易主；4）处于安全的考虑，一个被删除的包，其名称将会被替换为一个“安全占位包”。
+
+#### [Promise 是怎样工作的](https://github.com/xitu/gold-miner/blob/master/TODO/how-do-promises-work.md)
+
+在 JavaScript 中，虽然使用 [Continuation-Passing Style(后继传递格式)](http://matt.might.net/articles/by-example-continuation-passing-style/) 并没有什么明显的过错， 但实际上，这样做会非常容易让代码变得难以阅读和更加程序化。关于这一问题，人们已经提出了很多建议，使用 promise 来让这些并行过程同时进行就是其中之一。 在这篇博文中详尽地介绍什么是 promise，它是怎样工作的，为什么你应该/不该使用它们，总之你几乎能看到关于 promise 的一切。
+
+#### [ECMAScript Proposal for JavaScript Decorators(and protocols)](https://ponyfoo.com/articles/javascript-decorators-proposal?utm_source=javascriptweekly&utm_medium=email)
+
+Decorators 在 C#、Java、Python 等语言中很常见，JavaScript Decorators 目前处于提议阶段，ECMAScript7 将为我们带来该特性。本文介绍了 JavaScript Decorators 的特性、用法、示例以及因 JavaScript 语言的动态性带来的一些不同。
+
+#### [What are CSS Modules and why do we need them?](https://css-tricks.com/css-modules-part-1-need/)
+
+
+CSS Modules 在浏览器上并没有一个官方定义和实现，它是在利用 Webpack 或 Browserify 等工具对项目进行 build 的阶段通过改变 class 等选择器的名字以形成一个命名空间的过程。本文对 CSS Modules进行了介绍，为我们呈现了使用 CSS Modules 的优点。
+
+#### [Node.js 软肋之回调大坑](http://www.infoq.com/cn/articles/nodejs-callback-hell)
+
+Node.js 需要按顺序执行异步逻辑时一般采用后续传递风格，这种风格虽然可以提高CPU利用率，降低等待时间，但当后续逻辑步骤较多时会影响代码的可读性，结果代码的修改维护变得很困难。本文追溯了 CPS 编程风格的起源，并给出了几种不同的平坑方案。
+
+#### [淘宝首页性能优化实践](http://www.barretlee.com/blog/2016/04/01/optimization-in-taobao-homepage/)
+
+代码的性能优化是一个精细活，如果要在一个庞大的未经优化的页面上做性能优化，可能会面临一次重构代码。本文从淘宝首页个性化引出的问题出发，从微观到宏观讲述了页面的优化实践，提出了几条可以借鉴的「黄金法则」。
+
+## 移动开发
+
+#### [豆瓣混合开发实践](http://lincode.github.io/Hybrid-Rexxar)
+
+Web 技术具的优势是，Web 技术是一个开发的标准，开放的标准发展出来的庞大生态，开发者可以利用生态中产出的各种成果，而省去很多重复工作。文章介绍了 Rexxar 这个（Hybrid）混合开发框架在豆瓣移动开发中的使用。虽然 Rexxar 仍然存在一些问题，和使用上的限制，但是豆瓣的工程师在有限的使用中，确实提高了不少开发效率。
+
+#### [App架构经验总结](http://keeganlee.me/post/architecture/20160303)
+
+架构因人而异，不同的架构师大多会有不同的看法，架构也因项目而异，不同的项目需求不同，相应的架构也会不同。然而，有些东西还是通用的，是所有架构师都需要考虑的，也是所有项目都会有的需求，比如API如何设计，架构如何分层，开发环境和生产环境如何分离。
+
+## 程序人生
+
+#### [How To Get Hundreds of Stars on Your Github Project](https://medium.com/@cwRichardKim/how-to-get-hundreds-of-stars-on-your-github-project-345b065e20a2)
+
+如果你开源过代码，就会知道让别人对你的代码感兴趣是多么困难。 经过几次较为幸运经历，作者慢慢发现如何让其他人对他的开源工作感兴趣，并将其总结成六大要点。[译文点这里](https://github.com/gaohailang/blog/issues/9)
+
+#### [再三谈加班](http://www.jianshu.com/p/e1469d29a216)
+
+有趣的是，一个人过去和现在对待加班的看法截然不同，随着年龄渐长，了解各人眼中的加班都是“小马过河”。当我们谈论加班时，名词一致而场景迥异。即便是同一个人，在不同的人生阶段也有不同的加班心态。所以加班不加班这个事情，根本不存在三观正，你的个性和工作环境决定了对加班的态度。
+
+#### [一个线程的独白](http://www.techug.com/a-thread-say)
+
+用第一人称的方式生动形象地讲述了一个线程的一生。
+
+#### [An Autobiography of a Blind Programmer](https://www.parhamdoustdar.com/2016/03/27/autobiography-blind-programmer/)
+
+一个盲人程序员的自传。
+
+[](http://www.techug.com/a-thread-say)
+
+#### [漫画：当程序员成立了Hello World共和国…](http://www.techug.com/hello-world-2)
+
+公元 xxxx 年的某一天，苦逼的程序员们终于摆脱了产品经理的统治，宣布成立 Hello World 共和国，定都 Github，码农们终于迎来逆袭的一天……
+
+[](http://www.techug.com/a-thread-say)
+
+[](http://www.techug.com/a-thread-say)
+
+
+
+------
+
+- 本期编辑：@天默 @沐莘 @在原 @常胤
