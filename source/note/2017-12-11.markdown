@@ -1,0 +1,18 @@
+---
+layout: page
+title: "2017-12-11"
+date: 2017-12-11 23:35
+comments: true
+sharing: true
+footer: true
+---
+
+## 聚沙
+
+### Objeact.defineProperty
+
+https://www.zhihu.com/question/47924271
+
+https://github.com/migijs/migi/issues/5
+
+https://www.zhihu.com/question/42001493/answer/93611291

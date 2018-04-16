@@ -43,7 +43,10 @@ linux 中国 https://linux.cn/
 
 V2EX https://www.v2ex.com/
 
-Reddit https://www.reddit.com/r/javascript/
+Reddit
+
+* javascript https://www.reddit.com/r/javascript/
+* webdev https://www.reddit.com/r/webdev/
 
 Hacker news https://news.ycombinator.com/
 
@@ -172,6 +175,10 @@ FGT https://alifgt.github.io/
 美团点评技术团队 http://tech.meituan.com/
 
 DaoCloud http://blog.daocloud.io/
+
+又拍云 https://tech.upyun.com/
+
+http://www.olioapps.com/
 
 ### 开发者独立站点
 
@@ -337,6 +344,12 @@ justjavac http://justjavac.com/
 Simeon Velichkov https://simov.github.io/
 
 阿城 https://qiutc.me/
+
+太狼 Brooooooklyn https://lynvv.xyz/
+
+熊建刚 http://blog.codingplayboy.com/
+
+叶剑烨 https://www.yejianye.com
 
 ### Other
 
