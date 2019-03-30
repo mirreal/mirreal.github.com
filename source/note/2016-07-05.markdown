@@ -13,7 +13,6 @@ footer: true
 
 [零Bug的代码是怎么炼成的](http://mp.weixin.qq.com/s?__biz=MzAxOTc0NzExNg%3D%3D&mid=2665513189&idx=1&sn=8b705dac2e27ecf002e6308d10b7f272)
 
-
 [一个靠谱的前端开源项目需要什么](https://segmentfault.com/a/1190000005859766)
 
 

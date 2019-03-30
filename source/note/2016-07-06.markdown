@@ -22,9 +22,6 @@ footer: true
 
 [You-Dont-Need-Lodash-Underscore](https://github.com/cht8687/You-Dont-Need-Lodash-Underscore)
 
-感觉就像是又实现了一个类 underscore 或者 lodash
-
-
 ## 乱弹
 
 pipeline 式的消息结构还是挺棒的，较之最初的设计，到最后所有的组件都可以 pipeline 化。

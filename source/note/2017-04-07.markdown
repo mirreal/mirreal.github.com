@@ -55,7 +55,7 @@ import { default as _ } from 'lodash';
 
 ### 使用 new RegExp 需谨慎
 
-这次是我自己把浏览器搞坏了，没有处理字符串的特殊字符，比如 `\` 和 `|`
+这次是自己把浏览器搞坏了，没有处理字符串的特殊字符，比如 `\` 和 `|`
 
 ```js
 const reg = new RegExp(key, 'gi');

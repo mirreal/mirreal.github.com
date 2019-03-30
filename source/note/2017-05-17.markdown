@@ -17,12 +17,7 @@ footer: true
 
 ```js
 alias: {
-    // lib
-    'underscore': 'lib/underscore',
-    'utility': 'lib/utility',
-    'utilU': 'lib/util',
-    'urlUtil': 'lib/url',
-    'dateUtils': 'lib/dateUtils',
+    'utilU': 'lib/util'
 ```
 
 应该是：

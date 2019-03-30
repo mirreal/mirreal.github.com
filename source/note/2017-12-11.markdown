@@ -9,7 +9,7 @@ footer: true
 
 ## 聚沙
 
-### Objeact.defineProperty
+### Object.defineProperty
 
 https://www.zhihu.com/question/47924271
 

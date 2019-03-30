@@ -27,13 +27,10 @@ footer: true
 }
 ```
 
-http://git.dev.sh.ctripcorp.com/IRDC/Flight-H5/issues/52
-
 ### tree
 
 生成目录树
 
 ### cancel rebase
-
 
 `git rebase` 不成功可以 `git rebase --abort` 取消

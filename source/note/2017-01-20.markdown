@@ -1,8 +1,0 @@
----
-layout: page
-title: "2017-01-20"
-date: 2017-01-20 19:23
-comments: true
-sharing: true
-footer: true
----

@@ -14,5 +14,3 @@ footer: true
     color: orange;
 }
 ```
-
-## 阅读
